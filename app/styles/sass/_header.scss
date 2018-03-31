@@ -1,7 +1,8 @@
 .header {
-  position: fixed;
+  // position: fixed;
   top: 0;
   width: 100%;
+  margin-bottom: 13rem;
 
   &__logo {
     display: block;
@@ -14,7 +15,9 @@
 
   &__nav {
     a {
-      @include font-main-bold;
+      @extend .font-main-bold;
+      text-transform: uppercase;
+      color: $text-black;
     }
   }
 
@@ -24,7 +27,8 @@
   &__btn-phone {
     width: 57px;
     height: 42px;
-    background: #d06a60 url(../img/icons/header-icon-phone.png) center no-repeat;
+    background: $bg-main url(../img/icons/header-icon-phone.png) center
+      no-repeat;
     border-radius: 20px;
   }
 }

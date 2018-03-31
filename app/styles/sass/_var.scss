@@ -1,14 +1,14 @@
-@mixin font-main-bold {
+.font-main-bold {
   font-family: 'Merriweather', sans-serif;
   font-weight: 700;
 }
 
-@mixin font-main-regular {
+.font-main-regular {
   font-family: 'Merriweather', sans-serif;
   font-weight: 300;
 }
 
-@mixin font-second-light {
+.font-second-light {
   font-family: 'SF UI Display', sans-serif;
   font-weight: 200;
 }
