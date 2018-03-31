@@ -1,0 +1,26 @@
+{
+  "name": "templ",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Yuriy Krugoviy <CircularBoy@users.noreply.github.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0",
+    "popper.js": "^1.12.9",
+    "animate.css": "^3.5.2",
+    "select2": "^4.0.5",
+    "morris.js": "morrisjs#^0.5.1"
+  }
+}
