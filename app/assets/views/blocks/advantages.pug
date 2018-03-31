@@ -1,5 +1,8 @@
 .advatages
-  .conatainer
-    ul.d-flex.justify-between
+  .container
+    .d-flex.justify-between
       each val in values 
-        li= val.title
+        .advantages-item
+          img(src='img/icons/' + val.href)
+          p.advantage-title= val.title
+          p.advantage-desc= val.desc
