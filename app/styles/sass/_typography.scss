@@ -1,0 +1,19 @@
+body {
+  @extend %font-second-light;
+  color: $text-gray;
+  font-size: 16px;
+}
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue + rem;
+}
+
+%font-head-styles {
+  @extend %font-main-bold;
+  color: $text-black;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 24px/16px;
+}
