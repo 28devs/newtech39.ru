@@ -1,0 +1,21 @@
+.social {
+  &__link {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__in {
+    background: url(../img/icons/social-icon-in.png);
+  }
+
+  &__fb {
+    width: 9px;
+    background: url(../img/icons/social-icon-fb.png);
+  }
+
+  &__yt {
+    width: 24px;
+    background: url(../img/icons/social-icon-yt.png);
+  }
+}
