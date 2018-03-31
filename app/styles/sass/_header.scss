@@ -15,7 +15,7 @@
 
   &__nav {
     a {
-      @extend .font-main-bold;
+      @extend %font-main-bold;
       text-transform: uppercase;
       color: $text-black;
     }
