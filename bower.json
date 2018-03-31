@@ -2,9 +2,7 @@
   "name": "templ",
   "description": "",
   "main": "gulpfile.js",
-  "authors": [
-    "Yuriy Krugoviy <CircularBoy@users.noreply.github.com>"
-  ],
+  "authors": ["Yuriy Krugoviy <CircularBoy@users.noreply.github.com>"],
   "license": "ISC",
   "homepage": "",
   "ignore": [
@@ -18,6 +16,6 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.0.0"
   }
 }
