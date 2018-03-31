@@ -7,7 +7,9 @@
     display: block;
     width: 200px;
     height: 139px;
-    background: url(../img/header-logo.png);
+    width: 104px;
+    height: 72px;
+    background: url(../img/header-logo.png) center/cover;
   }
 
   &__nav {
@@ -17,5 +19,12 @@
   }
 
   &__menu {
+  }
+
+  &__btn-phone {
+    width: 57px;
+    height: 42px;
+    background: #d06a60 url(../img/icons/header-icon-phone.png) center no-repeat;
+    border-radius: 20px;
   }
 }
