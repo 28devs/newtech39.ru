@@ -11,6 +11,9 @@
   }
 
   &__nav {
+    a {
+      @include font-main-bold;
+    }
   }
 
   &__menu {
