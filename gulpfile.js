@@ -54,8 +54,13 @@
       .pipe(sass().on('error', notify.onError()))
       .pipe(uglifycss())
       .pipe(rename('libs.min.css'))
-      .pipe(gulp.dest('dest/styles/'))
-  })
+      .pipe(gulp.dest('dest/styles/'));
+  });
+  gulp.task('libs-js', function() {
+    return gulp.src('app/libs/**/*.js')
+      .pipe(concat('libs.min.js'))
+      .pipe(gulp.dest('dest/scripts/'));
+  });
   //copy all assets files
   gulp.task('assets', function () {
     return gulp.src('app/assets/**', {
@@ -65,7 +70,7 @@
   });
 
   //run task for build once
-  gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'views', 'css','libs-css', 'assets', 'scripts')));
+  gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'views', 'css','libs-css','libs-js', 'assets', 'scripts')));
 
   //up static server; watching change in dest and reload page
   gulp.task('server', function () {
@@ -83,6 +88,8 @@
     gulp.watch('app/scripts/**/*.*', gulp.series('scripts'));
     gulp.watch('app/assets/**/*.*', gulp.series('assets'));
     gulp.watch('app/assets/views/**/*.*', gulp.series('views'));
+    gulp.watch('app/assets/libs/**/*.js', gulp.series('libs-js'));
+    gulp.watch('app/assets/libs/libs.scss', gulp.series('libs-css'));
   });
 
   gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'server')));
