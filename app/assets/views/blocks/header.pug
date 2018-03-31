@@ -1,0 +1,25 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Клиника
+    link(href='styles/libs.min.css', rel='stylesheet')
+    link(href='styles/main.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Merriweather:300,700&subset=cyrillic', rel='stylesheet')
+  body
+
+    include var.pug
+
+    header.header.container
+      a.header__logo(href='#')
+
+      nav.header__nav
+        ul.nav
+          each nav in navs
+            li.nav-item
+              a.nav-link(href=nav.url)= nav.title
+
+
+      menu.header__menu
+      
