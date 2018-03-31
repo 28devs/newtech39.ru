@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'SF UI Display';
-  src: url('SFUIDisplay-Light.eot');
-  src: url('SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
-  url('SFUIDisplay-Light.woff2') format('woff2'),
-  url('SFUIDisplay-Light.woff') format('woff'),
-  url('SFUIDisplay-Light.ttf') format('truetype'),
-  url('SFUIDisplay-Light.svg#SFUIDisplay-Light') format('svg');
+  src: url('../fonts/sfui_display/SFUIDisplay-Light.eot');
+  src: url('../fonts/sfui_display/SFUIDisplay-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/sfui_display/SFUIDisplay-Light.woff2') format('woff2'),
+    url('../fonts/sfui_display/SFUIDisplay-Light.woff') format('woff'),
+    url('../fonts/sfui_display/SFUIDisplay-Light.ttf') format('truetype'),
+    url('../fonts/sfui_display/SFUIDisplay-Light.svg#SFUIDisplay-Light')
+      format('svg');
   font-weight: 200;
   font-style: normal;
 }
