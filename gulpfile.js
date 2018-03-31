@@ -89,7 +89,7 @@
   // gulp.task('scripts', gulp.series('libs-js', 'js'));
 
   //run task for build once
-  gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'views', 'css', 'libs-css', 'libs-js', 'assets', 'scripts')));
+  gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'views', 'css', 'assets', 'scripts')));
 
   //up static server; watching change in dest and reload page
   gulp.task('server', function () {
