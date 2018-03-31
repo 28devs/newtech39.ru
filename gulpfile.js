@@ -11,15 +11,8 @@
     uglifyJs = require('gulp-uglifyes'),
     uglifycss = require('gulp-uglifycss'),
     pug = require('gulp-pug'),
-    browserSync = require('browser-sync').create()
-    // lib = require('bower-files')({
-    //   overrides: {
-    //     bootstrap: {
-    //       main: ['./dist/js/bootstrap.min.js', './dist/css/bootstrap.min.css'],
-    //       dependencies: {}
-    //     }			
-    //   }
-    // });
+    browserSync = require('browser-sync').create();
+  
 
   //write html by pug
   gulp.task('views', function buildHTML() {
@@ -43,26 +36,6 @@
       .pipe(gulp.dest('dest/styles/'));
   });
 
-  //libs
-  // gulp.task('libs-js', function () {
-  //   return gulp.src(lib.ext('js').files)
-  //     .pipe(concat('lib.min.js'))
-  //     .pipe(uglifyJs({
-  //       warnings: true,
-  //       ecma: 8
-  //     }))
-  //     .pipe(gulp.dest('dest/scripts'));
-  // });
-  // gulp.task('libs-css', function () {
-  //   return gulp.src(lib.ext('css').files)
-  //     .pipe(concatCss('styles/libs.min.css'))
-  //     .pipe(uglifycss({
-  //       'maxLineLen': 80,
-  //       'uglyComments': true
-  //     }))
-  //     .pipe(gulp.dest('dest/'));
-  // });
-
   // write js
   gulp.task('scripts', function () {
     return gulp.src('app/scripts/**')
@@ -81,12 +54,6 @@
     })
       .pipe(gulp.dest('dest'));
   });
-
-  //task for styles together
-  // gulp.task('styles', gulp.parallel('sass', 'css');
-
-  //task for scripts together
-  // gulp.task('scripts', gulp.series('libs-js', 'js'));
 
   //run task for build once
   gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'views', 'css', 'assets', 'scripts')));
@@ -107,7 +74,6 @@
     gulp.watch('app/scripts/**/*.*', gulp.series('scripts'));
     gulp.watch('app/assets/**/*.*', gulp.series('assets'));
     gulp.watch('app/assets/views/**/*.*', gulp.series('views'));
-    // gulp.watch('app/libs/**/*.*', gulp.parallel('libs-js','libs-css'));
   });
 
   gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'server')));
