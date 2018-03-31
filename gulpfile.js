@@ -11,6 +11,7 @@
     uglifyJs = require('gulp-uglifyes'),
     uglifycss = require('gulp-uglifycss'),
     pug = require('gulp-pug'),
+    rename = require('gulp-rename'),
     browserSync = require('browser-sync').create();
   
 
@@ -47,6 +48,14 @@
     return del('dest');
   });
 
+  //lib
+  gulp.task('libs-css', function() {
+    return gulp.src('app/libs/libs.scss')
+      .pipe(sass().on('error', notify.onError()))
+      .pipe(uglifycss())
+      .pipe(rename('libs.min.css'))
+      .pipe(gulp.dest('dest/styles/'))
+  })
   //copy all assets files
   gulp.task('assets', function () {
     return gulp.src('app/assets/**', {
@@ -56,7 +65,7 @@
   });
 
   //run task for build once
-  gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'views', 'css', 'assets', 'scripts')));
+  gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'views', 'css','libs-css', 'assets', 'scripts')));
 
   //up static server; watching change in dest and reload page
   gulp.task('server', function () {
