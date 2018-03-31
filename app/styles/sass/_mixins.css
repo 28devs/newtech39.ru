@@ -1,0 +1,3 @@
+@mixin rem-size($size) {
+  font-size: ($size / $root-font-size) + rem;
+}
