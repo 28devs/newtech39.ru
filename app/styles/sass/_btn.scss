@@ -17,6 +17,8 @@
 
   &:hover, &:active, &.active {
     background-color: $bg-main-darken;
+    color: #fff;
+    text-decoration: none;
   }
 
   &--small {
