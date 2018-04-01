@@ -11,7 +11,7 @@ headerScroll();
 window.onscroll = headerScroll;
 
 // Center alignment for submenus
-// Add class for menu with submenu
+// Add class to menu item with submenu
 const submenus = document.querySelectorAll('.header .nav ul');
 
 submenus.forEach(function(elem) {
@@ -21,9 +21,16 @@ submenus.forEach(function(elem) {
     -Math.abs((elem.offsetWidth - elem.parentNode.offsetWidth) / 2) + 'px';
 });
 
-$(document).ready(function() {
-  $('.hero__slider').lightSlider({
-    item: 1,
-    controls: false
-  });
+// Hero slider initialization
+const heroSlider = $('.hero__slider').lightSlider({
+  item: 1,
+  controls: false,
+  onSliderLoad: function() {
+    //document.querySelectorAll('');
+  }
 });
+
+const heroSliderDotsWrapper = document.createElement('div');
+heroSliderDotsWrapper.classList.add('container');
+heroSliderDotsWrapper.appendChild(document.querySelector('.lSPager'));
+document.querySelector('.hero').appendChild(heroSliderDotsWrapper);

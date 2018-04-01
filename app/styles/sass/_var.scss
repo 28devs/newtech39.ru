@@ -1,3 +1,16 @@
+$text-black: #000;
+$text-gray: #a7a9ac;
+$text-gray-light: #9d9d9d;
+
+$bg-main: #d06a60;
+$bg-main-darken: darken($bg-main, 3%);
+$bg-second: #608820;
+
+$root-font-size: 16;
+
+$header-transition: ease 0.3s;
+$control-elem-transition: ease 0.3s;
+
 %font-main-bold {
   font-family: 'Merriweather', sans-serif;
   font-weight: 700;
@@ -13,15 +26,12 @@
   font-weight: 200;
 }
 
-$text-black: #000;
-$text-gray: #a7a9ac;
-$text-gray-light: #9d9d9d;
-
-$bg-main: #d06a60;
-$bg-main-darken: darken($bg-main, 3%);
-$bg-second: #608820;
-
-$root-font-size: 16;
-
-$header-transition: ease 0.3s;
-$control-elem-transition: ease 0.3s;
+%text-devider {
+  width: 50px;
+  height: 3px;
+  background: $bg-second;
+  content: '';
+  display: block;
+  margin: 28px 0;
+  border-radius: 2px;
+}
