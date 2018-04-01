@@ -1,0 +1,10 @@
+.devider {
+  &-inner {
+    width: 100%;
+    height: 20px;
+    background-image: url(../img/main-devider.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
