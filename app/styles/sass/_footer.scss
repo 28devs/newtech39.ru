@@ -1,0 +1,14 @@
+.footer {
+  &__callback {
+    padding: 20px 0;
+
+    > * {
+      margin: 0 10px;
+    }
+
+    p {
+      margin: 0;
+      @include rem-font-size(18);
+    }
+  }
+}
