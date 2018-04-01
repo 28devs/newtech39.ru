@@ -1,9 +1,10 @@
 section.hero
-  ul.hero__slider
-    each slide in slides
-      li
-        .container
-          img.hero__img(src=slide.href)
-          h1.hero__title !{slide.title}
-          p.hero__desc !{slide.desc}
-          .btn Узнать больше
+  .hero__slider(style='opacity:0')
+    ul
+      each slide in slides
+        li
+          .container
+            img.hero__img(src=slide.href)
+            h1.hero__title !{slide.title}
+            p.hero__desc !{slide.desc}
+            a.btn Узнать больше

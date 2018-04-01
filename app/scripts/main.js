@@ -22,7 +22,7 @@ submenus.forEach(function(elem) {
 });
 
 // Hero slider initialization
-const heroSlider = $('.hero__slider').lightSlider({
+const heroSlider = $('.hero__slider ul').lightSlider({
   item: 1,
   controls: false,
   onSliderLoad: function() {
