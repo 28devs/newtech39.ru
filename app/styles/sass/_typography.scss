@@ -1,8 +1,8 @@
 body {
   @extend %font-second-light;
   color: $text-gray;
-  font-size: $root-font-size;
-  line-height: $root-line-height;
+  font-size: $root-font-size + px;
+  line-height: $root-line-height + px;
 }
 
 %font-head-styles {
@@ -11,13 +11,50 @@ body {
 }
 h1 {
   @extend %font-head-styles;
-  @include rem-font-size(32px);
+  @include rem-font-size(32);
 }
 h2 {
   @extend %font-head-styles;
-  @include rem-font-size(24px);
+  @include rem-font-size(24);
 }
 h3 {
   @extend %font-head-styles;
-  @include rem-font-size(18px);
+  @include rem-font-size(18);
+}
+
+.link {
+  color: $text-gray-light;
+  text-decoration: underline;
+  transition: $control-elem-transition;
+  @include rem-font-size(14);
+
+  &:hover {
+    color: $text-black;
+    border-color: $text-black;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &--arrow {
+    display: inline-block;
+    padding-left: 28px;
+    background: url('../img/icons/link-arrow-right.png') left top 4px no-repeat;
+    background-size: 18px;
+    @include rem-font-size(16);
+  }
+
+  &--blacked {
+    color: $text-black;
+    @include rem-font-size(18);
+
+    &:hover {
+      text-decoration-color: transparent;
+      // text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
 }
