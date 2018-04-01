@@ -15,10 +15,12 @@
 
 $text-black: #000;
 $text-gray: #a7a9ac;
-
+$text-gray-light: #9d9d9d;
 $bg-main: #d06a60;
+$bg-main-darken: darken($bg-main, 3%);
 
 $root-font-size: 16;
 
 $header-transition: ease 0.3s;
+$control-elem-transition: ease .3s;
 $root-line-height: 26;
