@@ -6,6 +6,7 @@
   }
 
   &__title {
+    color: $text-black;
     @extend %font-main-bold;
     text-transform: uppercase;
     margin: 28px 0 21px;
@@ -21,7 +22,6 @@
   }
 
   &__desc {
-    color: $text-gray;
     margin-bottom: 0;
   }
 }
