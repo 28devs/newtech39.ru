@@ -2,6 +2,7 @@ body {
   @extend %font-second-light;
   color: $text-gray;
   font-size: $root-font-size;
+  line-height: $root-line-height;
 }
 
 %font-head-styles {

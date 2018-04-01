@@ -1,3 +1,8 @@
 .advantages {
   padding: 100px 0;
+
+  &-title {
+    @extend %font-main-bold;
+    text-transform: uppercase;
+  }
 }
