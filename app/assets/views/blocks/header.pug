@@ -7,6 +7,12 @@ header.header
         each nav in navs
           li.nav-item
             a.nav-link(href=nav.url)= nav.title
+            
+            if nav.childs
+              ul
+                each child in nav.childs
+                  li
+                    a(href=child.url)= child.title
 
     .header__menu.d-flex.align-items-center
       .social.d-flex

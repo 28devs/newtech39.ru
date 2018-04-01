@@ -13,8 +13,9 @@
 
   &__nav {
     margin: 24px auto 0 54px;
+    transition: $header-transition;
 
-    a {
+    .nav-item a {
       @extend %font-main-bold;
       text-transform: uppercase;
       color: $text-black;
