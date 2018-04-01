@@ -1,3 +1,6 @@
+.tpl {
+  background-color: #e9e9e9;;
+}
 .btn {
   display: inline-block;
   border-radius: 31.5px;
@@ -22,5 +25,27 @@
   &--outline {
     background-color: transparent;
     padding: 22px 31px;
+    border: 2px solid $bg-main;
+
+    &:hover {
+      background-color: $bg-main;
+    }
+    &:active, &.active {
+      border: 2px solid $bg-main-darken;
+      background-color: $bg-main-darken;
+    }
+  }
+
+  &--white {
+    border-color: #fff;
+
+    &:hover {
+      border-color: $bg-main;
+    }
+
+  }
+
+  &--black {
+    color: $text-black;
   }
 }
