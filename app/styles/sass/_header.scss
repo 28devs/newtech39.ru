@@ -1,19 +1,19 @@
 .header {
-  // position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
-  margin-bottom: 13rem;
 
   &__logo {
     display: block;
     width: 200px;
     height: 139px;
-    width: 104px;
-    height: 72px;
     background: url(../img/header-logo.png) center/cover;
+    transition: $header-transition;
   }
 
   &__nav {
+    margin: 24px auto 0 54px;
+
     a {
       @extend %font-main-bold;
       text-transform: uppercase;
@@ -24,11 +24,40 @@
   &__menu {
   }
 
+  .social {
+    margin: 20px 40px 0 0;
+    transition: $header-transition;
+  }
+
   &__btn-phone {
     width: 57px;
     height: 42px;
+    margin-top: 25px;
     background: $bg-main url(../img/icons/header-icon-phone.png) center
       no-repeat;
     border-radius: 20px;
+    transition: $header-transition;
+  }
+
+  &--scroll-state {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 3.92px 0.08px rgba(0, 0, 0, 0.08);
+
+    .header__logo {
+      width: 104px;
+      height: 72px;
+    }
+
+    .header__nav {
+      margin: 14px auto 0 53px;
+    }
+
+    .social {
+      margin-top: 10px;
+    }
+
+    .header__btn-phone {
+      margin-top: 15px;
+    }
   }
 }
