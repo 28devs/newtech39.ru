@@ -1,5 +1,28 @@
 .hero {
-  min-height: 700px;
   background: #f5f5f5 url(../img/main-bg.jpg) center top / cover;
   box-shadow: inset 0 100px 130px rgba(255, 255, 255, 0.5);
+  position: relative;
+
+  .hero__slider,
+  .lSSlideOuter,
+  .lSSlideWrapper,
+  .lslide,
+  .container {
+    height: 700px;
+  }
+
+  .container {
+    position: relative;
+    overflow: auto;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title {
+    margin-top: 300px;
+  }
 }

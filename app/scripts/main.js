@@ -20,3 +20,10 @@ submenus.forEach(function(elem) {
   elem.style.left =
     -Math.abs((elem.offsetWidth - elem.parentNode.offsetWidth) / 2) + 'px';
 });
+
+$(document).ready(function() {
+  $('.hero__slider').lightSlider({
+    item: 1,
+    controls: false
+  });
+});
