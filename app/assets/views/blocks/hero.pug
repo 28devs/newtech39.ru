@@ -1,2 +1,7 @@
 section.hero
-  
+  ul.hero__slider
+    each slide in slides
+      li
+        img(src=slide.href)
+        h1= !{slide.title}
+        p= !{slide.desc}
