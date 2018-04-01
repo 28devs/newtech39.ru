@@ -39,6 +39,14 @@
     }
   }
 
+  .lslide:nth-child(1) img {
+    transform: translateX(-98px);
+  }
+
+  .lslide:nth-child(3) img {
+    transform: translateX(-78px);
+  }
+
   .container {
     position: relative;
     overflow: auto;
