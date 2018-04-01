@@ -1,4 +1,7 @@
 .services {
+  h2 {
+    margin: 70px 0;
+  }
   &__item {
     width: 32%;
     position: relative;
@@ -23,12 +26,13 @@
     &:after {
       @extend %text-devider;
       width: 0;
+      margin: 18px 0;
       transition: .3s ease width;
     }
 
     :hover > .services__text & {
       &:after {
-        @extend %text-devider;
+        width: 50px;
       }
     }
   }
@@ -46,7 +50,30 @@
     bottom: 30px;
     left: 30px;
   }
-  &__item:last-shild {
-    
+  &__item:last-child {
+    img {
+      margin: 30px 0 0 0;
+    }
+    background-color: $bg-main;
+    & .services__title, & .services__desc, & .services__link {
+      color: #fff;
+    }
+    :hover & .services__text {
+      background-color: transparent;
+    }
+    & .services__title {
+      &:after {
+        @extend %text-devider;
+        background-color: #fff;
+      }
+    }
+    & .services__text-hover {
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin: 60px 0 100px;
   }
 }
