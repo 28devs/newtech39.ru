@@ -26,11 +26,7 @@ const heroSlider = $('.hero__slider').lightSlider({
   item: 1,
   controls: false,
   onSliderLoad: function() {
-    //document.querySelectorAll('');
+    document.querySelector('.lSPager').classList.add('container');
+    document.querySelector('.hero').classList.add('hero--slider-load');
   }
 });
-
-const heroSliderDotsWrapper = document.createElement('div');
-heroSliderDotsWrapper.classList.add('container');
-heroSliderDotsWrapper.appendChild(document.querySelector('.lSPager'));
-document.querySelector('.hero').appendChild(heroSliderDotsWrapper);

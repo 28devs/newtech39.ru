@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   @extend %font-second-light;
   color: $text-gray;
   font-size: $root-font-size + px;
@@ -13,6 +14,7 @@ html, body {
 h1 {
   @extend %font-head-styles;
   @include rem-font-size(32);
+  @include rem-line-height(44);
 }
 h2 {
   @extend %font-head-styles;
@@ -22,7 +24,6 @@ h3 {
   @extend %font-head-styles;
   @include rem-font-size(18);
 }
-
 
 .link {
   color: $text-gray-light;
