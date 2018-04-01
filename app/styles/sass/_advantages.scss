@@ -1,8 +1,26 @@
 .advantages {
   padding: 100px 0;
 
+  &-item {
+    padding: 0 22px;
+  }
+
   &-title {
     @extend %font-main-bold;
     text-transform: uppercase;
+    margin: 28px 40px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 23px auto 0;
+      width: 30px;
+      height: 3px;
+      background-color: $bg-main;
+    }
+  }
+
+  &-desc {
+    color: $text-gray;
   }
 }
