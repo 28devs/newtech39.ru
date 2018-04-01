@@ -1,0 +1,30 @@
+.leaf-container {
+  position: relative;
+  overflow: visible !important;
+}
+
+.leaf-1 {
+  background: url(../img/main-leaf-1.png);
+  width: 356px;
+  height: 363px;
+  position: absolute;
+}
+
+.leaf-2 {
+  background: url(../img/main-leaf-2.png);
+  width: 345px;
+  height: 196px;
+  position: absolute;
+}
+
+.hero {
+  .leaf-1 {
+    left: -360px;
+    top: -610px;
+  }
+
+  .leaf-2 {
+    right: -240px;
+    bottom: 0;
+  }
+}

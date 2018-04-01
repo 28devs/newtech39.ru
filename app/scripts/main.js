@@ -2,7 +2,7 @@
 const header = document.querySelector('.header');
 
 const headerScroll = function() {
-  this.scrollY < header.offsetHeight
+  this.scrollY < 30
     ? header.classList.remove('header--scroll-state')
     : header.classList.add('header--scroll-state');
 };
