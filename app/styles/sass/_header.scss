@@ -15,10 +15,54 @@
     margin: 24px auto 0 54px;
     transition: $header-transition;
 
-    .nav-item a {
-      @extend %font-main-bold;
-      text-transform: uppercase;
-      color: $text-black;
+    .nav-item {
+      position: relative;
+
+      > a {
+        @extend %font-main-bold;
+        text-transform: uppercase;
+        color: $text-black;
+      }
+    }
+
+    .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 60px;
+      background-color: #fff;
+      filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.08));
+
+      &:before {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 16px 16px 16px;
+        border-color: transparent transparent #ffffff transparent;
+        content: '';
+        display: block;
+        position: absolute;
+        top: -16px;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+
+      li {
+        a {
+          white-space: nowrap;
+          padding: 15px 30px;
+          display: block;
+          text-decoration: none;
+
+          &:hover,
+          &.active {
+            background: $bg-main;
+            color: #fff;
+          }
+        }
+      }
     }
   }
 
