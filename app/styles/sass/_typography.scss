@@ -2,7 +2,7 @@ html, body {
   @extend %font-second-light;
   color: $text-gray;
   font-size: $root-font-size + px;
-  line-height: $root-line-height + px;
+  @include rem-line-height(26);
 }
 
 %font-head-styles {
