@@ -6,6 +6,7 @@
     width: 32%;
     position: relative;
     cursor: pointer;
+    margin-bottom: 30px;
     & img {width: 100%;}
   }
   &__text {
@@ -74,6 +75,6 @@
 
   &__btn {
     text-align: center;
-    margin: 60px 0 100px;
+    margin: 30px 0 100px;
   }
 }
