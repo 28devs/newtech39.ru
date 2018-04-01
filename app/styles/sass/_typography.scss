@@ -10,13 +10,13 @@ body {
 }
 h1 {
   @extend %font-head-styles;
-  @include rem-size(32px);
+  @include rem-font-size(32px);
 }
 h2 {
   @extend %font-head-styles;
-  @include rem-size(24px);
+  @include rem-font-size(24px);
 }
 h3 {
   @extend %font-head-styles;
-  @include rem-size(18px);
+  @include rem-font-size(18px);
 }
