@@ -1,0 +1,26 @@
+.btn {
+  display: inline-block;
+  border-radius: 31.5px;
+  padding: 26px 35px;
+  @include rem-font-size(14);
+  @include rem-line-height(14);
+  color: #fff;
+  background-color: $bg-main;
+  text-transform: uppercase;
+  @extend %font-main-bold;
+  cursor: pointer;
+  transition: $control-elem-transition;
+
+  &:hover, &:active, &.active {
+    background-color: $bg-main-darken;
+  }
+
+  &--small {
+    padding: 17px 20px;
+  }
+
+  &--outline {
+    background-color: transparent;
+    padding: 22px 31px;
+  }
+}
