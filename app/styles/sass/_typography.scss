@@ -1,8 +1,8 @@
 body {
   @extend %font-second-light;
   color: $text-gray;
-  font-size: $root-font-size;
-  line-height: $root-line-height;
+  font-size: $root-font-size + px;
+  line-height: $root-line-height + px;
 }
 
 %font-head-styles {
@@ -11,13 +11,20 @@ body {
 }
 h1 {
   @extend %font-head-styles;
-  @include rem-font-size(32px);
+  @include rem-font-size(32);
 }
 h2 {
   @extend %font-head-styles;
-  @include rem-font-size(24px);
+  @include rem-font-size(24);
 }
 h3 {
   @extend %font-head-styles;
-  @include rem-font-size(18px);
+  @include rem-font-size(18);
+}
+
+.link {
+
+  &__arrow {
+
+  }
 }
