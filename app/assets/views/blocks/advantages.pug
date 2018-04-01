@@ -1,8 +1,8 @@
 .advantages
   .container
-    .d-flex.justify-content-between
+    .d-flex.flex-row.justify-content-between
       each val in values 
-        .advantages-item
+        .advantages-item.text-center
           img(src='img/icons/' + val.href)
           p.advantages-title= val.title
           p.advantages-desc= val.desc
