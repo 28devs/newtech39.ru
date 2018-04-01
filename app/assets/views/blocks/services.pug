@@ -1,15 +1,16 @@
-.services
-  .container
-    a.link(href='#') Onebanan Studio
-    a.link(href='#').link--arrow Смотреть все услуги
-    a.link(href='#').link--arrow.link--blacked Уберем угри у подростков
+section.services
+  //- .container
+  //-   a.link(href='#') Onebanan Studio
+  //-   a.link(href='#').link--arrow Смотреть все услуги
+  //-   a.link(href='#').link--arrow.link--blacked Уберем угри у подростков
   
   .container
-    h2 Эффективные решения
+    h2.text-center Эффективные решения
     .d-flex.flex-row.justify-content-between
       each val in services 
         .services__item.text-center
           img(src='img/' + val.href)
-          p.services__title
-            a.link(href='#').link--arrow.link--blacked= val.title
-          p.services__desc= val.desc
+          div.services__text
+            p.services__title
+              a.link(href='#').link--arrow.link--blacked !{val.title}
+            p.services__desc !{val.desc}
