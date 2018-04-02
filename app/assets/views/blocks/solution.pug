@@ -1,15 +1,28 @@
 section.solution
   
+  //- .container
+  //-   h2.text-center Эффективные решения
+  //-   .d-flex.flex-row.justify-content-between
+  //-     each val in solution 
+  //-       .solution__item.text-center
+  //-         img(src='img/' + val.href)
+  //-         div.solution__text
+  //-           p.solution__title
+  //-             a.link(href='#').link--arrow.link--blacked !{val.title}
+  //-           p.solution__desc !{val.desc}
+
+  //-   .solution__btn
+  //-     a(href='#').btn Смотреть все решения
   .container
     h2.text-center Эффективные решения
-    .d-flex.flex-row.justify-content-between
+    .row
       each val in solution 
-        .solution__item.text-center
-          img(src='img/' + val.href)
-          div.solution__text
-            p.solution__title
-              a.link(href='#').link--arrow.link--blacked !{val.title}
-            p.solution__desc !{val.desc}
+          .col-3.solution__item.text-center
+            img(src='img/' + val.href)
+            div.solution__text
+              p.solution__title
+                a.link(href='#').link--arrow.link--blacked !{val.title}
+              p.solution__desc !{val.desc}
 
-    .solution__btn
-      a(href='#').btn Смотреть все решения
+      .solution__btn.col-12
+        a(href='#').btn Смотреть все решения
