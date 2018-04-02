@@ -3,8 +3,8 @@
     overflow: hidden;
   }
   .row {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
   &:after {
     @extend %devider;
@@ -18,7 +18,7 @@
   &__item {
     position: relative;
     cursor: pointer;
-    padding: 20px;
+    padding: 5px;
   }
 
   &__img {
