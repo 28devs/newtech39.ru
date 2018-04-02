@@ -4,7 +4,7 @@ section.gallery
     .row
         each val in gallery
           .col-3.gallery__item
-            a(href= val.img )
+            a(href= val.img data-src= val.img)
               img.gallery__img(src= val.thumb)
               .gallery__hover 
                 img(src='img/icons/gallery-icon-hover.png')

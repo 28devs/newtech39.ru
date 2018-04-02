@@ -1,4 +1,11 @@
 .services {
+  &__wrap {
+    overflow: hidden;
+  }
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
   &:after {
     @extend %devider;
     margin-top: 95px;
@@ -7,16 +14,18 @@
   h2 {
     margin: 70px 0;
   }
-
+  
   &__item {
-    width: 32%;
     position: relative;
     cursor: pointer;
-    margin-bottom: 30px;
+    padding: 5px;
+  }
 
-    & img {
-      width: 100%;
-    }
+  &__img {
+    position: relative;
+    padding-top: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &__text {
@@ -66,7 +75,11 @@
   }
 
   &__item:last-child {
-    background-color: $bg-main;
+    & .services__img {
+      background-color: $bg-main;
+      background-size: 90%;
+      background-position: right center;
+    }
 
     img {
       margin: 30px 0 0 0;
