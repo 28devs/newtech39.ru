@@ -2,10 +2,12 @@
   &__wrap {
     overflow: hidden;
   }
+
   .row {
     margin-left: -5px;
     margin-right: -5px;
   }
+
   &:after {
     @extend %devider;
     margin-top: 95px;
@@ -14,7 +16,7 @@
   h2 {
     margin: 70px 0;
   }
-  
+
   &__item {
     position: relative;
     cursor: pointer;
@@ -36,7 +38,7 @@
     right: 20px;
     padding: 30px;
     background-color: transparent;
-    transition: ease 0.5s;
+    transition: ease 0.3s;
 
     :hover > & {
       background-color: #fff;

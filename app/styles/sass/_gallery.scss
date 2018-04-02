@@ -28,7 +28,10 @@
   &__hover {
     opacity: 0;
     position: absolute;
-    top: 35px;bottom: 35px;left: 35px;right: 35px;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     display: flex;
     transform: scale(0);
     justify-content: center;
@@ -38,7 +41,7 @@
     cursor: pointer;
 
     :hover > & {
-      opacity: .97;
+      opacity: 0.97;
       transform: scale(1);
     }
   }

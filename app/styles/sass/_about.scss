@@ -4,9 +4,13 @@
     margin-top: 44px;
   }
 
+  &__photo {
+    margin: 9px 26px;
+  }
+
   h2 {
     text-align: center;
-    margin: 76px 0 70px;
+    margin: 76px 0 46px;
   }
 
   &__desc {
@@ -22,10 +26,11 @@
     @extend %font-main-regular;
     @include rem-font-size(18);
     color: $text-black;
-    margin-bottom: 7px;
+    margin-bottom: 11px;
+    margin-top: 3px;
   }
 
   &__sign {
-    margin-top: -50px;
+    margin: -57px 41px 0;
   }
 }
