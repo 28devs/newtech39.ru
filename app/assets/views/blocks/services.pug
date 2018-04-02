@@ -1,17 +1,19 @@
 section.services
   
   h2.text-center Эффективные решения
-  .d-flex.flex-row.flex-wrap.justify-content-between
-    each val in services 
-      .services__item
-        img(src= val.href)
-        div.services__text
-          h3.services__title !{val.title}
-          .services__text-hover
-            p.services__desc !{val.desc}
-            if !val.last
-              a.services__link.link(href='#').link--arrow.link--blacked.link--blacked--small Смотреть все услуги
-            else 
-              .services__link.btn.btn--outline.btn--white Узнать больше
+  .services__wrap
+    .row
+      each val in services 
+          .col-4.services__item
+            .services__img(style="background-image: url('" +val.href+ "')")
+              .services__text
+                h3.services__title !{val.title}
+                .services__text-hover
+                  p.services__desc !{val.desc}
+                  if !val.last
+                    a.services__link.link(href='#').link--arrow.link--blacked.link--blacked--small Смотреть все услуги
+                  else 
+                    .services__link.btn.btn--outline.btn--white Узнать больше
+
   .services__btn
     a.link(href='#').link--arrow Смотреть все услуги
