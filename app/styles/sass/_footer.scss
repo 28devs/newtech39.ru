@@ -1,5 +1,6 @@
 .footer {
-  background: #f5f5f5 url(../img/main-bg.jpg) center top / cover;
+  background: #f5f5f5 url(../img/main-bg.jpg) center 80px / cover;
+  overflow: hidden;
 
   &__callback {
     padding: 20px 0;
@@ -39,5 +40,35 @@
 
   &__nav {
     padding: 64px 0;
+
+    &-item {
+      @include rem-font-size(16);
+      @extend %font-main-bold;
+      color: $text-black;
+      cursor: default;
+      margin-bottom: 20px;
+      display: block;
+
+      &:hover {
+        color: $text-black;
+        text-decoration: none;
+      }
+    }
+
+    &-childs {
+      .nav-link {
+        padding: 1px 0;
+        color: #666666;
+        border-bottom: 1px #c5c5c5 solid;
+        line-height: 14px;
+        margin-bottom: 20px;
+        transition: 0.1s;
+
+        &:hover {
+          color: $bg-main;
+          border-color: transparent;
+        }
+      }
+    }
   }
 }

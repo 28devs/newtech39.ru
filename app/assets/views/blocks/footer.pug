@@ -11,13 +11,13 @@ footer.footer
       .row
         each nav in navsFooter
           .col-6.col-md-3
-            a(href=nav.url)= nav.title
+            a.footer__nav-item(href=nav.url)= nav.title
 
       .row
         each nav in navsFooter
-          each child in nav.childs
-            .col-6.col-md-3
-              .nav
+          .col-6.col-md-3
+            each child in nav.childs
+              .nav.footer__nav-childs
                 a.nav-link(href=child.url)= child.title
 
 
