@@ -14,6 +14,21 @@
 @import 'about';
 @import 'footer';
 
+$container-max-widths: (
+  sm: 375px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1202px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 768px,
+  lg: 1220px,
+  xl: 1600px
+);
+@import '../../libs/bootstrap/scss/bootstrap.scss';
 body {
   background-color: #fff;
 }
