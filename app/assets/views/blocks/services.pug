@@ -4,7 +4,7 @@ section.services
   .services__wrap
     .row
       each val in services 
-          .col-4.services__item
+          .col-xl-4.col-lg-6.col-6.services__item
             .services__img(style="background-image: url('" +val.href+ "')")
               .services__text
                 h3.services__title !{val.title}
