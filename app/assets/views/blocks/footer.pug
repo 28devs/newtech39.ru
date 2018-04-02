@@ -1,13 +1,25 @@
-.devider
-  .container
-    .devider__inner
-
 footer.footer
-  .footer__callback.d-flex.align-items-center.justify-content-center
-    p Вы можете получить консультацию по телефону: 
-    a(href='tel:88005555555') 8-800-555-55-55
-    p или
-    a.btn(href='#') Задать вопрос
+  .footer__callback
+    .container.d-flex.align-items-center.justify-content-center
+      p Вы можете получить консультацию по телефону: 
+      a.footer__tel(href='tel:88005555555') 8-800-555-55-55
+      p или
+      a.btn(href='#') Задать вопрос
+
+  nav.footer__nav
+    .container
+      .row
+        each nav in navsFooter
+          .col-6.col-md-3
+            a(href=nav.url)= nav.title
+
+      .row
+        each nav in navsFooter
+          each child in nav.childs
+            .col-6.col-md-3
+              .nav
+                a.nav-link(href=child.url)= child.title
+
 
 
 

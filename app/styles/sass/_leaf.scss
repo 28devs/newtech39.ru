@@ -1,4 +1,5 @@
 .leaf-container {
+  @extend .container;
   position: relative;
   overflow: visible !important;
 }

@@ -1,7 +1,8 @@
-.devider {
+%devider {
+  @extend .container;
   width: 100%;
   height: 20px;
-  background-image: url(../img/main-devider.png) center no-repeat/cover;
+  background: url(../img/main-devider.png) center no-repeat/cover;
   content: '';
   display: block;
 }
