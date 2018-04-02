@@ -1,21 +1,30 @@
 .about {
+  &:after {
+    @extend %devider;
+    margin-top: 44px;
+  }
+
   h2 {
     text-align: center;
-    margin: 100px 0 70px;
+    margin: 76px 0 70px;
   }
+
   &__desc {
     @include rem-line-height(32);
+
     &:after {
       @extend %text-devider;
       background-color: $bg-main;
     }
   }
+
   &__name {
     @extend %font-main-regular;
-    @include rem-font-size(18)
+    @include rem-font-size(18);
     color: $text-black;
     margin-bottom: 7px;
   }
+
   &__sign {
     margin-top: -50px;
   }

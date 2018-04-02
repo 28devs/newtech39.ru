@@ -1,5 +1,10 @@
 .advantages {
-  padding: 100px 0 92px;
+  padding: 100px 0 0;
+
+  &:after {
+    @extend %devider;
+    margin-top: 95px;
+  }
 
   &__item {
     width: 20%;
