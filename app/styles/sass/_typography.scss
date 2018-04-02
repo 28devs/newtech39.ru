@@ -41,6 +41,23 @@ h5 {
   @include rem-line-height(20);
 }
 
+@include media-breakpoint-down(md) {
+  h1 {
+    @include rem-font-size(24);
+    @include rem-line-height(32);
+  }
+
+  h2 {
+    @include rem-font-size(20);
+    @include rem-line-height(30);
+  }
+
+  h3 {
+    @include rem-font-size(16);
+    @include rem-line-height(24);
+  }
+}
+
 .link {
   color: $text-gray-light;
   text-decoration: none;
