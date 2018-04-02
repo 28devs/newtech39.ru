@@ -11,14 +11,49 @@ footer.footer
       .row
         each nav in navsFooter
           .col-6.col-md-3
-            a.footer__nav-item(href=nav.url)= nav.title
+            h4.footer__nav-item
+              a(href=nav.url)= nav.title
 
       .row
         each nav in navsFooter
           .col-6.col-md-3
-            each child in nav.childs
-              .nav.footer__nav-childs
-                a.nav-link(href=child.url)= child.title
+            .row.footer__nav-childs
+              each child in nav.childs
+                .col-6.col-md-12
+                  a.nav-link(href=child.url)= child.title
+
+  .footer__address 
+    .container
+      .row
+        each address in footerAddress
+          .col-6.col-md-3
+            h5= address.title
+            p= address.phone
+            p= address.address
+        
+        .col-6.col-md-3
+          a.footer__logo(href='#')
+
+  .footer__copy
+    .container
+      .row
+        .col-6.col-md-3
+          p © 2018, nextech39.ru
+          
+        .col-6.col-md-3.d-flex.align-items-center
+          .social.d-flex
+            a.social__link.social__in(href='#')
+            a.social__link.social__fb(href='#')
+            a.social__link.social__yt(href='#')
+
+        .col-6.col-md-3
+          p 
+            a.link(href='mailto:info@newtech39.ru') info@newtech39.ru
+        .col-6.col-md-3
+          p 
+            | Разработка - 
+            a.link(href='#') Onebanan Studio
+
 
 
 

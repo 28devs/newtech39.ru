@@ -3,16 +3,27 @@
   overflow: hidden;
 
   &__callback {
-    padding: 20px 0;
     background: #fff;
-    box-shadow: 0px -6px 15px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 
     &:before {
       @extend %devider;
     }
 
+    &:after {
+      @extend .leaf, .leaf--2;
+      bottom: -60px;
+      left: -140px;
+    }
+
+    .container {
+      padding: 20px 0 28px;
+    }
+
     p {
-      margin: 0;
+      margin: 0 20px;
       @include rem-font-size(18);
     }
   }
@@ -24,8 +35,8 @@
     text-decoration: none;
     display: block;
     position: relative;
-    padding-left: 30px;
-    margin: 0 30px;
+    padding-left: 39px;
+    margin: 0 20px;
 
     &:before {
       width: 23px;
@@ -35,19 +46,30 @@
       content: '';
       position: absolute;
       left: 0;
+      top: 2px;
     }
   }
 
   &__nav {
-    padding: 64px 0;
+    padding: 55px 0 38px;
+    overflow: hidden;
 
-    &-item {
-      @include rem-font-size(16);
-      @extend %font-main-bold;
+    .container {
+      position: relative;
+
+      &:after {
+        @extend .leaf, .leaf--1;
+        right: -34px;
+        bottom: -141px;
+        transform: scale(0.84);
+      }
+    }
+
+    &-item a {
       color: $text-black;
       cursor: default;
-      margin-bottom: 20px;
-      display: block;
+      margin-bottom: 26px;
+      display: inline-block;
 
       &:hover {
         color: $text-black;
@@ -63,12 +85,54 @@
         line-height: 14px;
         margin-bottom: 20px;
         transition: 0.1s;
+        display: inline-block;
 
         &:hover {
           color: $bg-main;
           border-color: transparent;
         }
       }
+    }
+  }
+
+  &__address {
+    background: #fff;
+    padding: 35px 0 31px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    h5 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include rem-font-size(14);
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 180px;
+    height: 127px;
+    background: url(../img/header-logo.png) center/cover;
+    margin-top: -35px;
+  }
+
+  &__copy {
+    padding: 20px 0;
+
+    .social a {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    p {
+      @include rem-font-size(14);
+      margin: 0;
     }
   }
 }

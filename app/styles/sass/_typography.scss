@@ -29,6 +29,18 @@ h3 {
   @include rem-line-height(28);
 }
 
+h4 {
+  @extend %font-head-styles;
+  @include rem-font-size(16);
+  @include rem-line-height(26);
+}
+
+h5 {
+  @extend %font-head-styles;
+  @include rem-font-size(14);
+  @include rem-line-height(20);
+}
+
 .link {
   color: $text-gray-light;
   text-decoration: none;
