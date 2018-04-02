@@ -11,15 +11,18 @@ body {
   color: $text-black;
   text-transform: uppercase;
 }
+
 h1 {
   @extend %font-head-styles;
   @include rem-font-size(32);
   @include rem-line-height(44);
 }
+
 h2 {
   @extend %font-head-styles;
   @include rem-font-size(24);
 }
+
 h3 {
   @extend %font-head-styles;
   @include rem-font-size(18);
@@ -28,7 +31,7 @@ h3 {
 
 .link {
   color: $text-gray-light;
-  text-decoration: underline;
+  text-decoration: none;
   transition: $control-elem-transition;
   @include rem-font-size(14);
 
@@ -49,6 +52,7 @@ h3 {
     @include rem-font-size(16);
     @extend %font-main-regular;
   }
+
   &--blacked {
     color: $text-black;
     @include rem-font-size(18);
@@ -56,14 +60,14 @@ h3 {
 
     &:hover {
       text-decoration-color: transparent;
-      // text-decoration: none;
     }
+
     &:active {
       text-decoration: none;
     }
+
     &--small {
       @include rem-font-size(14);
     }
-
   }
 }
