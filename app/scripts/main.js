@@ -33,5 +33,6 @@ const heroSlider = $('.hero__slider ul').lightSlider({
 
 // main page gallery initializatio
 const lightGalleryMain = $('#gallery-main').lightGallery({
-  selector: '.gallery__item a'
+  selector: '.gallery__item a',
+  downloadUrl: false
 });
