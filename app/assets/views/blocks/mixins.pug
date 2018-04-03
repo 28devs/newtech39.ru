@@ -1,0 +1,20 @@
+mixin list-item(data)
+  .list-item&attributes(attributes)
+    .list-item__inner
+      a.list-item__img(style="background-image: url('" +data.href+ "')")
+        .list-item__img-hover
+
+      .list-item__link
+        a.link--blacked !{data.title}
+
+      if data.time
+        p.list-item__time
+          
+
+      if data.desc 
+        p.list-item__desc
+
+      if data.tags
+        .list-item__tags
+          each val in data.tags
+            span.list-item__tag val
