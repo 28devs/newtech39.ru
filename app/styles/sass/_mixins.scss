@@ -1,0 +1,11 @@
+@mixin rem-font-size($size) {
+  font-size: ($size / $root-font-size) + rem;
+}
+
+@mixin rem-line-height($size) {
+  line-height: ($size / $root-font-size) + rem;
+}
+
+@mixin nav-icon-arrow-right($color) {
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 17" xmlns="http://www.w3.org/2000/svg"><path d="m3 1l7 7-7 7" fill="none" fill-rule="evenodd" stroke="#{$color}" stroke-width="2px"/></svg>');
+}

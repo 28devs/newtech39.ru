@@ -3,7 +3,13 @@ header.header
     a.header__logo(href='#')
 
     nav.header__nav
+      button.header__nav-open
+
       ul.nav
+        li.nav-item.header__nav-title 
+          | Меню
+          button.header__nav-close
+
         each nav in navs
           li.nav-item
             a.nav-link(href=nav.url)= nav.title
@@ -16,8 +22,8 @@ header.header
 
     .header__menu.d-flex.align-items-center
       .social.d-flex
-        a.social__link.social__in(href='#')
-        a.social__link.social__fb(href='#')
-        a.social__link.social__yt(href='#')
+        a.social__link.social__in(href='#!')
+        a.social__link.social__fb(href='#!')
+        a.social__link.social__yt(href='#!')
 
       .header__btn-phone

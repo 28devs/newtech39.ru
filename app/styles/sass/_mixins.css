@@ -1,6 +1,0 @@
-@mixin rem-font-size($size) {
-  font-size: ($size / $root-font-size) + rem;
-}
-@mixin rem-line-height($size) {
-  line-height: ($size / $root-font-size) + rem;
-}

@@ -12,47 +12,55 @@ body {
   text-transform: uppercase;
 }
 
-h1 {
+h1,
+.h1 {
   @extend %font-head-styles;
   @include rem-font-size(32);
   @include rem-line-height(44);
 }
 
-h2 {
+h2,
+.h2 {
   @extend %font-head-styles;
   @include rem-font-size(24);
 }
 
-h3 {
+h3,
+.h3 {
   @extend %font-head-styles;
   @include rem-font-size(18);
   @include rem-line-height(28);
 }
 
-h4 {
+h4,
+.h4 {
   @extend %font-head-styles;
   @include rem-font-size(16);
   @include rem-line-height(26);
 }
 
-h5 {
+h5,
+.h5 {
   @extend %font-head-styles;
   @include rem-font-size(14);
   @include rem-line-height(20);
 }
 
 @include media-breakpoint-down(md) {
-  h1 {
+  h1,
+  .h1 {
     @include rem-font-size(24);
     @include rem-line-height(32);
   }
 
-  h2 {
+  h2,
+  .h2 {
     @include rem-font-size(20);
     @include rem-line-height(30);
   }
 
-  h3 {
+  h3,
+  .h3 {
     @include rem-font-size(16);
     @include rem-line-height(24);
   }

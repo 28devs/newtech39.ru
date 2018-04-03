@@ -31,8 +31,29 @@ const heroSlider = $('.hero__slider ul').lightSlider({
   }
 });
 
-// main page gallery initializatio
+// Main page gallery initializatio
 const lightGalleryMain = $('#gallery-main').lightGallery({
   selector: '.gallery__item a',
   downloadUrl: false
+});
+
+// Header nav mobile
+const headerNavBtnOpen = document.querySelector('.header__nav-open');
+const headerNavBtnClose = document.querySelector('.header__nav-close');
+
+headerNavBtnOpen.addEventListener('click', function() {
+  headerNavBtnOpen.parentNode.classList.add('header__nav--open');
+});
+
+const headerNavsWithChilds = document.querySelectorAll(
+  '.header__nav .nav-child'
+);
+
+const headerNavsChild = function() {
+  console.log(this);
+  this.classList.add('header__nav-child-open');
+};
+
+headerNavsWithChilds.forEach(function(elem) {
+  elem.addEventListener('click', headerNavsChild);
 });
