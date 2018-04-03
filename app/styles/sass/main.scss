@@ -15,12 +15,12 @@ $grid-breakpoints: (
 @import '../../libs/bootstrap/scss/bootstrap.scss';
 @import 'var';
 @import 'mixins';
+@import 'font';
+@import 'typography';
 @import 'list-item';
 @import 'btn';
 @import 'devider';
 @import 'header';
-@import 'font';
-@import 'typography';
 @import 'advantages';
 @import 'services';
 @import 'solution';

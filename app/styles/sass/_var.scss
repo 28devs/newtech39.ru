@@ -10,28 +10,3 @@ $root-font-size: 16;
 
 $header-transition: ease 0.3s;
 $control-elem-transition: ease 0.3s;
-
-%font-main-bold {
-  font-family: 'Merriweather', sans-serif;
-  font-weight: 700;
-}
-
-%font-main-regular {
-  font-family: 'Merriweather', sans-serif;
-  font-weight: 300;
-}
-
-%font-second-light {
-  font-family: 'SF UI Display', sans-serif;
-  font-weight: 200;
-}
-
-%text-devider {
-  width: 50px;
-  height: 3px;
-  background: $bg-second;
-  content: '';
-  display: block;
-  margin: 28px 0;
-  border-radius: 2px;
-}

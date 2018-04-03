@@ -6,6 +6,35 @@ body {
   @include rem-line-height(26);
 }
 
+@mixin font-main-bold() {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 700;
+}
+
+%font-main-bold {
+  @include font-main-bold;
+}
+
+%font-main-regular {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 300;
+}
+
+%font-second-light {
+  font-family: 'SF UI Display', sans-serif;
+  font-weight: 200;
+}
+
+%text-devider {
+  width: 50px;
+  height: 3px;
+  background: $bg-second;
+  content: '';
+  display: block;
+  margin: 28px 0;
+  border-radius: 2px;
+}
+
 %font-head-styles {
   @extend %font-main-bold;
   color: $text-black;
