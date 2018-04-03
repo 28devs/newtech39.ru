@@ -92,6 +92,7 @@ h5,
 
   &--blacked {
     color: $text-black;
+    text-decoration: underline;
     @include rem-font-size(18);
     @include rem-line-height(28);
 
