@@ -66,4 +66,21 @@
       }
     } 
   }
+  
+  &--lined {
+    .list-item {
+      &__img {
+        height: 150px;
+        width: 150px;
+      }
+
+      &__title {
+        &:after {
+          @extend %text-devider;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    } 
+  }
 }

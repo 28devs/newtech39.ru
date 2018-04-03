@@ -1,0 +1,11 @@
+section.team
+  .container
+    h2.text-center Наш коллектив 
+    .row
+      each val in team 
+        .col-xl-3.col-lg-6.col-6.team__item
+          +list-item(val)(class='list-item--lined')
+       
+
+      .team__btn.col-12
+        a(href='#').btn Смотреть все решения
