@@ -34,6 +34,10 @@
   .advantages {
     padding: 70px 0 0;
 
+    &:after {
+      margin-top: 5px;
+    }
+
     &__item {
       min-width: 30%;
       margin-bottom: 70px;
@@ -50,16 +54,25 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
   .advantages {
     padding: 50px 0 0;
+
+    &:after {
+      margin-top: -25px;
+    }
 
     &__item {
       min-width: 50%;
       margin-bottom: 70px;
+
+      img {
+        height: 60px;
+      }
     }
 
     &__title {
+      margin-top: 19px;
     }
   }
 }

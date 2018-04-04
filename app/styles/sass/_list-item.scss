@@ -1,14 +1,21 @@
 .list-item {
+  width: 100%;
+
   &__inner {
     display: flex;
     flex-flow: column;
     align-items: center;
   }
-  
+
+  &__img-wrap {
+    width: 100%;
+    max-width: 200px;
+  }
+
   &__img {
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    padding-top: 100%;
     background-size: cover;
     margin: 0 auto;
   }
@@ -16,20 +23,26 @@
   &__img {
     position: relative;
   }
-  
+
   &__img-hover {
-    border-radius: 50%; 
+    border-radius: 50%;
     position: absolute;
-    top: 10px;left: 10px;right: 10px;bottom: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
     background-color: $bg-main;
     background-image: url(../img/icons/gallery-icon-hover-white.png);
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(0);
-    transition: $control-elem-transition;
+    transform: scale(1.1);
+    opacity: 0;
+    transition: 0.3s ease;
 
     .list-item__img:hover & {
       transform: scale(1);
+      opacity: 1;
     }
   }
 
@@ -40,7 +53,7 @@
   &__title {
     margin: 36px 0 16px;
 
-    & a:hover{
+    & a:hover {
       color: $bg-main;
       text-decoration: underline;
     }
@@ -55,7 +68,8 @@
       &__title {
         display: inline-block;
         padding-left: 28px;
-        background: url('../img/icons/link-arrow-right.png') left top 4px no-repeat;
+        background: url('../img/icons/link-arrow-right.png') left top 4px
+          no-repeat;
         background-size: 18px;
         @include rem-font-size(16);
         @extend %font-main-regular;
@@ -64,9 +78,9 @@
       &__desc {
         margin-left: 28px;
       }
-    } 
+    }
   }
-  
+
   &--lined {
     .list-item {
       &__img {
@@ -81,6 +95,6 @@
           margin-right: auto;
         }
       }
-    } 
+    }
   }
 }

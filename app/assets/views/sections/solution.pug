@@ -1,9 +1,10 @@
 section.solution
   .container
     h2.text-center Эффективные решения
+
     .row
       each val in solution 
-        .col-xl-3.col-lg-6.col-6.solution__item
+        .solution__item.col-6.col-md-4.col-lg-3.d-flex.justify-content-center
           +list-item(val)(class='list-item--arrowed')
        
       .solution__btn.col-12

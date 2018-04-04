@@ -1,5 +1,4 @@
 .solution {
-  display: none;
   &:after {
     @extend %devider;
     margin-top: 15px;
@@ -25,5 +24,13 @@
   &__btn {
     padding: 82px 0;
     text-align: center;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .solution {
+    &__item:nth-of-type(4) {
+      display: none !important;
+    }
   }
 }

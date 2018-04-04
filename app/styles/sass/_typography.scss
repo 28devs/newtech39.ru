@@ -134,14 +134,14 @@ p {
   }
 
   p {
-    @include rem-font-size(16);
-    @include rem-line-height(26);
+    @include rem-font-size(14);
+    @include rem-line-height(22);
   }
 }
 
 @include media-breakpoint-down(sm) {
   p {
-    @include rem-font-size(14);
-    @include rem-line-height(22);
+    @include rem-font-size(12);
+    @include rem-line-height(18);
   }
 }
