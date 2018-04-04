@@ -1,6 +1,7 @@
 .footer {
   background: #f5f5f5 url(../img/main-bg.jpg) center 80px / cover;
   overflow: hidden;
+  background-attachment: fixed;
 
   &__callback {
     background: #fff;
@@ -123,7 +124,7 @@
     display: block;
     width: 180px;
     height: 127px;
-    background: url(../img/header-logo.png) center/cover;
+    background: url(../img/header-logo.png) left top no-repeat/contain;
     margin-top: -35px;
   }
 
@@ -178,6 +179,14 @@
         @include rem-line-height(12);
       }
     }
+
+    &__address {
+      padding: 26px 0;
+    }
+
+    &__logo {
+      height: 97px;
+    }
   }
 }
 
@@ -201,6 +210,75 @@
       .btn {
         margin-top: 15px;
       }
+    }
+
+    &__nav {
+      padding-bottom: 28px;
+
+      a {
+        margin-bottom: 0;
+        text-decoration: underline;
+        @include rem-font-size(14);
+      }
+
+      .container {
+        &:after {
+          bottom: -241px;
+        }
+      }
+    }
+
+    &__nav-item a {
+      &:hover,
+      &.active {
+        color: $bg-main;
+        text-decoration: none;
+      }
+    }
+
+    &__nav-items:after {
+      @include text-devider;
+      margin: 17px 0 24px 15px;
+      width: 40px;
+      background: $bg-main;
+    }
+
+    &__address {
+      padding: 26px 0 5px;
+
+      h5 {
+        & + p {
+          margin-bottom: 5px;
+
+          & + p {
+            margin-bottom: 25px;
+          }
+        }
+      }
+
+      p {
+        @include rem-font-size(12);
+      }
+    }
+
+    &__logo {
+      margin-top: 0;
+    }
+
+    &__nav-childs:not(.active) {
+      display: none;
+    }
+
+    &__copy {
+      .col-6:nth-of-type(3),
+      .col-6:nth-of-type(4) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .nav-link {
+      margin-bottom: 9px;
+      color: $text-black;
     }
   }
 }

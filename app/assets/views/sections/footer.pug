@@ -5,20 +5,20 @@ footer.footer
       p.d-block.d-lg-none Консультация по телефону: 
       a.footer__tel(href='tel:88005555555') 8-800-555-55-55
       p или
-      a.btn(href='#') Задать вопрос
+      a.btn(href='#!') Задать вопрос
 
   nav.footer__nav
     .container
-      .row
-        each nav in navsFooter
+      .row.footer__nav-items
+        each nav, index in navsFooter
           .col-6.col-md-3
             h4.footer__nav-item
-              a(href=nav.url)= nav.title
+              a(href='#' + index class=index === 0 ? 'active' : '')= nav.title
 
       .row
-        each nav in navsFooter
+        each nav, index in navsFooter
           .col-12.col-md-3
-            .row.footer__nav-childs
+            .row.footer__nav-childs(class=index === 0 ? 'active' : '' data-footer-nav-child=index)
               each child in nav.childs
                 .col-6.col-md-12
                   a.nav-link(href=child.url)= child.title
@@ -28,32 +28,33 @@ footer.footer
       .row
         each address in footerAddress
           .col-6.col-md-3
-            h5= address.title
+            h5!= address.title
             p= address.phone
             p= address.address
         
         .col-6.col-md-3
-          a.footer__logo(href='#')
+          a.footer__logo(href='#!')
 
   .footer__copy
     .container
       .row
-        .col-6.col-md-3
+        .col-6.col-md-3.d-flex.align-items-center.order-3.order-md-1
           p © 2018, nextech39.ru
           
-        .col-6.col-md-3.d-flex.align-items-center
+        .col-6.col-md-3.d-flex.align-items-center.order-4.order-md-2
           .social.d-flex
-            a.social__link.social__in(href='#')
-            a.social__link.social__fb(href='#')
-            a.social__link.social__yt(href='#')
+            a.social__link.social__in(href='#!')
+            a.social__link.social__fb(href='#!')
+            a.social__link.social__yt(href='#!')
 
-        .col-6.col-md-3
+        .col-6.col-md-3.d-flex.align-items-center.order-1.order-md-3
           p 
             a.link(href='mailto:info@newtech39.ru') info@newtech39.ru
-        .col-6.col-md-3
+
+        .col-6.col-md-3.d-flex.align-items-center.order-2.order-md-4
           p 
             | Разработка - 
-            a.link(href='#') Onebanan Studio
+            a.link(href='#!') Onebanan Studio
 
 
 

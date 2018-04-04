@@ -116,6 +116,14 @@
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .services {
+    &__img {
+      padding-top: 50%;
+    }
+  }
+}
+
 @include media-breakpoint-down(md) {
   .services {
     h2 {
@@ -137,6 +145,10 @@
     &__text {
       margin: 10px;
       padding: 20px 25px;
+    }
+
+    &__img {
+      padding-top: 72%;
     }
   }
 }

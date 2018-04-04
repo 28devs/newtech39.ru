@@ -42,11 +42,17 @@ const heroSlider = $('.hero__slider ul').lightSlider({
   onSliderLoad: function() {
     document.querySelector('.lSPager').classList.add('container');
     document.querySelector('.hero').classList.add('hero--slider-load');
+  },
+  onBeforeNextSlide: function() {
+    document.querySelector('.hero').classList.add('hero--slider-slide');
+  },
+  onAfterSlide: function() {
+    document.querySelector('.hero').classList.remove('hero--slider-slide');
   }
 });
 
 //
-// Main page gallery initializatio
+// Main page gallery initialization
 //
 
 const lightGalleryMain = $('#gallery-main').lightGallery({
@@ -101,3 +107,30 @@ const returnPrevBtnText = function() {
 };
 
 headerNavBtnPrev.addEventListener('click', returnPrevBtnText);
+
+//
+// Footer nav tabs (work on small resolution)
+//
+
+const footerNavBtns = document.querySelectorAll('.footer__nav-item a');
+const footerNavs = document.querySelectorAll('.footer__nav-childs');
+
+const showFooterNav = function() {
+  let index = this.getAttribute('href').slice(1);
+
+  footerNavBtns.forEach(function(elem) {
+    elem.classList.remove('active');
+  });
+
+  this.classList.add('active');
+
+  footerNavs.forEach(function(elem) {
+    elem.classList.remove('active');
+  });
+
+  footerNavs[index].classList.add('active');
+};
+
+footerNavBtns.forEach(function(elem) {
+  elem.addEventListener('click', showFooterNav);
+});
