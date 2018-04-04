@@ -32,10 +32,11 @@
 
   &__text {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
     padding: 30px;
     background-color: transparent;
     transition: ease 0.3s;
@@ -112,5 +113,30 @@
   &__btn {
     text-align: center;
     margin: 30px 0 30px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .services {
+    h2 {
+      margin: 40px auto 27px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .services {
+    &:after {
+      margin: 16px 0;
+    }
+
+    &__link {
+      position: static;
+    }
+
+    &__text {
+      margin: 10px;
+      padding: 20px 25px;
+    }
   }
 }

@@ -44,12 +44,23 @@
 
     &__sign {
       margin: 0;
-      max-width: 128px;
+      max-width: 168px;
     }
   }
 }
 
 @include media-breakpoint-down(sm) {
   .about {
+    h2 {
+      margin: 40px 0 20px;
+    }
+
+    &:after {
+      margin-top: 23px;
+    }
+
+    &__desc {
+      @include rem-line-height(24);
+    }
   }
 }

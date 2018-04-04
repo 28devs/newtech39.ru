@@ -5,6 +5,8 @@
   background: url(../img/main-devider.png) center no-repeat/cover;
   content: '';
   display: block;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 %text-devider {
@@ -18,6 +20,10 @@
 }
 
 @include media-breakpoint-down(md) {
+  %devider {
+    width: calc(100% - 30px);
+  }
+
   %text-devider {
     margin: 20px 0;
   }
