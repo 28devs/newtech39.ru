@@ -11,11 +11,3 @@ section.gallery
 
   .gallery__btn
     a.link(href='#').link--arrow Перейти в фотогалерею
-
-    each val in gallery
-      .col-3.gallery__item
-        a(href= val.img data-src= val.img)
-          img.gallery__img(src= val.thumb)
-            .gallery__hover 
-              img(src='img/icons/gallery-icon-hover.png')
-     
