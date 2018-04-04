@@ -1,7 +1,9 @@
 .mission {
-  margin: 80px 0;
+  margin: 60px 0 80px;
 
   h2 {
+    margin-top: 20px;
+
     &:after {
       @extend %text-devider;
     }

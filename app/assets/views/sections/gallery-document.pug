@@ -1,0 +1,13 @@
+section.gallery-document
+  .container
+
+    h2 Документы клиники
+
+    .gallery__wrap#gallery-main
+      .row
+        each val in galleryDocument
+          +gallery(val)(class='gallery__item--desc')
+
+    .gallery-document__btn.text-center
+      a(href='#!').btn Смотреть все документы
+      
