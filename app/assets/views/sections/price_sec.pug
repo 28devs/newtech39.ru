@@ -1,0 +1,23 @@
+section.price
+  .container
+
+    +menu(menuTypeServe)  
+
+    h2 Косметология
+
+    table.price__table
+      thead
+        tr
+          th 
+            p Наименования услуги
+          th
+            p Цена, руб.
+      
+      tbody
+        each val in price
+          tr
+            td.title= val.title
+            td.price= val.price
+
+    .price__btn
+      .btn.btn--outline.btn--black Записаться на прием

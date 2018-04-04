@@ -1,0 +1,42 @@
+.menu-block {
+  margin: 40px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+  }
+
+  &__item-wrap {
+    // margin: 0 30px;
+  }
+
+  &__item {
+    margin: 0 30px;
+    color: #666;
+    text-decoration: underline;
+    transition: $control-elem-transition;
+
+    &:hover {
+      color: #666;
+      text-decoration-color: transparent;
+    }
+
+    &.active {
+      margin: 0;
+      @include rem-line-height(16);
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+      padding: 12px 32px;
+      text-align: center;
+      border: 2px solid $bg-main;
+      border-radius: 19.5px;
+    }
+  }
+
+  &:after {
+    @extend %devider;
+    margin-top: 40px;
+  }
+}

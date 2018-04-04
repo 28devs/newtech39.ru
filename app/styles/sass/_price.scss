@@ -1,0 +1,54 @@
+.price {
+  margin: 200px 0 70px;
+
+  h2 {
+    margin: 80px 60px;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    background-image: url('../img/table-header-bg.jpg');
+    background-size: cover;
+
+    th {
+      padding: 26px 30px;
+      color: $text-black;
+      
+      p {
+        position: relative;
+        @extend %font-main-bold;
+        text-transform: uppercase;
+        padding-left: 23px;
+        margin-bottom: 0;
+
+        &:after {
+          @include pseudo(8px, 8px)
+          position: absolute;
+          left: 0px;
+          top: 8px;
+          background-color: $bg-main;
+          border-radius: 50%;
+        } 
+      }
+    }
+  }
+
+  td {
+    padding: 26px 30px;
+    border-bottom: 1px solid #e7e7e7;
+
+    &.price {
+      color: $text-black;
+      font-weight: 600;
+    }
+  }
+
+  .price__btn {
+    margin: 80px 0 138px;
+    text-align: center;
+  }
+}

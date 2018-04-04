@@ -18,3 +18,13 @@ mixin list-item(data)
           .list-item__tags
             each val in data.tags
               span.list-item__tag val
+
+mixin menu(data)
+  nav.menu-block
+    ul.d-flex.flex-row.flex-wrap.justify-content-center.align-items-center
+      each val in data
+        li.menu-block__item-wrap
+          if val.active
+            a(href='#').menu-block__item.active= val.title
+          else
+            a(href='#').menu-block__item= val
