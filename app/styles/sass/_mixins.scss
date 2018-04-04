@@ -1,9 +1,9 @@
-@mixin rem-font-size($size) {
-  font-size: ($size / $root-font-size) + rem;
+@mixin rem-font-size($size, $important: '') {
+  font-size: ($size / $root-font-size) + rem + $important;
 }
 
-@mixin rem-line-height($size) {
-  line-height: ($size / $root-font-size) + rem;
+@mixin rem-line-height($size, $important: '') {
+  line-height: ($size / $root-font-size) + rem + $important;
 }
 
 @mixin nav-icon-arrow-right($color) {

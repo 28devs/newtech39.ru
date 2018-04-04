@@ -7,8 +7,7 @@
   }
 
   &__item {
-    width: 20%;
-    padding: 0 22px;
+    text-align: center;
   }
 
   &__title {
@@ -18,16 +17,49 @@
     margin: 28px 0 20px;
 
     &:after {
-      content: '';
-      display: block;
-      margin: 23px auto 0;
+      @extend %text-devider;
       width: 30px;
-      height: 3px;
+      margin: 23px auto;
       background-color: $bg-main;
     }
   }
 
   &__desc {
-    margin-bottom: 0;
+    max-width: 228px;
+    margin: 0 auto;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .advantages {
+    padding: 70px 0 0;
+
+    &__item {
+      min-width: 30%;
+      margin-bottom: 70px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+
+      &:after {
+        margin-top: 15px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .advantages {
+    padding: 50px 0 0;
+
+    &__item {
+      min-width: 50%;
+      margin-bottom: 70px;
+    }
+
+    &__title {
+    }
   }
 }

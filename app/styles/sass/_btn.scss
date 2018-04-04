@@ -26,6 +26,8 @@
 
   &--small {
     padding: 17px 20px;
+    @include rem-font-size(12);
+    @include rem-line-height(12);
   }
 
   &--outline {
@@ -53,6 +55,10 @@
 
   &--black {
     color: $text-black;
+  }
+
+  &--no-shadow {
+    box-shadow: none;
   }
 }
 
