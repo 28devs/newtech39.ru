@@ -1,0 +1,11 @@
+.mission {
+  margin: 60px 0 80px;
+
+  h2 {
+    margin-top: 20px;
+
+    &:after {
+      @extend %text-devider;
+    }
+  }
+}

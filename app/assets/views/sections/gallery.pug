@@ -2,12 +2,9 @@ section.gallery
   h2.text-center Открытие филиала клиники на Некрасова
   .gallery__wrap#gallery-main
     .row
-        each val in gallery
-          .gallery__item.col-6.col-md-4.col-lg-3
-            a(href= val.img data-src= val.img)
-              img.gallery__img(src= val.thumb)
-              .gallery__hover 
-                img(src='img/icons/gallery-icon-hover.png')
+      each val in gallery
+        +gallery(val)
+        
 
   .gallery__btn
     a.link(href='#').link--arrow Перейти в фотогалерею
