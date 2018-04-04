@@ -1,8 +1,9 @@
 section.advantages
   .container
-    .d-flex.flex-row.justify-content-between.flex-wrap
+    //- .d-flex.flex-row.justify-content-between.flex-wrap
+    .row
       each val in advantages 
-        .advantages__item.text-center
+        .col.advantages__item
           img(src='img/icons/' + val.href)
           p.advantages__title= val.title
           p.advantages__desc= val.desc

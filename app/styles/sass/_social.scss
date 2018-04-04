@@ -3,20 +3,29 @@
     display: block;
     width: 16px;
     height: 16px;
-    margin-left: 15px;
+    padding: 7px;
+    filter: grayscale(1) brightness(1.6);
+    transition: $control-elem-transition;
+    box-sizing: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      filter: grayscale(0) brightness(1);
+    }
   }
 
   &__in {
-    background: url(../img/icons/social-icon-in.png);
+    background-image: url(../img/icons/social-icon-in.png);
   }
 
   &__fb {
     width: 9px;
-    background: url(../img/icons/social-icon-fb.png);
+    background-image: url(../img/icons/social-icon-fb.png);
   }
 
   &__yt {
     width: 24px;
-    background: url(../img/icons/social-icon-yt.png);
+    background-image: url(../img/icons/social-icon-yt.png);
   }
 }

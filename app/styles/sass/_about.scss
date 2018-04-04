@@ -6,6 +6,7 @@
 
   &__photo {
     margin: 9px 26px;
+    max-width: 100%;
   }
 
   h2 {
@@ -14,8 +15,6 @@
   }
 
   &__desc {
-    @include rem-line-height(32);
-
     &:after {
       @extend %text-devider;
       background-color: $bg-main;
@@ -32,5 +31,25 @@
 
   &__sign {
     margin: -57px 41px 0;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .about {
+    &__photo {
+      margin: 0;
+      max-width: 128px;
+      margin-bottom: 28px;
+    }
+
+    &__sign {
+      margin: 0;
+      max-width: 128px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .about {
   }
 }

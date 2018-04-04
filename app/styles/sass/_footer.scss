@@ -81,7 +81,8 @@
       .nav-link {
         padding: 1px 0;
         color: #666666;
-        border-bottom: 1px #c5c5c5 solid;
+        //border-bottom: 1px #c5c5c5 solid;
+        text-decoration: underline;
         line-height: 14px;
         margin-bottom: 20px;
         transition: 0.1s;
@@ -89,7 +90,8 @@
 
         &:hover {
           color: $bg-main;
-          border-color: transparent;
+          //border-color: transparent;
+          text-decoration: none;
         }
       }
     }
