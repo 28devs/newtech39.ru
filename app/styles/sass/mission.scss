@@ -1,0 +1,9 @@
+.mission {
+  margin: 80px 0;
+
+  h2 {
+    &:after {
+      @extend %text-devider;
+    }
+  }
+}

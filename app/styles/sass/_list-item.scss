@@ -97,4 +97,16 @@
       }
     }
   }
+
+  &--big {
+    .list-item {
+      &__img-wrap {
+        max-width: 250px;
+      }
+
+      &__text {
+        text-align: left;
+      }
+    }
+  }
 }
