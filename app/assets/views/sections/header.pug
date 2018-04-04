@@ -15,7 +15,7 @@ header.header
             a.nav-link(href=nav.url)= nav.title
             
             if nav.childs
-              ul
+              ul.header__nav-child
                 each child in nav.childs
                   li
                     a(href=child.url)= child.title
@@ -27,3 +27,6 @@ header.header
         a.social__link.social__yt(href='#!')
 
       .header__btn-phone
+        .header__block-phone
+          a.header__block-phone__number(href='tel:88005555555') 8-800-555-55-55
+          a.btn.btn--small.header__block-phone__btn(href='#!') Перезвоните мне

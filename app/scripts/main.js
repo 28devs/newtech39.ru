@@ -58,17 +58,18 @@ const lightGalleryMain = $('#gallery-main').lightGallery({
 // Header nav mobile
 //
 
+const headerNav = document.querySelector('.header__nav .nav');
 const headerNavBtnOpen = document.querySelector('.header__nav-open');
 const headerNavBtnClose = document.querySelector('.header__nav-close');
 const headerNavBtnPrev = document.querySelector('.header__nav-prev');
 const headerNavBtnPrevOriginalText = headerNavBtnPrev.textContent;
 
 headerNavBtnOpen.addEventListener('click', function() {
-  headerNavBtnOpen.parentNode.classList.add('header__nav--open');
+  headerNav.classList.add('header__nav--open');
 });
 
 headerNavBtnClose.addEventListener('click', function() {
-  headerNavBtnOpen.parentNode.classList.remove('header__nav--open');
+  headerNav.classList.remove('header__nav--open');
 });
 
 // Change prev button text to current nav category
@@ -78,7 +79,11 @@ const headerNavsWithChilds = document.querySelectorAll(
 
 const changePrevBtnText = function() {
   let categoryName = this.childNodes[0].textContent;
+
   headerNavBtnPrev.textContent = categoryName;
+  headerNavBtnPrev.classList.add('header__nav-prev--arrow');
+
+  this.classList.add('header__nav--child-open');
 };
 
 headerNavsWithChilds.forEach(function(elem) {
@@ -88,6 +93,11 @@ headerNavsWithChilds.forEach(function(elem) {
 // Return original text to prev button than close submenu
 const returnPrevBtnText = function() {
   this.textContent = headerNavBtnPrevOriginalText;
+  this.classList.remove('header__nav-prev--arrow');
+
+  document
+    .querySelector('.header__nav--child-open')
+    .classList.remove('header__nav--child-open');
 };
 
 headerNavBtnPrev.addEventListener('click', returnPrevBtnText);

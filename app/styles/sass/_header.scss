@@ -17,9 +17,8 @@
     transition: $header-transition;
 
     &-open {
-      width: 20px;
-      height: 20px;
-      background: url(../img/icons/header-icon-nav-open.png);
+      padding: 15px;
+      background: url(../img/icons/header-icon-nav-open.png) center no-repeat;
       border: 0;
       cursor: pointer;
       display: none;
@@ -29,8 +28,8 @@
     &-close {
       @extend .header__nav-open;
       display: block;
-      transform: translateY(-3px);
-      background: url(../img/icons/header-icon-nav-close.png);
+      background: url(../img/icons/header-icon-nav-close.png) center no-repeat;
+      transform: translate(5px, -4px);
     }
 
     &-title {
@@ -56,6 +55,23 @@
       border: 0;
       padding: 10px 10px 10px 0;
       outline: 0 !important;
+      position: relative;
+
+      &--arrow {
+        padding-left: 22px;
+
+        &:before {
+          @include nav-icon-arrow-right(#000);
+          background-size: contain;
+          display: block;
+          width: 11px;
+          height: 15px;
+          content: '';
+          transform: translateY(4px) rotate(180deg);
+          position: absolute;
+          left: 0;
+        }
+      }
     }
 
     .nav-item {
@@ -109,7 +125,8 @@
       }
     }
 
-    .nav ul {
+    .nav ul,
+    .header__block-phone & {
       list-style: none;
       margin: 0;
       padding: 10px 0;
@@ -156,13 +173,15 @@
           white-space: nowrap;
           padding: 8px 30px;
           display: block;
-          text-decoration: none;
+          text-decoration: underline;
           color: #666;
           @include rem-font-size(16);
+          transition: 0.1s;
 
           &:hover,
           &.active {
             background: $bg-main;
+            text-decoration: none;
             color: #fff;
           }
         }
@@ -226,7 +245,7 @@
 
     &__nav {
       order: 3;
-      margin: 33px 0 0 0;
+      margin: 30px 0 0 0;
 
       &-open {
         display: block;
@@ -240,12 +259,17 @@
         position: absolute;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
         background: #fff;
-        right: 0;
+        right: -13px;
         top: 0;
         flex-direction: column;
         width: 100%;
         max-width: 375px;
         padding-bottom: 20px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: 0.3s ease;
+        z-index: -1;
 
         > .nav-item {
           position: static;
@@ -280,9 +304,12 @@
             }
           }
 
-          &:hover {
+          &:hover,
+          &.header__nav--child-open {
             ul {
               transform: translate(0, 111px);
+              opacity: 1;
+              visibility: visible;
             }
           }
 
@@ -303,6 +330,13 @@
         }
       }
 
+      .header__nav--open {
+        overflow: visible;
+        opacity: 1;
+        transform: translateY(0);
+        z-index: 2;
+      }
+
       &--open {
         .nav-item {
           position: static;
@@ -313,10 +347,15 @@
     &__menu {
       width: 100%;
       justify-content: space-between;
+
+      .social {
+        margin-left: 31px;
+        margin-right: 30px;
+      }
     }
 
     &__btn-phone {
-      margin-right: 20px;
+      margin-right: 25px;
     }
 
     &--scroll-state {
@@ -328,6 +367,17 @@
 
       .header__nav {
         margin: 23px 0 0 0;
+      }
+    }
+
+    &--scroll-state {
+      .header__menu {
+        // I think designer mistake
+        // justify-content: flex-end;
+      }
+
+      .header__nav {
+        margin: 21px 0 0 0;
       }
     }
   }

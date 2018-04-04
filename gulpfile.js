@@ -93,7 +93,8 @@
   //up static server; watching change in dest and reload page
   gulp.task('server', function() {
     browserSync.init({
-      server: 'dest'
+      server: 'dest',
+      notify: false
     });
 
     browserSync.watch('dest/**/*.*').on('change', browserSync.reload);
