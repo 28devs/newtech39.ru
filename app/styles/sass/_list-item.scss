@@ -110,3 +110,17 @@
     }
   }
 }
+
+@include media-breakpoint-down(md) {
+  .list-item {
+    &__title {
+      margin: 18px 0 14px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .list-item {
+    margin-bottom: 25px;
+  }
+}

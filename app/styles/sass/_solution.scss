@@ -22,15 +22,32 @@
   }
 
   &__btn {
-    padding: 82px 0;
+    margin: 82px 0;
     text-align: center;
   }
 }
 
 @include media-breakpoint-down(md) {
   .solution {
+    h2 {
+      margin: 35px auto;
+      width: 70%;
+    }
+
     &__item:nth-of-type(4) {
       display: none !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .solution {
+    &__item:nth-of-type(4) {
+      display: block !important;
+    }
+
+    &__btn {
+      margin: 0 0 30px;
     }
   }
 }

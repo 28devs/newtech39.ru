@@ -34,12 +34,17 @@
   .advantages {
     padding: 70px 0 0;
 
+    .row {
+      justify-content: center;
+    }
+
     &:after {
       margin-top: 5px;
     }
 
     &__item {
       min-width: 30%;
+      max-width: 30%;
       margin-bottom: 70px;
     }
 
@@ -58,13 +63,18 @@
   .advantages {
     padding: 50px 0 0;
 
+    .row {
+      justify-content: start;
+    }
+
     &:after {
-      margin-top: -25px;
+      margin-top: 5px;
     }
 
     &__item {
       min-width: 50%;
-      margin-bottom: 70px;
+      max-width: 50%;
+      margin-bottom: 40px;
 
       img {
         height: 60px;

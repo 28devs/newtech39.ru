@@ -88,8 +88,9 @@ p {
   &--arrow {
     display: inline-block;
     padding-left: 28px;
-    background: url('../img/icons/link-arrow-right.png') left top 4px no-repeat;
+    background: url('../img/icons/link-arrow-right.png') left center no-repeat;
     background-size: 18px;
+    text-decoration: underline;
     @include rem-font-size(16);
     @extend %font-main-regular;
   }
@@ -136,6 +137,13 @@ p {
   p {
     @include rem-font-size(14);
     @include rem-line-height(22);
+  }
+
+  .link {
+    &--blacked {
+      @include rem-font-size(14);
+      @include rem-line-height(22);
+    }
   }
 }
 
