@@ -285,7 +285,7 @@
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
         background: #fff;
         right: -13px;
-        top: 0;
+        top: -928px;
         flex-direction: column;
         width: 100%;
         max-width: 375px;
@@ -293,7 +293,7 @@
         overflow: hidden;
         opacity: 0;
         transform: translateY(-10px);
-        transition: 0.3s ease;
+        transition: top 0s, transform 0.3s ease;
         z-index: -1;
 
         > .nav-item {
@@ -360,6 +360,7 @@
         opacity: 1;
         transform: translateY(0);
         z-index: 2;
+        top: 0;
       }
 
       &--open {
