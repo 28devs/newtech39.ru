@@ -1,0 +1,53 @@
+.header-page {
+  height: 400px;
+  padding-top: 194px;
+  box-shadow: inset 0px -15px 15px -15px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    @include rem-font-size(24);
+  }
+
+  &__breadcrumbs {
+    ol {
+      background: transparent;
+      padding: 0;
+      margin-bottom: 11px;
+
+      li {
+        &:before {
+          @include rem-font-size(14);
+          color: $text-gray !important;
+          padding: 0 3px !important;
+        }
+
+        a {
+          @include rem-font-size(14);
+          color: $text-gray;
+        }
+      }
+    }
+  }
+
+  &--bg-price {
+    background: url(../img/header-page/header-page-prices.jpg) left top / cover;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .header-page {
+    height: 350px;
+    padding-top: 155px;
+
+    &__breadcrumbs {
+      ol {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .header-page {
+    height: 325px;
+  }
+}

@@ -173,12 +173,18 @@
       left: 65%;
     }
 
-    .lslide:nth-child(2) img {
-      transform: translateX(-170px) scale(0.8);
-    }
+    .lslide {
+      .container {
+        max-width: 100%;
+      }
 
-    .lslide:nth-child(3) img {
-      transform: translateX(-290px) scale(0.8);
+      &:nth-child(2) img {
+        transform: translateX(-170px) scale(0.8);
+      }
+
+      &:nth-child(3) img {
+        transform: translateX(-290px) scale(0.8);
+      }
     }
 
     &__title {

@@ -130,6 +130,11 @@
       margin: 40px auto 27px;
     }
 
+    h3 {
+      @include rem-font-size(16);
+      @include rem-line-height(24);
+    }
+
     &:after {
       margin-top: 55px;
     }
@@ -147,6 +152,11 @@
 
 @include media-breakpoint-down(sm) {
   .services {
+    h3 {
+      @include rem-font-size(14);
+      @include rem-line-height(24);
+    }
+
     &:after {
       margin: 16px 0;
     }

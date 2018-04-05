@@ -1,0 +1,10 @@
+mixin header-page(page, title, breadcrumbs)
+  section.header-page(class='header-page--bg-' + page)
+    .container
+      nav.header-page__breadcrumbs
+        ol.breadcrumb
+          each link in breadcrumbs
+            li.breadcrumb-item
+              a(href='#!')= link
+
+      h2= title 
