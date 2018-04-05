@@ -23,14 +23,17 @@ mixin list-item(data)
               span.list-item__tag val
 
 mixin menu(data)
-  nav.menu-block
-    ul.d-flex.flex-row.flex-wrap.justify-content-center.align-items-center
-      each val in data
-        li.menu-block__item-wrap
-          if val.active
-            a(href='#').menu-block__item.active= val.title
-          else
-            a(href='#').menu-block__item= val
+  .container
+    .row
+
+      nav.menu-block
+        ul.d-flex.flex-row.flex-wrap.justify-content-center.align-items-center
+          each val in data
+            li.menu-block__item-wrap
+              if val.active
+                a(href='#').menu-block__item.active= val.title
+              else
+                a(href='#').menu-block__item= val
 
 mixin gallery(data)
   .gallery__item.col-6.col-md-4.col-lg-3(class!=attributes.class)
@@ -43,3 +46,14 @@ mixin gallery(data)
     if data.desc
       .gallery__link-wrap
         a(href="#!").gallery__desc.link--blacked= data.desc
+
+mixin callToActionSimple(data)
+  .call-to-action-simple
+    .container
+
+      if data.title
+        h2= data.title
+      p= data.desc
+
+      .call-to-action-simple__button
+        .btn.btn--outline.btn--black= data.btnTitle
