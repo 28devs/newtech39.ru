@@ -49,10 +49,10 @@ mixin gallery(data)
 mixin callToActionSimple(data)
   .call-to-action-simple
     .container
+      .call-to-action-simple__wrap.d-flex.justify-content-between.flex-column.align-items-center
+        if data.title
+          h2.call-to-action-simple__title= data.title
+        p.call-to-action-simple__desc= data.desc
 
-      if data.title
-        h2= data.title
-      p= data.desc
-
-      .call-to-action-simple__button
-        .btn.btn--outline.btn--black= data.btnTitle
+        .call-to-action-simple__button
+          .btn.btn--outline.btn--black= data.btnTitle

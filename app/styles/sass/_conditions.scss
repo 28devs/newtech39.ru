@@ -1,11 +1,36 @@
 .conditions {
-  padding: 80px 0 60px;
+  padding: 40px 0 60px;
   &:after {
     @extend %devider;
-    margin-top: 88px;
+    margin-top: -14px;
   }
 
   h2 {
     margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-bottom: 70px;
+  }
+
+  &__salary {
+    margin-top: 30px;
+    background: url('../img/main-bg.jpg');
+    background-size: containe;
+    background-position: center;
+    padding: 30px 0 30px 30px;
+
+    span {
+      position: relative;
+      @include rem-font-size(24);
+      color: $text-black;
+
+      &:before {
+        @include pseudo(27px, 28px);
+        margin-right: 26px;
+        background: url('../img/icons/wallet.png') center no-repeat;
+        float: left;
+      }
+    }
   }
 }
