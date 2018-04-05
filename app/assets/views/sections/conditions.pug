@@ -1,0 +1,22 @@
+.conditions
+  .container
+
+    
+
+    .row
+
+      each val in conditions
+        .col-12.col-md-6
+          if val.list
+            h2= val.title
+
+            ul
+              each valInner in val.list
+                li= valInner
+          else 
+            h2= val.title
+
+            p= val.desc
+
+            .condition__salary
+              span= val.salary
