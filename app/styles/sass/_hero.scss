@@ -56,11 +56,9 @@
     .hero__img {
       opacity: 1;
     }
-    .hero__title {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    .hero__desc {
+    .hero__title,
+    .hero__desc,
+    .btn {
       transform: translateY(0);
       opacity: 1;
     }
@@ -72,15 +70,19 @@
     right: 0;
     opacity: 0;
     transition: ease 1s;
-    transition-delay: 0.6s;
+    transition-delay: 0.5s;
+  }
+
+  %hero-slide-animate {
+    transform: translateY(-10px);
+    transition: ease 1s;
+    opacity: 0;
   }
 
   &__title {
     margin-top: 228px;
-    transform: translateY(-10px);
-    transition: ease 1s;
-    opacity: 0;
-    transition-delay: 0.3s;
+    @extend %hero-slide-animate;
+    transition-delay: 0.3s !important;
 
     &:after {
       @extend %text-devider;
@@ -90,10 +92,13 @@
 
   &__desc {
     margin-bottom: 76px;
-    transform: translateY(-10px);
-    transition: ease 1s;
-    opacity: 0;
-    transition-delay: 0.4s;
+    @extend %hero-slide-animate;
+    transition-delay: 0.4s !important;
+  }
+
+  .btn {
+    @extend %hero-slide-animate;
+    transition-delay: 0.5s !important;
   }
 
   .leaf--1 {
