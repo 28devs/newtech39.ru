@@ -129,6 +129,19 @@
     h2 {
       margin: 40px auto 27px;
     }
+
+    &:after {
+      margin-top: 55px;
+    }
+
+    &__img {
+      padding-top: 70%;
+    }
+
+    &__text {
+      margin: 15px;
+      padding: 20px 25px;
+    }
   }
 }
 
