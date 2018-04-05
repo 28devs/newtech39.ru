@@ -31,6 +31,30 @@ body {
   text-transform: uppercase;
 }
 
+%list-style {
+  padding: 0;
+
+  & li {
+    list-style: none;
+    position: relative;
+    padding-left: 23px;
+    color: $text-gray;
+    margin-bottom: 12px;
+
+    &:after {
+      @include pseudo(8px, 8px) position: absolute;
+      left: 0px;
+      top: 8px;
+      background-color: $bg-main;
+      border-radius: 50%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 h1,
 .h1 {
   @extend %font-head-styles;
@@ -68,6 +92,24 @@ h5,
 p {
   @include rem-font-size(16);
   @include rem-line-height(28);
+}
+
+.content {
+  ul {
+    @extend %list-style;
+  } 
+}
+
+.list {
+  @extend %list-style;
+
+  &--secondary-color {
+    & li {
+      &:after {
+        background-color: $bg-second;
+      }
+    }
+  }
 }
 
 .link {

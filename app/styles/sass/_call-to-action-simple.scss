@@ -1,0 +1,13 @@
+.call-to-action-simple {
+  padding-bottom: 138px;
+
+  &__desc {
+    max-width: 750px;
+    text-align: center;
+    @include rem-line-height(32);
+  }
+
+  &__button {
+    margin-top: 60px;
+  }
+}
