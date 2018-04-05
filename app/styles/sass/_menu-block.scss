@@ -4,21 +4,20 @@
   ul {
     margin: 0;
     padding: 0;
-    list-style:none;
+    list-style: none;
   }
 
   &__item-wrap {
-    // margin: 0 30px;
+    margin: 9px 20px;
   }
 
   &__item {
-    margin: 0 30px;
     color: #666;
     text-decoration: underline;
     transition: $control-elem-transition;
 
     &:hover {
-      color: #666;
+      forcolor: #666;
       text-decoration-color: transparent;
     }
 
@@ -28,15 +27,34 @@
       text-decoration: none;
       color: #000;
       display: inline-block;
-      padding: 12px 32px;
+      padding: 9px 28px;
       text-align: center;
       border: 2px solid $bg-main;
-      border-radius: 19.5px;
+      border-radius: 20px;
     }
   }
 
   &:after {
     @extend %devider;
     margin-top: 40px;
+    @include rem-font-size(14);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .menu-block {
+    margin: 20px 0;
+
+    &:after {
+      margin-top: 14px;
+    }
+
+    &__item {
+      @include rem-font-size(14);
+
+      &-wrap {
+        margin: 9px 13px;
+      }
+    }
   }
 }
