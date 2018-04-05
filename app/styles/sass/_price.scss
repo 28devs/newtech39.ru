@@ -2,7 +2,7 @@
   margin: 0 0 70px;
 
   h2 {
-    margin: 80px 60px;
+    margin: 78px 25px 53px;
     text-align: center;
   }
 
@@ -15,8 +15,22 @@
     background-size: cover;
 
     th {
-      padding: 26px 30px;
+      padding: 19px 30px 17px;
       color: $text-black;
+
+      &:last-child {
+        white-space: nowrap;
+
+        p {
+          margin-left: -24px;
+        }
+      }
+
+      td {
+        &.price {
+          width: 100px;
+        }
+      }
 
       p {
         position: relative;
@@ -26,9 +40,10 @@
         margin-bottom: 0;
 
         &:after {
-          @include pseudo(8px, 8px) position: absolute;
+          @include pseudo(8px, 8px);
+          position: absolute;
           left: 0px;
-          top: 8px;
+          top: 10px;
           background-color: $bg-main;
           border-radius: 50%;
         }
@@ -37,7 +52,7 @@
   }
 
   td {
-    padding: 26px 30px;
+    padding: 21px 30px 22px;
     border-bottom: 1px solid #e7e7e7;
 
     &.price {
@@ -49,5 +64,56 @@
   .price__btn {
     margin: 80px 0 138px;
     text-align: center;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .price {
+    h2 {
+      margin: 43px 25px 36px;
+    }
+
+    td {
+      padding: 12px 30px 11px;
+      @include rem-font-size(14);
+    }
+
+    .price__btn {
+      margin: 36px 0 76px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .price {
+    margin-bottom: 50px;
+
+    thead {
+      th {
+        padding: 19px 13px 16px;
+
+        p {
+          padding-left: 18px;
+
+          &:after {
+            top: 4px;
+          }
+        }
+      }
+    }
+
+    h2 {
+      margin: 33px 25px 33px;
+    }
+
+    td {
+      padding: 11px 10px 11px 1px;
+      @include rem-font-size(12);
+      @include rem-line-height(20);
+    }
+
+    .price__btn {
+      margin: 36px 0 76px;
+    }
   }
 }

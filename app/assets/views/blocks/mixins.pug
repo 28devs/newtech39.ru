@@ -8,7 +8,7 @@ mixin list-item(data)
           
       .list-item__text
         .list-item__title
-          a(href='#').link.link--blacked !{data.title}
+          a(href='#!').link.link--blacked !{data.title}
 
         if data.time
           p.list-item__time !{data.time}
@@ -24,20 +24,17 @@ mixin list-item(data)
 
 mixin menu(data)
   .container
-
-      nav.menu-block
-        ul.d-flex.flex-row.flex-wrap.justify-content-center.align-items-center
-          each val in data
-            li.menu-block__item-wrap
-              if val.active
-                a(href='#').menu-block__item.active= val.title
-              else
-                a(href='#').menu-block__item= val
+    nav.menu-block
+      ul.d-flex.flex-row.flex-wrap.justify-content-start.justify-content-lg-center.align-items-center
+        each val in data
+          li.menu-block__item-wrap
+            if val.active
+              a(href='#!').menu-block__item.active= val.title
+            else
+              a(href='#!').menu-block__item= val
 
 mixin gallery(data)
   .gallery__item.col-6.col-md-4.col-lg-3(class!=attributes.class)
-  
-    
     a.gallery__item-wrap(href= data.img data-src= data.img)
         img.gallery__img(src= data.thumb)
         .gallery__hover 
