@@ -8,4 +8,14 @@
     text-align: center;
     margin: 0 0 50px;
   }
+
+  .link--arrow {
+    color: $text-gray;
+    transition: $control-elem-transition;
+    
+    &:hover {
+      text-decoration-color: transparent;
+      color: $text-black;
+    }
+  }
 }
