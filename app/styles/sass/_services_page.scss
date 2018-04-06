@@ -1,6 +1,61 @@
 .services-page {
   h2 {
-    margin: 80px 0;
+    margin: 75px 0;
     text-align: center;
+  }
+
+  .list-item {
+    margin-bottom: 52px;
+
+    &__title {
+      margin: 30px 0 12px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .services-page {
+    .list-item {
+      &__text {
+        padding-left: 40px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .services-page {
+    h2 {
+      margin: 45px 0 30px;
+    }
+
+    .list-item {
+      margin-bottom: 32px;
+
+      .link {
+        @include rem-font-size(16, !important);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .services-page {
+    h2 {
+      margin: 35px auto 29px;
+      width: 80%;
+    }
+
+    .list-item {
+      margin-bottom: 12px;
+
+      &__title {
+        margin: 15px 0 10px;
+      }
+
+      .link {
+        @include rem-font-size(14, !important);
+      }
+    }
   }
 }
