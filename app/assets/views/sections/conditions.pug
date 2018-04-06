@@ -1,18 +1,16 @@
 .conditions
   .container
-
     .row
-
       each val in conditions
         .conditions__item.col-12.col-md-6
           if val.list
-            h2= val.title
+            h3= val.title
 
             ul.list(class=val.class)
               each valInner in val.list
                 li= valInner
           else 
-            h2= val.title
+            h3= val.title
 
             p.conditions__desc= val.desc
 

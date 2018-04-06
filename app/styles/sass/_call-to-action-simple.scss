@@ -4,10 +4,30 @@
   &__desc {
     max-width: 750px;
     text-align: center;
-    @include rem-line-height(32);
   }
 
   &__button {
-    margin-top: 60px;
+    margin-top: 43px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .call-to-action-simple {
+    padding-bottom: 58px;
+
+    &__button {
+      margin-top: 17px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .call-to-action-simple {
+    padding-bottom: 38px;
+
+    &__desc {
+      @include rem-font-size(12);
+      @include rem-line-height(24);
+    }
   }
 }
