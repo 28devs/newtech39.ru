@@ -5,6 +5,7 @@
 
   h2 {
     @include rem-font-size(24);
+    max-width: 400px;
   }
 
   &__breadcrumbs {
@@ -30,6 +31,63 @@
 
   &--bg-price {
     background: url(../img/header-page/header-page-prices.jpg) left top / cover;
+  }
+
+  &--bg-about {
+    background: url(../img/header-page/header-page-about.jpg) left top / cover;
+  }
+
+  &--bg-team {
+    background: url(../img/header-page/header-page-team.jpg) left top / cover;
+  }
+
+  &--bg-jobs {
+    background: url(../img/header-page/header-page-jobs.jpg) left top / cover;
+  }
+
+  &--bg-docs {
+    background: url(../img/header-page/header-page-docs.jpg) left top / cover;
+  }
+
+  &--bg-article {
+    background: url(../img/header-page/header-page-article.jpg) left top / cover;
+  }
+
+  &--bg-blog {
+    background: url(../img/header-page/header-page-blog.jpg) left top / cover;
+  }
+
+  &--bg-contacts {
+    background: url(../img/header-page/header-page-contacts.jpg) left top /
+      cover;
+  }
+
+  &--bg-services {
+    background: url(../img/header-page/header-page-services.jpg) left top /
+      cover;
+  }
+
+  &--bg-faq {
+    background: url(../img/header-page/header-page-faq.jpg) left top / cover;
+  }
+
+  &--bg-reviews {
+    background: url(../img/header-page/header-page-reviews.jpg) left top / cover;
+  }
+
+  &--bg-photo-gallery {
+    background: url(../img/header-page/header-page-photo-gallery.jpg) left top /
+      cover;
+  }
+
+  &--bg-video-gallery {
+    background: url(../img/header-page/header-page-video-gallery.jpg) left top /
+      cover;
+  }
+
+  &--bg-photo-solutions {
+    background: url(../img/header-page/header-page-photo-solutions.jpg) left top /
+      cover;
   }
 }
 

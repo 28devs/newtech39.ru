@@ -3,9 +3,89 @@
   background-image: url('../img/main-bg.jpg');
   background-size: cover;
   background-position: center;
-  
+
   h2 {
     text-align: center;
     margin: 0 0 50px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .gallery-document {
+    .gallery {
+      &__item {
+        &--desc {
+          max-width: 20%;
+        }
+      }
+
+      &__link-wrap {
+        margin-right: -15px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .gallery-document {
+    padding: 60px 0 64px;
+
+    h2 {
+      margin-bottom: 34px;
+    }
+
+    .gallery {
+      &__item {
+        &:last-child {
+          display: none;
+        }
+
+        &--desc {
+          max-width: 25%;
+          margin-bottom: 30px;
+        }
+      }
+
+      &__link-wrap {
+        margin-top: 18px;
+      }
+
+      &__desc {
+        display: block;
+        @include rem-font-size(12);
+        @include rem-line-height(22);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .gallery-document {
+    padding: 46px 0 49px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      &__item {
+        &:last-child {
+          display: none;
+        }
+
+        &--desc {
+          max-width: 50%;
+          margin-bottom: 30px;
+        }
+      }
+
+      &__link-wrap {
+        margin-top: 18px;
+      }
+
+      &__desc {
+        @include rem-line-height(20);
+      }
+    }
   }
 }

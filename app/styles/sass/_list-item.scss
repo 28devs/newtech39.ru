@@ -18,6 +18,10 @@
     padding-top: 100%;
     background-size: cover;
     margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.028);
   }
 
   &__img {
@@ -53,9 +57,13 @@
   &__title {
     margin: 36px 0 16px;
 
-    & a:hover {
-      color: $bg-main;
-      text-decoration: underline;
+    a {
+      @extend %font-main-regular;
+
+      &:hover {
+        color: $bg-main;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -83,9 +91,9 @@
 
   &--lined {
     .list-item {
-      &__img {
-        height: 150px;
-        width: 150px;
+      &__img-wrap {
+        max-height: 150px;
+        max-width: 150px;
       }
 
       &__title {

@@ -1,11 +1,23 @@
 .mission {
-  margin: 60px 0 80px;
+  margin: 60px 0 67px;
 
-  h2 {
-    margin-top: 20px;
+  h3 {
+    margin-top: 14px;
 
     &:after {
       @extend %text-devider;
+      margin: 22px 0 21px 0;
     }
+  }
+
+  p {
+    width: 90%;
+    margin-bottom: 26px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .mission {
+    margin: 30px 0 37px;
   }
 }

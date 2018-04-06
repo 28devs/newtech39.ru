@@ -2,7 +2,6 @@ mixin list-item(data)
   .list-item(class!=attributes.class)
     .list-item__inner
       .list-item__img-wrap
-
         a.list-item__img(href='#' style="background-image: url('img/" +data.href+ "')")
           .list-item__img-hover
           
@@ -13,7 +12,6 @@ mixin list-item(data)
         if data.time
           p.list-item__time !{data.time}
             
-
         if data.desc 
           p.list-item__desc !{data.desc}
 

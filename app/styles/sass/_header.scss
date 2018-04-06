@@ -304,6 +304,7 @@
             margin-right: 0;
             @include font-main-bold;
             text-transform: uppercase;
+            text-decoration: none;
             color: $text-black;
 
             &:before {
