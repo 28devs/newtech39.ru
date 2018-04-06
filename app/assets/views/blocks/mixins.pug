@@ -51,3 +51,15 @@ mixin callToActionSimple(data)
 
         .call-to-action-simple__button
           .btn.btn--outline.btn--black= data.btnTitle
+
+mixin newsList(data) 
+  .news-list__item
+    .news-list__wrap
+      a.news-list__img(href='#!' style="background-image: url('img/" +data.href+ "')")
+          
+    .news-list__time
+      span.date= data.time
+    .news-list__title
+      a.link--title(href='#!')= data.title
+    .news-list__desc
+      p= data.desc
