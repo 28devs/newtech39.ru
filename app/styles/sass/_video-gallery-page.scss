@@ -1,0 +1,21 @@
+.video-gallery {
+  padding: 100px 0 0 0;
+  &:after {
+    // @extend %devider;
+  }
+
+  
+  &__btn {
+    margin: 20px 0 138px;
+
+    .link--arrow {
+      color: $text-gray;
+      transition: $control-elem-transition;
+      
+      &:hover {
+        text-decoration-color: transparent;
+        color: $text-black;
+      }
+    }
+  }
+}

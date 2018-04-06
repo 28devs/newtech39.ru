@@ -1,8 +1,8 @@
 .news
   .container
-    each val in news
-
-      +newsList(val)
+    .news-list
+      each val in news
+        +newsList(val)
   
     .news__btn.text-center
       a.link--arrow(href='#!') Показать еще

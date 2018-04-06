@@ -1,10 +1,8 @@
-.news
+.video-gallery
   .container
-    each val in news
+    .news-list--wide-image
+      each val in news
+        +newsList(val)(class='news-list__item--wide-image')
 
-      +newsList(val)
-
-      
-  
-    .news__btn.text-center
+    .video-gallery__btn.text-center
       a.link--arrow(href='#!') Показать еще
