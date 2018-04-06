@@ -99,3 +99,13 @@
     }
   }
 }
+
+.header-page--bg-docs + .gallery-document {
+  background: #fff;
+
+  .gallery {
+    &__item {
+      display: block !important;
+    }
+  }
+}
