@@ -4,14 +4,13 @@
     // @extend %devider;
   }
 
-  
   &__btn {
     margin: 20px 0 138px;
 
     .link--arrow {
       color: $text-gray;
       transition: $control-elem-transition;
-      
+
       &:hover {
         text-decoration-color: transparent;
         color: $text-black;
@@ -20,3 +19,22 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  .news {
+    padding-top: 70px;
+
+    &__btn {
+      margin-bottom: 77px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .news {
+    padding-top: 50px;
+
+    &__btn {
+      margin-bottom: 58px;
+    }
+  }
+}

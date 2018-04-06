@@ -54,7 +54,9 @@
       }
 
       .link {
+        display: block;
         @include rem-font-size(14, !important);
+        @include rem-line-height(22, !important);
       }
     }
   }
