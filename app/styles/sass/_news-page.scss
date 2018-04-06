@@ -1,0 +1,23 @@
+.news {
+  &__item {
+    &:after {
+      @include pseudo(0, 0)
+      clear: both;
+    }
+  }
+  
+  &__img {
+    height: 170px; 
+    width: 170px;
+    display: block;
+    float: left;
+  }
+
+  &__time {
+    // float: right;
+  }
+
+  &__desc {
+    // clear: both;
+  }
+}

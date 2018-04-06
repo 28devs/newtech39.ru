@@ -156,6 +156,29 @@ p {
       @include rem-font-size(14);
     }
   }
+
+  &--title {
+    @extend %font-main-regular;
+    @include rem-font-size(18)
+    color: $text-black;
+    text-decoration: uppercase;
+    transition: $control-elem-transition;
+
+    &:hover {
+      text-decoration-color: transparent;
+      color: $text-orange;
+    }
+  }
+}
+
+.date {
+  @include rem-font-size(14);
+  color: $text-gray;
+  
+  &:before {
+    @include pseudo(16px, 16px);
+    background: url('../img/icons/calendar.png') center no-repeat;
+  }
 }
 
 @include media-breakpoint-down(md) {
