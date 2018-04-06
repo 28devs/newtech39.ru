@@ -160,23 +160,27 @@ p {
 
   &--title {
     @extend %font-main-regular;
-    @include rem-font-size(18) color: $text-black;
-    text-decoration: uppercase;
+    @include rem-font-size(18);
+    color: $text-black;
     transition: $control-elem-transition;
+    text-decoration: underline;
 
     &:hover {
-      text-decoration-color: transparent;
       color: $text-orange;
     }
   }
 }
 
 .date {
+  position: relative;
+  display: block;
   @include rem-font-size(14);
   color: $text-gray;
 
   &:before {
     @include pseudo(16px, 16px);
+    float: left;
+    margin: 4px 10px 0 0;
     background: url('../img/icons/calendar.png') center no-repeat;
   }
 }

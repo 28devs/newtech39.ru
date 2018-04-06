@@ -1,4 +1,9 @@
 .news {
+  padding: 100px 0 0 0;
+  &:after {
+    // @extend %devider;
+  }
+
   &__item {
     &:after {
       @include pseudo(0, 0)
@@ -11,13 +16,56 @@
     width: 170px;
     display: block;
     float: left;
+    margin-right: 49px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 99;
+
+    &:after {
+      @include pseudo();
+      margin: 10px;
+      top: 0;right: 0;left: 0;bottom: 0;
+      width: initial;
+      height: initial;
+      position: absolute;
+      background: #fff url('../img/icons/gallery-icon-hover.png') center no-repeat;
+      transition: $header-transition;
+      transform: scale(1.1);
+      opacity: 0;
+    }
+
+    &:hover:after {
+      transform: scale(1);
+      opacity: .9;
+    }
   }
 
-  &__time {
-    // float: right;
+  &__title {
+    margin: 7px 0;
   }
 
   &__desc {
-    // clear: both;
+    margin-bottom: 60px;
+    p {
+      @include rem-line-height(28)
+    }
+  }
+
+  &__btn {
+    margin: 20px 0 138px;
+
+    .link--arrow {
+      color: $text-gray;
+      transition: $control-elem-transition;
+      
+      &:hover {
+        text-decoration-color: transparent;
+        color: $text-black;
+      }
+    }
   }
 }
+
+// &__desc {
+//   clear: both;
+// }
