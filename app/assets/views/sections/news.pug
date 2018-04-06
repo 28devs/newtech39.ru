@@ -1,0 +1,13 @@
+.news
+  .container
+    each val in news
+
+      .news__item
+        .news__wrap
+          a.news__img(href='#' style="background-image: url('img/" +val.href+ "')")
+            .news__hover
+             
+        .news__time
+          span.date= val.time
+        .news__title= val.title
+        .news__desc= val.desc

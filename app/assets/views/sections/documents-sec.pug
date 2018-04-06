@@ -1,0 +1,12 @@
+section.gallery-document
+  .container
+
+    h2 Список докуменов
+
+    .gallery__wrap#gallery-main
+      .row
+        each val in galleryDocumentAll
+          +gallery(val)(class='gallery__item--desc')
+
+    .gallery-document__btn.text-center
+      a(href='#!').link--arrow Показать еще
