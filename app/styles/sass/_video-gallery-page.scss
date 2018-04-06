@@ -4,18 +4,41 @@
     // @extend %devider;
   }
 
-  
   &__btn {
     margin: 20px 0 138px;
 
     .link--arrow {
       color: $text-gray;
       transition: $control-elem-transition;
-      
+
       &:hover {
         text-decoration-color: transparent;
         color: $text-black;
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .video-gallery {
+    padding-top: 70px;
+
+    &__btn {
+      margin-bottom: 77px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .video-gallery {
+    padding-top: 50px;
+
+    .news-list__time {
+      clear: both;
+    }
+
+    &__btn {
+      margin-bottom: 58px;
     }
   }
 }

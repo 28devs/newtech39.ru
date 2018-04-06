@@ -59,9 +59,13 @@
 
   &--wide-image {
     .news-list {
+      &__wrap {
+        max-width: 270px;
+        max-height: 170px;
+      }
+
       &__img {
-        width: 270px;
-        height: 170px;
+        padding-top: 60%;
       }
     }
   }
@@ -101,5 +105,3 @@
     }
   }
 }
-
-//mobile
