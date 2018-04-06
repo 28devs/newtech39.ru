@@ -4,10 +4,14 @@
 
       .news__item
         .news__wrap
-          a.news__img(href='#' style="background-image: url('img/" +val.href+ "')")
-            .news__hover
+          a.news__img(href='#!' style="background-image: url('img/" +val.href+ "')")
              
         .news__time
           span.date= val.time
-        .news__title= val.title
-        .news__desc= val.desc
+        .news__title
+          a.link--title(href='#!')= val.title
+        .news__desc
+          p= val.desc
+  
+    .news__btn.text-center
+      a.link--arrow(href='#!') Показать еще
