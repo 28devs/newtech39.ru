@@ -1,0 +1,8 @@
+.video-gallery
+  .container
+    .news-list--wide-image
+      each val in news
+        +newsList(val)(class='news-list__item--wide-image')
+
+    .video-gallery__btn.text-center
+      a.link--arrow(href='#!') Показать еще

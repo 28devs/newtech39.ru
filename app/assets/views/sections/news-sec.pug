@@ -1,0 +1,8 @@
+.news
+  .container
+    .news-list
+      each val in news
+        +newsList(val)
+  
+    .news__btn.text-center
+      a.link--arrow(href='#!') Показать еще
