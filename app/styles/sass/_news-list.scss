@@ -1,29 +1,41 @@
 .news-list {
   &__item {
     &:after {
-      @include pseudo(0, 0)
-      clear: both;
+      @include pseudo(0, 0) clear: both;
     }
   }
-  
+
+  .date {
+    transform: translateY(-6px);
+  }
+
+  &__wrap {
+    max-width: 170px;
+  }
+
   &__img {
-    height: 170px; 
-    width: 170px;
+    width: 100%;
+    padding-top: 100%;
     display: block;
     float: left;
     margin-right: 49px;
     margin-bottom: 60px;
     position: relative;
     z-index: 99;
+    background-size: cover;
 
     &:after {
       @include pseudo();
       margin: 10px;
-      top: 0;right: 0;left: 0;bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
       width: initial;
       height: initial;
       position: absolute;
-      background: #fff url('../img/icons/gallery-icon-hover.png') center no-repeat;
+      background: #fff url('../img/icons/gallery-icon-hover.png') center
+        no-repeat;
       transition: $header-transition;
       transform: scale(1.1);
       opacity: 0;
@@ -31,32 +43,65 @@
 
     &:hover:after {
       transform: scale(1);
-      opacity: .9;
+      opacity: 0.9;
     }
   }
 
   &__title {
-    margin: 7px 0;
+    margin: 7px 0 10px;
   }
 
   &__desc {
     margin-bottom: 60px;
     p {
-      @include rem-line-height(28)
     }
   }
 
   &--wide-image {
     .news-list {
+      &__wrap {
+        max-width: 270px;
+        max-height: 170px;
+      }
+
       &__img {
-        width: 270px;
-        height: 170px;
+        padding-top: 60%;
       }
     }
   }
 }
 
-//mobile
-// &__desc {
-//   clear: both;
-// }
+@include media-breakpoint-down(md) {
+  .news-list {
+    &__img {
+      margin-right: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .news-list {
+    .date {
+      @include rem-font-size(12);
+    }
+
+    &__wrap {
+      max-width: 90px;
+    }
+
+    &__img {
+      margin-right: 20px;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      margin: 0 0 15px 0;
+      @include rem-line-height(24);
+    }
+
+    &__desc {
+      clear: both;
+      margin-bottom: 38px;
+    }
+  }
+}

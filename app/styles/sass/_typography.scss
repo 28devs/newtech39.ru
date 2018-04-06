@@ -214,6 +214,11 @@ p {
       @include rem-font-size(14);
       @include rem-line-height(22);
     }
+
+    &--title {
+      @include rem-font-size(16);
+      @include rem-line-height(24);
+    }
   }
 
   %list-style {
@@ -241,6 +246,18 @@ p {
         height: 6px;
         top: 6px;
       }
+    }
+  }
+
+  .link {
+    &--blacked {
+      @include rem-font-size(14);
+      @include rem-line-height(22);
+    }
+
+    &--title {
+      @include rem-font-size(14);
+      @include rem-line-height(22);
     }
   }
 }
