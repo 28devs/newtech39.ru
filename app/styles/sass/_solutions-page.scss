@@ -1,0 +1,19 @@
+.solutions-all {
+  margin: 100px 0 132px;
+
+  .list-item {
+    margin-bottom: 60px;
+  }
+  &__btn {
+    margin-top: 68px;
+  }
+  .link--arrow {
+    color: $text-gray;
+    transition: $control-elem-transition;
+
+    &:hover {
+      text-decoration-color: transparent;
+      color: $text-black;
+    }
+  }
+}

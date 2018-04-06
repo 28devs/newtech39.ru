@@ -7,8 +7,8 @@ mixin list-item(data)
           
       .list-item__text
         if data.time
-        .list-item__date
-          span.date !{data.time}
+          .list-item__date
+            span.date !{data.time}
 
         .list-item__title
           a(href='#!').link.link--blacked !{data.title}
