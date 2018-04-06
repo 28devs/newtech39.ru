@@ -34,12 +34,13 @@ body {
 %list-style {
   padding: 0;
 
-  & li {
+  li {
     list-style: none;
     position: relative;
     padding-left: 23px;
     color: $text-gray;
     margin-bottom: 12px;
+    @include rem-line-height(24);
 
     &:after {
       @include pseudo(8px, 8px) position: absolute;
@@ -97,7 +98,7 @@ p {
 .content {
   ul {
     @extend %list-style;
-  } 
+  }
 }
 
 .list {
@@ -145,7 +146,7 @@ p {
 
     &:hover {
       text-decoration-color: transparent;
-      color: $text-black; 
+      color: $text-black;
     }
 
     &:active {
@@ -159,7 +160,7 @@ p {
 
   &--title {
     @extend %font-main-regular;
-    @include rem-font-size(18)
+    @include rem-font-size(18);
     color: $text-black;
     transition: $control-elem-transition;
     text-decoration: underline;
@@ -175,7 +176,7 @@ p {
   display: block;
   @include rem-font-size(14);
   color: $text-gray;
-  
+
   &:before {
     @include pseudo(16px, 16px);
     float: left;
@@ -214,11 +215,32 @@ p {
       @include rem-line-height(22);
     }
   }
+
+  %list-style {
+    li {
+      margin-bottom: 10px;
+      @include rem-line-height(22);
+      @include rem-font-size(14);
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {
   p {
     @include rem-font-size(12);
     @include rem-line-height(18);
+  }
+
+  %list-style {
+    li {
+      @include rem-line-height(20);
+      @include rem-font-size(12);
+
+      &:after {
+        width: 6px;
+        height: 6px;
+        top: 6px;
+      }
+    }
   }
 }
