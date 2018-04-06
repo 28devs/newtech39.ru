@@ -117,6 +117,46 @@
       }
     }
   }
+
+  &--square {
+    margin-bottom: 36px;
+    .list-item {
+      &__inner {
+        align-items: flex-start;
+      }
+      &__img-wrap {
+        max-width: initial;
+      }
+
+      &__img {
+        border-radius: 0;
+        padding-top: 63%;
+      }
+
+      &__img-hover {
+        border-radius: 0;
+      }
+
+      &__text {
+        padding: 27px 0;
+        text-align: left;
+      }
+
+      &__title {
+        margin: 19px 0 25px;
+      }
+
+      &__tags {
+        span {
+          @include rem-font-size(12);
+          background-color: #f4f4f4;
+          border-radius: 13.5px;
+          padding: 9px 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
