@@ -1,0 +1,28 @@
+mixin share-opinion(data)
+  section.share-opinion(class=data.class)
+    .container
+      h2= data.title
+
+      p= data.text
+      
+      form(action='#')
+        .row.no-gutters
+          .col-12.col-md-6
+            input(type='text' placeholder='Ваше имя ...')
+            input(type='text' placeholder='Контактный телефон ...')
+            input(type='text' placeholder='Укажите email ...')
+
+          .col-12.col-md-6
+            textarea(type='text' placeholder='Текст Вашего сообщения ...')
+
+          .col-12.col-lg-6.offset-lg-3.text-left
+            input(type='checkbox' id='checkbox')
+            label(for='checkbox') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу www.newtech39.ru/personalinfo.pdf.
+
+          .col-12.text-center
+            button.btn(type='submit')= data.textBtn
+
+    .container.form-success 
+      h2 Спасибо, Ваша заявка успешно отправлена
+      
+      p Мы рассмотрим вашу заявку и свяжемся с Вами в ближайшее время!

@@ -1,0 +1,7 @@
+include blocks/head.pug
+include sections/share-opinion.pug
+
+.form-shower
+  each form in forms
+    +share-opinion(form)
+
