@@ -7,6 +7,11 @@ textarea {
   width: calc(100% - 20px);
   margin: 10px;
   border-radius: 5px;
+  outline: 0 !important;
+
+  &.input-error {
+    box-shadow: 0 0 0 2px $bg-main;
+  }
 }
 
 input[type='checkbox'] {
@@ -23,6 +28,9 @@ input[type='checkbox'] {
     padding-left: 35px;
     cursor: pointer;
     position: relative;
+    margin: 20px 10px 50px;
+    @include rem-font-size(14);
+    @include rem-line-height(22);
 
     &:before {
       @include pseudo(20px, 20px);
@@ -41,11 +49,67 @@ input[type='checkbox'] {
   }
 }
 
+.form-success {
+  display: none;
+
+  h2 {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    @include rem-line-height(36);
+
+    &:after {
+      @extend %text-devider;
+      margin: 35px auto 5px;
+    }
+  }
+
+  p {
+    max-width: 400px;
+    margin: 40px auto 0;
+  }
+
+  &--show {
+    .container:not(.form-success) {
+      display: none;
+    }
+
+    .form-success {
+      display: block;
+    }
+  }
+}
+
+.form-shower {
+  background: #f4f4f4;
+  padding: 40px;
+
+  .share-opinion {
+    background: #fff;
+  }
+
+  > * {
+    margin-bottom: 40px;
+  }
+
+  &--bg-white {
+    background: #fff;
+  }
+}
+
 @include media-breakpoint-down(md) {
   input,
   textarea {
     padding: 13px 24px;
     @include rem-font-size(14);
+  }
+
+  .form-shower {
+    padding: 20px;
+
+    > * {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -54,5 +118,13 @@ input[type='checkbox'] {
   textarea {
     padding: 12px 24px;
     @include rem-font-size(12);
+  }
+
+  .form-shower {
+    padding: 10px;
+
+    > * {
+      margin-bottom: 10px;
+    }
   }
 }
