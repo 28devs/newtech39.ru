@@ -6,11 +6,12 @@ mixin list-item(data)
           .list-item__img-hover
           
       .list-item__text
+        if data.time
+          .list-item__date
+            span.date !{data.time}
+
         .list-item__title
           a(href='#!').link.link--blacked !{data.title}
-
-        if data.time
-          p.list-item__time !{data.time}
             
         if data.desc 
           p.list-item__desc !{data.desc}
@@ -18,7 +19,7 @@ mixin list-item(data)
         if data.tags
           .list-item__tags
             each val in data.tags
-              span.list-item__tag val
+              span.list-item__tag= val
 
 mixin menu(data)
   .container

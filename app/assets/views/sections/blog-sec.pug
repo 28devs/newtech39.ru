@@ -1,0 +1,10 @@
+.blog
+  .container
+    .row
+      each val in blog
+        .col-12.col-md-6.col-lg-4
+          +list-item(val)(class='list-item--square')
+
+    .blog__btn.text-center
+      a.link--arrow(href='#!') Показать еще
+

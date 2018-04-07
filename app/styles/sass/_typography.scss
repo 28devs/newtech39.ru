@@ -173,7 +173,7 @@ p {
 
 .date {
   position: relative;
-  display: block;
+  display: inline-block;
   @include rem-font-size(14);
   color: $text-gray;
 

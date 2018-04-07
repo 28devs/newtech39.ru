@@ -1,0 +1,16 @@
+.blog {
+  margin: 80px 0 132px;
+
+  &__btn {
+    margin-top: 16px;
+  }
+  .link--arrow {
+    color: $text-gray;
+    transition: $control-elem-transition;
+
+    &:hover {
+      text-decoration-color: transparent;
+      color: $text-black;
+    }
+  }
+}
