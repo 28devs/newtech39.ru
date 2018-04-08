@@ -1,0 +1,10 @@
+section.gallery
+  h2.text-center Открытие стоматологии на ул. Некрасова 10 января 2017
+  .gallery__wrap#gallery-main
+    .row
+      each val in galleryAll
+        +gallery(val)
+        
+
+  .gallery__btn
+    a.link(href='#').link--arrow Показать еще

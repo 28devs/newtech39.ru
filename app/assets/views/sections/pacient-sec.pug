@@ -1,0 +1,13 @@
+.before-after-menu
+  .slider-menu
+    .container
+      h2 Наши пациенты
+      .slider-menu__wrap
+        .slider-menu__slider#slider-menu
+          
+          each val in pacients 
+            +list-item(val)
+        
+        .slider-menu__navigation
+          div.slider-menu__prev#prev
+          div.slider-menu__next#next

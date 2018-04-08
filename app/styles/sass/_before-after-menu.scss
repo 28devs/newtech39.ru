@@ -1,0 +1,15 @@
+.before-after-menu {
+  h2 {
+    text-align: center;
+    margin: 40px 0 46px;
+  }
+
+  .slider-menu {
+    margin-bottom: 38px;
+  }
+  .list-item {
+    &__img-wrap {
+      max-width: 170px;
+    }
+  }
+}

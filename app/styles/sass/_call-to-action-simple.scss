@@ -1,6 +1,9 @@
 .call-to-action-simple {
   padding-bottom: 138px;
 
+  &__title {
+    margin: 80px 0 48px;
+  }
   &__desc {
     max-width: 750px;
     text-align: center;

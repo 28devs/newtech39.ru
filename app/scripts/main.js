@@ -52,6 +52,22 @@ const heroSlider = $('.hero__slider ul').lightSlider({
 });
 
 //
+// Menu slider for photo-gallary
+//
+
+const menuSlider = $('#slider-menu').lightSlider({
+  item: 5,
+  controls: false,
+  pager: false
+});
+const prevSlide = $('#prev').on('click', function() {
+  menuSlider.goToPrevSlide();
+});
+const nextSlide = $('#next').on('click', function() {
+  menuSlider.goToNextSlide();
+});
+
+//
 // Main page gallery initialization
 //
 

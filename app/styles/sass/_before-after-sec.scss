@@ -1,0 +1,54 @@
+.before-after {
+
+  &:after {
+    @extend %devider;
+    margin-top: 80px;
+  }
+
+  &__img-wrap {
+    position: relative;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;left: 0;
+    background-color: #93c6a8;
+    @extend %font-main-bold;
+    @include rem-font-size(16);
+    @include rem-line-height(42);
+    text-align: center;
+    text-transform: lowercase;
+    color: #fff;
+    width: 80px;
+    height: 42px;
+  }
+
+  h4 {
+    margin: 33px 0 22px;
+  }
+
+  &__specialist-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 30px 30px 0;
+
+    .d-flex:last-child > & {
+      margin-bottom: 0;
+    }
+  }
+
+  .link {
+    @include rem-font-size(16);
+  }
+
+  &__specialist {
+    p {
+      margin-top: 12px;
+    }
+  }
+  p {
+    @include rem-line-height(24);
+  }
+}

@@ -157,6 +157,27 @@
       }
     }
   }
+
+  &--menu {
+    .list-item {
+      &__img-wrap {
+        max-width: 170px;
+      }
+
+      &__text {
+        text-align: left;
+      }
+
+      &__title a {
+        @include rem-font-size(14);
+        @include rem-line-height(24);
+      }
+
+      &__text {
+        max-width: 170px;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {

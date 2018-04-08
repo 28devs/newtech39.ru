@@ -1,0 +1,11 @@
+.slider-menu
+  .container
+    .slider-menu__wrap
+      .slider-menu__slider#slider-menu
+        
+        each val in sliderMenu 
+          +list-item(val)(class='list-item--menu')
+      
+      .slider-menu__navigation
+        div.slider-menu__prev#prev
+        div.slider-menu__next#next
