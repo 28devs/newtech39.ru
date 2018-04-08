@@ -1,7 +1,7 @@
 .footer {
   background: #f5f5f5 url(../img/main-bg.jpg) center 50px / cover;
   overflow: hidden;
-  background-attachment: fixed;
+  // background-attachment: fixed;
 
   &__callback {
     background: #fff;
@@ -78,6 +78,7 @@
       cursor: default;
       margin-bottom: 26px;
       display: inline-block;
+      text-decoration: none;
 
       &:hover {
         color: $text-black;
@@ -146,6 +147,12 @@
   }
 }
 
+section:last-of-type {
+  &:after {
+    background: transparent;
+  }
+}
+
 @include media-breakpoint-down(md) {
   .footer {
     &__callback:after {
@@ -194,7 +201,8 @@
 @include media-breakpoint-down(sm) {
   .footer {
     &__tel {
-      margin: 9px 0;
+      margin-top: 9px;
+      margin-bottom: 9px;
       padding-left: 30px;
       @include rem-font-size(18);
 

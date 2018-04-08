@@ -98,6 +98,7 @@
         text-transform: uppercase;
         color: $text-black;
         margin-right: 0.3em;
+        text-decoration: none;
 
         &:after {
           @include pseudo(0%, 3px);
@@ -165,7 +166,6 @@
         text-decoration: underline;
         color: #666;
         @include rem-font-size(16);
-        transition: 0.1s;
 
         &:hover,
         &.active {

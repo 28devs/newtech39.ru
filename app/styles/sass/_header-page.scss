@@ -2,6 +2,7 @@
   height: 400px;
   padding-top: 194px;
   box-shadow: inset 0px -15px 15px -15px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
 
   h2 {
     @include rem-font-size(24);
@@ -68,6 +69,11 @@
 
   &--bg-services {
     background: url(../img/header-page/header-page-services.jpg) left top /
+      cover;
+  }
+
+  &--bg-service {
+    background: url(../img/header-page/header-page-service.jpg) center top /
       cover;
   }
 

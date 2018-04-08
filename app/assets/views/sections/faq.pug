@@ -1,0 +1,12 @@
+section.faq-page 
+  .container
+    h2 Список вопросов
+
+    each f, index in faq
+      a.faq-page__question(href='#faq' + index data-toggle='collapse')= f.question
+
+      article.faq-page__ansver(class='collapse' id='faq' + index) 
+        p= f.ansver
+
+    .text-center
+      a.link.link--arrow(href='#!') Показать еще
