@@ -78,6 +78,7 @@
       cursor: default;
       margin-bottom: 26px;
       display: inline-block;
+      text-decoration: none;
 
       &:hover {
         color: $text-black;
@@ -143,6 +144,12 @@
       @include rem-font-size(14);
       margin: 0;
     }
+  }
+}
+
+section:last-of-type {
+  &:after {
+    background: transparent;
   }
 }
 

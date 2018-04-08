@@ -6,6 +6,16 @@ body {
   @include rem-line-height(26);
 }
 
+a {
+  color: $text-gray;
+  text-decoration: underline;
+
+  &:hover {
+    color: $text-gray;
+    text-decoration: none;
+  }
+}
+
 @mixin font-main-bold() {
   font-family: 'Merriweather', sans-serif;
   font-weight: 700;
@@ -43,7 +53,8 @@ body {
     @include rem-line-height(24);
 
     &:after {
-      @include pseudo(8px, 8px) position: absolute;
+      @include pseudo(8px, 8px);
+      position: absolute;
       left: 0px;
       top: 8px;
       background-color: $bg-main;
@@ -95,12 +106,6 @@ p {
   @include rem-line-height(28);
 }
 
-.content {
-  ul {
-    @extend %list-style;
-  }
-}
-
 .list {
   @extend %list-style;
 
@@ -136,6 +141,10 @@ p {
     text-decoration: underline;
     @include rem-font-size(16);
     @extend %font-main-regular;
+
+    &-left {
+      background: url('../img/icons/link-arrow-left.png') left center no-repeat;
+    }
   }
 
   &--blacked {
@@ -257,6 +266,11 @@ p {
 
     &--title {
       @include rem-font-size(14);
+      @include rem-line-height(22);
+    }
+
+    &--arrow {
+      @include rem-font-size(12);
       @include rem-line-height(22);
     }
   }

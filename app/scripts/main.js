@@ -144,7 +144,6 @@ const forms = document.querySelectorAll('form');
 forms.forEach(function(elem) {
   elem.addEventListener('submit', function(e) {
     e.preventDefault();
-    console.log(this);
     this.parentNode.parentNode.classList.add('form-success--show');
   });
 });
