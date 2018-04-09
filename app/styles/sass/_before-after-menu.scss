@@ -7,9 +7,19 @@
   .slider-menu {
     margin-bottom: 38px;
   }
+
   .list-item {
     &__img-wrap {
       max-width: 170px;
+    }
+
+    &__title {
+      margin-top: 22px;
+
+      a {
+        @include rem-font-size(16);
+        @include rem-line-height(28);
+      }
     }
   }
 }

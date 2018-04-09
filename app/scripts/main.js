@@ -80,6 +80,17 @@ const lightGalleryMain = $('#gallery-main').lightGallery({
 // Header nav mobile
 //
 
+//
+//video gallery reviews
+//
+
+const videoGalleryReviews = $('#video-reviews').lightGallery({
+  selector: '.video-list__item',
+  pager: false,
+  controls: false,
+  thumbnail: false
+})
+
 const headerNav = document.querySelector('.header__nav .nav');
 const headerNavBtnOpen = document.querySelector('.header__nav-open');
 const headerNavBtnClose = document.querySelector('.header__nav-close');
