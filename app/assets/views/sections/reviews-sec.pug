@@ -1,0 +1,14 @@
+.reviews
+  .container
+    h2 Еще мнения
+
+    each val in reviews
+      .reviews__item
+        .d-flex.flex-row.align-items-start
+          img(src='img/reviews/' + val.href)
+          .reviews__text-wrap
+            p.reviews__text= val.text
+            p.reviews__name= val.name
+
+    .reviews__btn 
+      a(href='#!').link.link--arrow Показать еще

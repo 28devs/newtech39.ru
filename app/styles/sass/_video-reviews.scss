@@ -4,5 +4,27 @@
     margin: 80px 0 65px;
   }
 
-  
+  &__name {
+    margin: 32px 0 5px;
+    @extend %font-main-regular;
+    @include rem-line-height(28);
+    color: $text-black;
+
+    &:before {
+      @include pseudo(14px, 14px);
+      background-image: url(../img/icons/person.png);
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+
+  &__operations {
+    margin: 0 0 0 30px;
+    @include rem-line-height(22);
+  }
+
+  &__btn {
+    text-align: center;
+    margin: 66px 0 85px;
+  }
 }

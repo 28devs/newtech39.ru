@@ -102,7 +102,7 @@ const lightGalleryMain = $('#gallery-main').lightGallery({
 //
 
 const videoGalleryReviews = $('#video-reviews').lightGallery({
-  selector: '.video-list__item',
+  selector: '.video-reviews__item',
   pager: false,
   controls: false,
   thumbnail: false
