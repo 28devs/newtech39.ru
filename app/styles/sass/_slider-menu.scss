@@ -1,30 +1,37 @@
 .slider-menu {
   margin: 80px 0;
+
   &:after {
     @exnted %devider;
   }
+
   &__wrap {
     position: relative;
     max-width: 970px;
     margin: 0 auto;
+    padding: 0 55px;
   }
 
   &__slider {
     position: relative;
     z-index: 9;
   }
+
   &__navigation {
-    margin: 0 -100px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 0;bottom: 0;left: 0;right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
-  &__next, &__prev {
-    transform: translateY(-60px);
+  &__next,
+  &__prev {
+    transform: translateY(-45px);
     width: 26px;
     height: 49px;
     background-image: url('../img/icons/slider-arrows.png');
@@ -37,6 +44,6 @@
   }
 
   &__next {
-    transform: rotate(180deg) translateY(60px);
+    transform: rotate(180deg) translateY(45px);
   }
 }

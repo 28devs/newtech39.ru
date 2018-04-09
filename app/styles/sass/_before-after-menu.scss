@@ -1,14 +1,18 @@
 .before-after-menu {
   h2 {
     text-align: center;
-    margin: 40px 0 46px;
+    margin: 40px 0 54px;
   }
 
   .slider-menu {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .list-item {
+    &__title {
+      margin-top: 26px;
+    }
+
     &__img-wrap {
       max-width: 170px;
     }

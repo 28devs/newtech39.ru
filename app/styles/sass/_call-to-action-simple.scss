@@ -4,6 +4,7 @@
   &__title {
     margin: 80px 0 48px;
   }
+
   &__desc {
     max-width: 750px;
     text-align: center;
@@ -17,6 +18,10 @@
 @include media-breakpoint-down(md) {
   .call-to-action-simple {
     padding-bottom: 58px;
+
+    &__title {
+      margin: 60px 0 18px;
+    }
 
     &__button {
       margin-top: 17px;

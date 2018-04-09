@@ -14,3 +14,22 @@
     }
   }
 }
+
+@include media-breakpoint-down(md) {
+  .blog {
+    margin: 50px 0 62px;
+
+    &__btn {
+      margin-top: -20px;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .blog {
+    margin: 40px 0 52px;
+
+    &__btn {
+      margin-top: 0;
+    }
+  }
+}

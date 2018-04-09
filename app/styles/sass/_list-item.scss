@@ -138,21 +138,22 @@
       }
 
       &__text {
-        padding: 27px 0;
+        padding: 23px 0 25px;
         text-align: left;
       }
 
       &__title {
-        margin: 19px 0 25px;
+        margin: 13px 0 23px;
       }
 
       &__tags {
         span {
           @include rem-font-size(12);
           background-color: #f4f4f4;
-          border-radius: 13.5px;
-          padding: 9px 15px;
-          margin-right: 10px;
+          border-radius: 14px;
+          padding: 3px 14px;
+          margin: 10px 10px 0 0;
+          display: inline-block;
         }
       }
     }
@@ -182,8 +183,13 @@
 
 @include media-breakpoint-down(md) {
   .list-item {
-    &__title {
-      margin: 18px 0 14px;
+    &--square {
+      .list-item__title {
+        margin: 3px 0 12px;
+      }
+      .list-item__text {
+        padding: 10px 0 9px;
+      }
     }
   }
 }
@@ -191,5 +197,15 @@
 @include media-breakpoint-down(sm) {
   .list-item {
     margin-bottom: 25px;
+
+    &--square {
+      .list-item__title {
+        margin: 3px 0 3px;
+      }
+
+      .list-item__tags span {
+        padding: 0px 14px;
+      }
+    }
   }
 }

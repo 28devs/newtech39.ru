@@ -63,28 +63,28 @@
       margin: auto;
     }
   }
+}
 
-  .video-block {
-    position: relative;
+.video-block {
+  position: relative;
 
-    &:before {
-      @include pseudo(80px, 80px);
-      background: url(../img/icons/video-icon-play.png) center no-repeat/contain;
-      position: absolute;
-      z-index: 6;
-      cursor: pointer;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      filter: grayscale(1) brightness(2);
-      transition: 0.3s ease;
-    }
+  &:before {
+    @include pseudo(80px, 80px);
+    background: url(../img/icons/video-icon-play.png) center no-repeat/contain;
+    position: absolute;
+    z-index: 6;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    filter: grayscale(1) brightness(2);
+    transition: 0.3s ease;
+  }
 
-    &:hover:before {
-      filter: grayscale(0) brightness(1);
-    }
+  &:hover:before {
+    filter: grayscale(0) brightness(1);
   }
 }
 
