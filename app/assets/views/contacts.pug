@@ -1,0 +1,105 @@
+include blocks/head.pug
+include sections/header.pug
+include sections/header_page.pug
++header-page('contacts', 'Контакты', ['Главная', 'Контакты'])
+
+.contacts-page
+  .container
+    .row
+      .col-12.col-md-4.col-lg-5
+        h3 Клиника на Московском проспекте
+
+        p.icon-text.icon-text--location Россия, г. Калининград, Московский<br> проспект, 375
+
+        p.icon-text.icon-text--phone 
+          | +7 (4012) 35-35-46 <br>
+          | +7 (4012) 37-75-53
+
+        p.icon-text.icon-text--time 
+          | ПН-ПТ с 09:00 до 20:00  <br>
+          | СБ-ВС с 10:00 до 18:00
+
+      .col-12.col-md-5.col-lg-4
+        img.contacts-page__img(src='img/contacts-location-1.jpg', alt='Россия, г. Калининград, Московский проспект, 375')
+
+      .col-12.col-md-3
+        h3 Отделения:
+
+        ul.list
+          each li in ['Пластическая хирургия', 'Стационар', 'Трихология', 'Андрология', 'Гинекология']
+           li= li
+
+    .row
+      .col-12.col-md-4.col-lg-5
+        h3 Косметология на Некрасова
+
+        p.icon-text.icon-text--location Россия, г. Калининград, ул. Некрасова, д. 3
+
+        p.icon-text.icon-text--phone 
+          | +7 (4012) 332-332
+
+        p.icon-text.icon-text--time 
+          | ПН-ПТ с 09:00 до 20:00  <br>
+          | СБ-ВС с 10:00 до 18:00
+
+      .col-12.col-md-5.col-lg-4
+        img.contacts-page__img(src='img/contacts-location-2.jpg', alt='Россия, г. Калининград, ул. Некрасова, д. 3')
+
+      .col-12.col-md-3 
+        h3 Отделения:
+
+        ul.list
+          each li in ['Косметология', 'Андрология', 'Генекология']
+           li= li
+
+    .row       
+      .col-12.col-md-4.col-lg-5
+        h3 Клиника на Московском проспекте
+
+        p.icon-text.icon-text--location Россия, г. Калининград, Московский проспект, 375
+
+        p.icon-text.icon-text--phone 
+          | +7 (4012) 333-660
+
+        p.icon-text.icon-text--time 
+          | ПН-ПТ с 09:00 до 20:00  <br>
+          | СБ-ВС с 10:00 до 18:00
+
+      .col-12.col-md-5.col-lg-4
+        img.contacts-page__img(src='img/contacts-location-3.jpg', alt='Россия, г. Калининград, Московский проспект, 375')
+
+      .col-12.col-md-3
+        h3 Отделения:
+
+        ul.list
+          each li in ['Стоматология']
+           li= li
+
+  .contact-page__map
+    iframe(width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=54.7104,20.4522&key=AIzaSyBdyv1rLhnLTot0cmWLq2KYUeun8NKNcf8" allowfullscreen)
+
+
+include sections/share-opinion.pug
++share-opinion(forms[0])
+
+section.info
+    .container
+      h2 Информация
+
+      .row
+        .col-12.col-md-4
+          p Лицензия на осуществление<br> медицинской деятельности<br> No ЛО-39-01-001474 от 03.02.2016 г.
+          a.icon-text.icon-text--doc(href='#!') Посмотреть лицензию
+
+        .col-12.col-md-4
+          p Контролирующий орган:<br> Отдел по защите прав потребителей<br> Калининградской области
+          a.icon-text.icon-text--phone(href='tel:+84012658194') 8 (4012) 65 81 94
+
+        .col-12.col-md-4
+          p Ваши вопросы, отзывы и<br> предложения<br> по сотрудничеству:
+          a.icon-text.icon-text--mail(href='mailto:info@newtech39.ru') info@newtech39.ru
+
+
+
+
+include sections/footer.pug
