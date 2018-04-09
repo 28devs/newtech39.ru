@@ -1,0 +1,15 @@
+.effective-solution
+  .container
+    h2 Эффективное решение
+
+    
+    each val in effectiveSolution
+      .effective-solution__item
+        .row
+          .col-12.col-md-6
+            div(style="background-image: url('img/landing/"+val.href+"')").effective-solution__img
+
+          .col-12.col-md-6
+            .effective-solution__text-wrap
+              h4= val.title
+              p= val.text

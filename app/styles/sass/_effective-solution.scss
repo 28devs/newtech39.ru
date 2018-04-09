@@ -1,0 +1,64 @@
+.effective-solution {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1) inset;
+  background: #f5f5f5 url(../img/main-bg.jpg) center / cover;
+  padding: 80px 0 61px;
+
+  h2 {
+    text-align: center;
+    margin: 0 0 80px 0;
+  }
+
+  h4 {
+    &:after {
+      @extend %text-devider;
+      background-color: $bg-main;
+      margin: 22px 0;
+    }
+  }
+
+  &__img {
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 35%;
+  }
+
+  &__item {
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 50px;
+    &:nth-of-type(even) .row {
+      flex-flow: row-reverse;
+    }
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-wrap {
+    padding-bottom: 22px;
+  }
+
+  &__text {
+    @include rem-line-height(32);
+  }
+
+  &__name {
+    margin: 4px 0 5px;
+    @extend %font-main-regular;
+    @include rem-font-size(18);
+    @include rem-line-height(28);
+    color: $text-black;
+
+    &:before {
+      @include pseudo(14px, 14px);
+      background-image: url(../img/icons/person.png);
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin: 76px 0 0;
+  }
+}
