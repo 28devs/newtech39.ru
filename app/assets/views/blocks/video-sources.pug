@@ -1,0 +1,4 @@
+each val in videoSources
+  div(style='display: none;' id= val.videoId)
+    video.lg-video-object.lg-html5(controls preload='none')
+      source(src= val.href type='video/mp4')
