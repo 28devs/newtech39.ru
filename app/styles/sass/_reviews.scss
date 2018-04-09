@@ -23,7 +23,7 @@
       .reviews__img {
         margin-right: 0;
         margin-left: 50px;
-        order: 1
+        order: 1;
       }
       .reviews__text-wrap {
         order: 0;
@@ -35,7 +35,7 @@
     border-bottom: 1px solid #e7e7e7;
     padding-bottom: 22px;
   }
-  
+
   &__text {
     @include rem-line-height(32);
   }
@@ -58,5 +58,133 @@
   &__btn {
     text-align: center;
     margin: 76px 0 0;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .video-reviews {
+    h2 {
+      margin: 50px 0 35px;
+    }
+
+    .col-6:last-child {
+      display: none;
+    }
+
+    &__btn {
+      margin: 46px 0 55px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .reviews {
+    padding: 50px 0 55px;
+
+    &__item {
+      margin-bottom: 40px;
+    }
+
+    &__btn {
+      margin: 46px 0 0;
+    }
+
+    &__text {
+      @include rem-font-size(14);
+      @include rem-line-height(24);
+    }
+
+    h2 {
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .video-reviews {
+    &__item-wrap {
+      margin-bottom: 20px;
+    }
+
+    .col-6:last-child {
+      display: block;
+    }
+
+    h2 {
+      margin: 40px 0 25px;
+    }
+
+    &__name {
+      margin: 10px 0 5px;
+      @include rem-font-size(14);
+    }
+
+    &__operations {
+      @include rem-font-size(12);
+      @include rem-line-height(18);
+    }
+
+    &__btn {
+      margin: 6px 0 35px;
+    }
+  }
+
+  .reviews {
+    padding: 40px 0 45px;
+
+    .reviews h2 {
+      margin: 0 0 18px 0;
+    }
+
+    &__img {
+      width: 130px;
+      min-width: 130px;
+      height: 130px;
+      background-size: contain;
+      margin: 0 0 15px 0 !important;
+    }
+
+    &__text {
+      @include rem-font-size(12);
+      @include rem-line-height(24);
+    }
+
+    &__item {
+      margin-bottom: 30px;
+
+      > div {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+
+      &:nth-of-type(even) {
+        > div {
+          flex-direction: column-reverse !important;
+        }
+      }
+
+      &:last-of-type {
+        .reviews__text-wrap {
+          border: 0 !important;
+        }
+      }
+    }
+
+    &__name {
+      text-align: center;
+      @include rem-font-size(14);
+
+      &:before {
+        width: 11px;
+        background-size: contain;
+        height: 11px;
+      }
+    }
+
+    &__btn {
+      margin: 26px 0 0;
+    }
   }
 }
