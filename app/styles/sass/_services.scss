@@ -1,4 +1,6 @@
 .services {
+  position: relative;
+
   &__wrap {
     overflow: hidden;
   }
@@ -113,6 +115,16 @@
   &__btn {
     text-align: center;
     margin: 30px 0 30px;
+  }
+
+  .leaf-container {
+    position: static;
+  }
+
+  .leaf--1 {
+    right: -60px;
+    z-index: -1;
+    top: -70px;
   }
 }
 

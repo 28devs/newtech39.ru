@@ -1,5 +1,6 @@
 .price {
   margin: 0 0 70px;
+  position: relative;
 
   h2 {
     margin: 78px 25px 53px;
@@ -67,6 +68,26 @@
   }
 }
 
+section.price {
+  &:before {
+    @include pseudo(74px, 343px);
+    background: url(../img/price-leaf-1.png) left no-repeat / contain;
+    position: absolute;
+    top: 22%;
+    left: 0;
+    z-index: 1;
+  }
+
+  &:after {
+    @include pseudo(77px, 401px);
+    background: url(../img/price-leaf-2.png) right no-repeat / contain !important;
+    position: absolute;
+    top: 42%;
+    right: 0;
+    z-index: 1;
+  }
+}
+
 @include media-breakpoint-down(md) {
   .price {
     h2 {
@@ -80,6 +101,12 @@
 
     .price__btn {
       margin: 36px 0 76px;
+    }
+  }
+  section.price {
+    &:before,
+    &:after {
+      display: none;
     }
   }
 }

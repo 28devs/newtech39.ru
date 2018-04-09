@@ -5,6 +5,7 @@
 
   &-dialog {
     transition: 0.3s !important;
+    background: #fff;
   }
 
   &:not(.show) {
@@ -35,8 +36,9 @@
   &-content {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     border: 0;
-    background: #fff;
+    background: transparent;
     border-radius: 2px;
+    z-index: 2;
   }
 
   &-header {
@@ -102,6 +104,66 @@
           margin-top: 17px;
           margin-bottom: 31px;
         }
+      }
+    }
+  }
+
+  &--leaf-1 {
+    .modal-dialog {
+      position: relative;
+
+      &:after {
+        @include pseudo(82px, 212px);
+        background: url(../img/form-leaf-1.png) center no-repeat / contain;
+        position: absolute;
+        top: 12%;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &--leaf-2 {
+    .modal-dialog {
+      position: relative;
+
+      &:before {
+        @include pseudo(73px, 238px);
+        background: url(../img/form-leaf-2.png) center no-repeat / contain;
+        position: absolute;
+        top: 36%;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &--leaf-3 {
+    .modal-dialog {
+      position: relative;
+
+      &:before {
+        @include pseudo(60px, 317px);
+        background: url(../img/form-leaf-3.png) center no-repeat / contain;
+        position: absolute;
+        top: 26%;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &--leaf-4 {
+    .modal-dialog {
+      position: relative;
+
+      &:before {
+        @include pseudo(91px, 240px);
+        background: url(../img/form-leaf-4.png) center no-repeat / contain;
+        position: absolute;
+        top: 42%;
+        right: 0;
+        z-index: 1;
       }
     }
   }

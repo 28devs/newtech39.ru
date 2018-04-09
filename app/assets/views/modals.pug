@@ -1,5 +1,4 @@
 include blocks/head.pug
-include sections/header.pug
 include sections/header_page.pug
 +header-page('docs', 'Модальные окна', ['Главная', 'Модальные окна'])
 
@@ -10,7 +9,7 @@ include sections/header_page.pug
     button.btn(type='button' data-toggle='modal' data-target='#modal1')
       | Обратный звонок
 
-    #modal1.modal.fade.modal--col-1
+    #modal1.modal.fade.modal--col-1.modal--leaf-1.modal--leaf-2
       .modal-dialog
         .modal-content
           button.close(data-dismiss='modal')
@@ -42,9 +41,7 @@ include sections/header_page.pug
     button.btn(type='button' data-toggle='modal' data-target='#modal2')
       | Задать вопрос
 
-
-
-    #modal2.modal.fade.modal--col-2
+    #modal2.modal.fade.modal--col-2.modal--leaf-1.modal--leaf-3
       .modal-dialog
         .modal-content
           button.close(data-dismiss='modal')
@@ -75,11 +72,43 @@ include sections/header_page.pug
               p Мы рассмотрим вашу заявку и свяжемся с Вами в ближайшее время!
               button.btn(type='submit' data-dismiss='modal') Закрыть
 
+    button.btn(type='button' data-toggle='modal' data-target='#modal4')
+      | Записаться на прием
+
+    #modal4.modal.fade.modal--col-2.modal--leaf-1.modal--leaf-4
+      .modal-dialog
+        .modal-content
+          button.close(data-dismiss='modal')
+
+          .modal-body
+            .container
+              h2 Записаться на прием
+              
+              form(action='#')
+                .row.no-gutters
+                  .col-12.col-md-6
+                    input(type='text' placeholder='Ваше имя ...')
+                    input(type='text' placeholder='Контактный телефон ...')
+                    input(type='text' placeholder='Укажите email ...')
+
+                  .col-12.col-md-6
+                    textarea(type='text' placeholder='Текст Вашего сообщения ...')
+
+                  .col-12.col-lg-10.offset-lg-1.text-left
+                    input(type='checkbox' id='checkbox')
+                    label(for='checkbox') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу www.newtech39.ru/personalinfo.pdf.
+
+                  .col-12.text-center
+                    button.btn(type='submit') Записаться на прием
+
+            .container.form-success 
+              h2 Спасибо, Ваша заявка успешно отправлена
+              p Мы рассмотрим вашу заявку и свяжемся с Вами в ближайшее время!
+              button.btn(type='submit' data-dismiss='modal') Закрыть
+
 
     button.btn(type='button' data-toggle='modal' data-target='#modal3')
       | Врач
-
-
 
     #modal3.modal.fade.modal--col-1
       .modal-dialog
