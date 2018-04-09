@@ -4,6 +4,7 @@
   .list-item {
     margin-bottom: 60px;
   }
+
   &__btn {
     margin-top: 0px;
   }
@@ -14,6 +15,34 @@
     &:hover {
       text-decoration-color: transparent;
       color: $text-black;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .solutions-all {
+    margin: 63px 0 74px;
+
+    .list-item {
+      margin-bottom: 22px;
+
+      &__title {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .solutions-all {
+    margin: 43px 0 54px;
+
+    .list-item {
+      margin-bottom: 18px;
+
+      &__title {
+        margin-top: 16px;
+      }
     }
   }
 }
