@@ -1,5 +1,4 @@
 .before-after {
-
   &:after {
     @extend %devider;
     margin-top: 80px;
@@ -7,11 +6,16 @@
 
   &__img-wrap {
     position: relative;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__badge {
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     background-color: #93c6a8;
     @extend %font-main-bold;
     @include rem-font-size(16);
@@ -41,6 +45,7 @@
 
   .link {
     @include rem-font-size(16);
+    @extend %font-main-regular;
   }
 
   &__specialist {
