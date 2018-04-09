@@ -57,8 +57,25 @@ const heroSlider = $('.hero__slider ul').lightSlider({
 
 const menuSlider = $('#slider-menu').lightSlider({
   item: 5,
+  slideMove: 5,
   controls: false,
-  pager: false
+  pager: false,
+  responsive: [
+    {
+      breakpoint: 1220,
+      settings: {
+        item: 4,
+        slideMove: 4
+      }
+    },
+    {
+      breakpoint: 668,
+      settings: {
+        item: 3,
+        slideMove: 3
+      }
+    }
+  ]
 });
 const prevSlide = $('#prev').on('click', function() {
   menuSlider.goToPrevSlide();
