@@ -3,6 +3,7 @@
 
   &__title {
     margin: 80px 0 48px;
+    text-align: center;
   }
 
   &__desc {
@@ -32,6 +33,10 @@
 @include media-breakpoint-down(sm) {
   .call-to-action-simple {
     padding-bottom: 38px;
+
+    &__title {
+      margin: 32px 0 18px;
+    }
 
     &__desc {
       @include rem-font-size(12);

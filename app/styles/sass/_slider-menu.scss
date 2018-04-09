@@ -1,5 +1,7 @@
 .slider-menu {
-  margin: 80px 0;
+  margin: 33px 0;
+  overflow: hidden;
+  max-height: 390px;
 
   &:after {
     @exnted %devider;
@@ -7,9 +9,8 @@
 
   &__wrap {
     position: relative;
-    max-width: 970px;
     margin: 0 auto;
-    padding: 0 55px;
+    padding: 0 65px;
   }
 
   &__slider {
@@ -34,16 +35,51 @@
     transform: translateY(-45px);
     width: 26px;
     height: 49px;
-    background-image: url('../img/icons/slider-arrows.png');
-    background-repeat: no-repeat;
+    background: url('../img/icons/slider-arrows.png') center no-repeat / contain;
     cursor: pointer;
+    filter: grayscale(1) brightness(1.6);
+    transition: 0.1s ease;
 
     &:hover {
-      background-position: center bottom;
+      filter: grayscale(0) brightness(1);
     }
   }
 
   &__next {
     transform: rotate(180deg) translateY(45px);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .slider-menu {
+    margin: 20px 0;
+
+    &__wrap {
+      padding: 0 45px;
+    }
+
+    h2 {
+      margin-bottom: 34px !important;
+      margin-top: 22px !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .slider-menu {
+    margin: 40px 0;
+
+    &__wrap {
+      padding: 0 32px;
+    }
+
+    &__next,
+    &__prev {
+      width: 16px;
+    }
+
+    h2 {
+      margin: 0 0 28px !important;
+    }
   }
 }
