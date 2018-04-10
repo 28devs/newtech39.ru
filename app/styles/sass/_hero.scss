@@ -110,6 +110,23 @@
     right: -310px;
     bottom: 0;
   }
+
+  &--landing {
+    box-shadow: inset 0px -6px 15px -6px rgba(0, 0, 0, 0.1),
+      inset 0px 6px 15px -6px rgba(0, 0, 0, 0.1);
+
+    .hero__title {
+      margin-top: 138px;
+    }
+
+    .hero__slider,
+    .lSSlideOuter,
+    .lSSlideWrapper,
+    .lslide,
+    .lslide .container {
+      height: 600px;
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
@@ -184,6 +201,12 @@
 
       &:nth-child(3) img {
         transform: translateX(-290px) scale(0.8);
+      }
+    }
+
+    &--landing {
+      .lslide:nth-child(1) img {
+        transform: translate(-304px, 33px) scale(0.83);
       }
     }
 

@@ -1,0 +1,12 @@
+mixin advantages(advantages, title)
+  section.advantages(class=attributes.class)
+    .container
+      if title
+        h2= title
+
+      .row
+        each val in advantages 
+          .col.advantages__item
+            img(src='img/icons/' + val.href)
+            p.advantages__title !{val.title}
+            p.advantages__desc !{val.desc}

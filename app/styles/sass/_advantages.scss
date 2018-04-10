@@ -6,6 +6,17 @@
     margin-top: 95px;
   }
 
+  &--no-devider {
+    &:after {
+      background: transparent;
+    }
+  }
+
+  h2 {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
   &__item {
     text-align: center;
   }

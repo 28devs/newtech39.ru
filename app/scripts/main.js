@@ -36,7 +36,7 @@ window.onresize = submenusAligment;
 // Hero slider initialization
 //
 
-const heroSlider = $('.hero__slider ul').lightSlider({
+const heroSlider = $('.hero__slider #hero-slider').lightSlider({
   item: 1,
   controls: false,
   onSliderLoad: function() {
@@ -50,6 +50,50 @@ const heroSlider = $('.hero__slider ul').lightSlider({
     document.querySelector('.hero').classList.remove('hero--slider-slide');
   }
 });
+
+//
+// Landing hero slider initialization
+//
+
+const landingSlider = $('.hero__slider #landing-slider').lightSlider({
+  item: 1,
+  controls: false,
+  enableDrag: false,
+  pager: false,
+  enableTouch: false,
+  onSliderLoad: function() {
+    document.querySelector('.lSPager').classList.add('container');
+    document.querySelector('.hero').classList.add('hero--slider-load');
+  },
+  onBeforeNextSlide: function() {
+    document.querySelector('.hero').classList.add('hero--slider-slide');
+  },
+  onAfterSlide: function() {
+    document.querySelector('.hero').classList.remove('hero--slider-slide');
+  }
+});
+
+//
+// Landing tariffs slider initialization
+//
+
+// const tariffsSlider = $('.tariffs-block__slider').lightSlider({
+//   item: 3,
+//   slideMargin: 0,
+//   controls: false,
+//   pager: false,
+//   enableTouch: false,
+//   onSliderLoad: function() {
+//     document.querySelector('.lSPager').classList.add('container');
+//     document.querySelector('.hero').classList.add('hero--slider-load');
+//   },
+//   onBeforeNextSlide: function() {
+//     document.querySelector('.hero').classList.add('hero--slider-slide');
+//   },
+//   onAfterSlide: function() {
+//     document.querySelector('.hero').classList.remove('hero--slider-slide');
+//   }
+// });
 
 //
 // Menu slider for photo-gallary
@@ -106,7 +150,7 @@ const videoGalleryReviews = $('#video-reviews').lightGallery({
   pager: false,
   controls: false,
   thumbnail: false
-})
+});
 
 const headerNav = document.querySelector('.header__nav .nav');
 const headerNavBtnOpen = document.querySelector('.header__nav-open');
