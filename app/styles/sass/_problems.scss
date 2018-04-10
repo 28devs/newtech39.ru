@@ -12,3 +12,30 @@
     margin: 0 auto;
   }
 }
+
+@include media-breakpoint-down(md) {
+  .problems {
+    padding: 60px 0 50px;
+
+    h2 {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .problems {
+    padding: 30px 0 30px;
+
+    h2 {
+      margin: 0 0 20px;
+    }
+
+    &__img {
+      width: 109px;
+      background-size: contain !important;
+      height: 94px;
+      margin-bottom: 20px;
+    }
+  }
+}

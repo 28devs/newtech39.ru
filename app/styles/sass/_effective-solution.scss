@@ -9,6 +9,9 @@
   }
 
   h4 {
+    @include rem-font-size(16);
+    text-transform: none;
+
     &:after {
       @extend %text-devider;
       background-color: $bg-main;
@@ -60,5 +63,73 @@
   &__btn {
     text-align: center;
     margin: 76px 0 0;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .effective-solution {
+    padding: 50px 0 21px;
+
+    h2 {
+      margin: 0 0 30px 0;
+    }
+
+    h4 {
+      &:after {
+        margin: 15px 0;
+      }
+    }
+
+    &__img {
+      padding-bottom: 55%;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+    }
+
+    &__text-wrap {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .effective-solution {
+    padding: 50px 0 21px;
+
+    h2 {
+      margin: 0 0 30px 0;
+    }
+
+    h4 {
+      &:after {
+        margin: 15px 0;
+      }
+    }
+
+    &__item:nth-of-type(even) .row {
+      flex-flow: column;
+    }
+
+    &__img {
+      padding-bottom: 35%;
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border: 0;
+    }
+
+    &__text-wrap {
+      p {
+        margin-bottom: 0;
+      }
+    }
   }
 }
