@@ -94,10 +94,6 @@ const lightGalleryMain = $('#gallery-main').lightGallery({
 });
 
 //
-// Header nav mobile
-//
-
-//
 //video gallery reviews
 //
 
@@ -106,7 +102,20 @@ const videoGalleryReviews = $('#video-reviews').lightGallery({
   pager: false,
   controls: false,
   thumbnail: false
-})
+});
+
+//
+// landing gallery whith one video
+//
+const videoPresentation = $('#video-presentation').lightGallery({
+  selector: '.presentation__item',
+  pager: false,
+  controls: false,
+  thumbnail: false
+});
+//
+// Header nav mobile
+//
 
 const headerNav = document.querySelector('.header__nav .nav');
 const headerNavBtnOpen = document.querySelector('.header__nav-open');
