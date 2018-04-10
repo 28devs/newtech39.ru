@@ -1,0 +1,43 @@
+.presentation {
+  padding: 90px 0 105px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 59px;
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+
+  &__item {
+    border: 20px solid #fff;
+    box-shadow: 1px 1px 21px 7px rgba(0, 0, 0, 0.03);
+    position: relative;
+
+    &:after {
+      content: '';
+      bottom: -78px;
+      position: absolute;
+      left: -60px;
+      z-index: -1;
+      right: -60px;
+      padding-bottom: 10%;
+      background-image: url('../img/landing/presentation-shadow.png');
+      background-size: cover;
+    }
+  }
+
+  &__desc {
+    max-width: 560px;
+    text-align: center;
+
+    &:before {
+      @extend %text-devider;
+      margin: 40px auto 33px;
+    }
+  }
+}
