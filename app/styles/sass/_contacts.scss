@@ -269,3 +269,6 @@
     display: none !important;
   }
 }
+.gm-style > div > div > :last-child {
+  filter: grayscale(1)
+}
