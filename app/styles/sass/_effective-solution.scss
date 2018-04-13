@@ -16,20 +16,46 @@
       @extend %text-devider;
       background-color: $bg-main;
       margin: 22px 0;
+      box-shadow: inset 0 0 0 $bg-main;
+      background-color: #eaeaea;
+      transition: 0.2s;
     }
   }
 
   &__img {
     background-size: cover;
-    width: 100%;
+    // width: 100%;
     padding-bottom: 35%;
+    margin-right: 10px;
+  }
+
+  &__text-wrap {
+    margin-left: 10px;
+    margin-top: -7px;
   }
 
   &__item {
     border-bottom: 1px solid #e7e7e7;
     margin-bottom: 50px;
+
+    &:hover {
+      .effective-solution__text-wrap h4:after {
+        box-shadow: inset 50px 0 0 $bg-main;
+      }
+    }
+
     &:nth-of-type(even) .row {
       flex-flow: row-reverse;
+
+      .effective-solution__img {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+
+      .effective-solution__text-wrap {
+        margin-right: 10px;
+        margin-left: 0;
+      }
     }
     &:last-child {
       border-bottom: 0;
@@ -82,6 +108,7 @@
 
     &__img {
       padding-bottom: 55%;
+      margin: 0 !important;
     }
 
     &__item {
@@ -111,6 +138,11 @@
       }
     }
 
+    &__text-wrap {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
     &__item:nth-of-type(even) .row {
       flex-flow: column;
     }
@@ -118,6 +150,8 @@
     &__img {
       padding-bottom: 35%;
       margin-bottom: 15px;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
 
     &__item {

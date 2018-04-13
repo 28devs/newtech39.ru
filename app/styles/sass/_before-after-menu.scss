@@ -4,8 +4,19 @@
     margin: 40px 0 54px;
   }
 
+  &--landing {
+    .list-item {
+      width: 23%;
+    }
+  }
+
   .slider-menu {
     margin-bottom: 30px;
+  }
+
+  .slider-menu__slider {
+    display: flex;
+    justify-content: center;
   }
 
   .list-item {
@@ -23,6 +34,16 @@
       a {
         @include rem-font-size(16);
         @include rem-line-height(28);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .before-after-menu {
+    &--landing {
+      .slider-menu__slider {
+        justify-content: space-between;
       }
     }
   }

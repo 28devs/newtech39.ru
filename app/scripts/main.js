@@ -62,14 +62,18 @@ const landingSlider = $('.hero__slider #landing-slider').lightSlider({
   pager: false,
   enableTouch: false,
   onSliderLoad: function() {
-    document.querySelector('.lSPager').classList.add('container');
     document.querySelector('.hero').classList.add('hero--slider-load');
-  },
-  onBeforeNextSlide: function() {
-    document.querySelector('.hero').classList.add('hero--slider-slide');
-  },
-  onAfterSlide: function() {
-    document.querySelector('.hero').classList.remove('hero--slider-slide');
+  }
+});
+
+const landingSliderTop = $('.hero__slider #landing-slider-top').lightSlider({
+  item: 1,
+  controls: false,
+  enableDrag: false,
+  pager: false,
+  enableTouch: false,
+  onSliderLoad: function() {
+    document.querySelector('.hero-top').classList.add('hero--slider-load');
   }
 });
 
@@ -244,3 +248,5 @@ forms.forEach(function(elem) {
     this.parentNode.parentNode.classList.add('form-success--show');
   });
 });
+
+new WOW().init();
