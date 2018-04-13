@@ -17,6 +17,10 @@ textarea {
 input[type='checkbox'] {
   display: none;
 
+  &.input-error + label:before {
+    box-shadow: inset 0 0 0 2px $bg-main;
+  }
+
   &:checked + label:before {
     background: $bg-input url(../img/icons/input-checkbox-checked.png) center
       no-repeat;
@@ -42,9 +46,6 @@ input[type='checkbox'] {
     }
 
     &:hover {
-      &:before {
-        box-shadow: inset 0 0 0 2px $bg-main;
-      }
     }
   }
 }

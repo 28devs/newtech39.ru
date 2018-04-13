@@ -1,18 +1,4 @@
 //
-// Minify header when page scroll
-//
-
-const header = document.querySelector('.header');
-
-const headerScroll = function() {
-  this.scrollY < 30
-    ? header.classList.remove('header--scroll-state')
-    : header.classList.add('header--scroll-state');
-};
-headerScroll();
-window.onscroll = headerScroll;
-
-//
 // Center alignment for submenus
 // Add class to menu item with submenu
 //
@@ -161,6 +147,73 @@ const videoPresentation = $('#video-presentation').lightGallery({
   controls: false,
   thumbnail: false
 });
+
+//
+// Footer nav tabs (work on small resolution)
+//
+
+const footerNavBtns = document.querySelectorAll('.footer__nav-item a');
+const footerNavs = document.querySelectorAll('.footer__nav-childs');
+
+const showFooterNav = function() {
+  let index = this.getAttribute('href').slice(1);
+
+  footerNavBtns.forEach(function(elem) {
+    elem.classList.remove('active');
+  });
+
+  this.classList.add('active');
+
+  footerNavs.forEach(function(elem) {
+    elem.classList.remove('active');
+  });
+
+  footerNavs[index].classList.add('active');
+};
+
+footerNavBtns.forEach(function(elem) {
+  elem.addEventListener('click', showFooterNav);
+});
+
+//
+// Forms testing handler
+//
+
+const forms = document.querySelectorAll('form');
+
+forms.forEach(function(elem) {
+  elem.addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.parentNode.parentNode.classList.add('form-success--show');
+  });
+});
+
+//
+// Landing animate (in tags) and input phone mask
+//
+
+new WOW().init();
+
+//$('.input-phone').inputmask('99-9999999');
+Inputmask({ mask: '+7 (999) 999-99-99' }).mask(
+  document.querySelectorAll('.input-phone')
+);
+console.log(Inputmask);
+
+//
+// Minify header when page scroll
+//
+
+const header = document.querySelector('.header');
+
+const headerScroll = function() {
+  this.scrollY < 30
+    ? header.classList.remove('header--scroll-state')
+    : header.classList.add('header--scroll-state');
+};
+headerScroll();
+window.onscroll = headerScroll;
+
 //
 // Header nav mobile
 //
@@ -208,45 +261,3 @@ const returnPrevBtnText = function() {
 };
 
 headerNavBtnPrev.addEventListener('click', returnPrevBtnText);
-
-//
-// Footer nav tabs (work on small resolution)
-//
-
-const footerNavBtns = document.querySelectorAll('.footer__nav-item a');
-const footerNavs = document.querySelectorAll('.footer__nav-childs');
-
-const showFooterNav = function() {
-  let index = this.getAttribute('href').slice(1);
-
-  footerNavBtns.forEach(function(elem) {
-    elem.classList.remove('active');
-  });
-
-  this.classList.add('active');
-
-  footerNavs.forEach(function(elem) {
-    elem.classList.remove('active');
-  });
-
-  footerNavs[index].classList.add('active');
-};
-
-footerNavBtns.forEach(function(elem) {
-  elem.addEventListener('click', showFooterNav);
-});
-
-//
-// Forms testing handler
-//
-
-const forms = document.querySelectorAll('form');
-
-forms.forEach(function(elem) {
-  elem.addEventListener('submit', function(e) {
-    e.preventDefault();
-    this.parentNode.parentNode.classList.add('form-success--show');
-  });
-});
-
-new WOW().init();

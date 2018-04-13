@@ -5,6 +5,7 @@ include sections/header_page.pug
 .form-shower.form-shower--bg-white
   .container
 
+    p Ошибка валидации отображается с помощью класса .input-error на элементе input. Пример в окне "Обратный звонок". <br><br>
 
     button.btn(type='button' data-toggle='modal' data-target='#modal1')
       | Обратный звонок
@@ -22,11 +23,11 @@ include sections/header_page.pug
                 .row.no-gutters
                   .col-12
                     input.input-error(type='text' placeholder='Ваше имя ...')
-                    input(type='text' placeholder='Контактный телефон ...')
+                    input.input-phone.input-error(type='text' placeholder='Контактный телефон ...')
 
                   .col-12
-                    input(type='checkbox' id='checkbox')
-                    label(for='checkbox') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу www.newtech39.ru/personalinfo.pdf.
+                    input.input-error(type='checkbox' id='checkbox1')
+                    label(for='checkbox1') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу <a href="#!">www.newtech39.ru/personalinfo.pdf</a>
 
                   .col-12
                     button.btn(type='submit') Перезвоните мне
@@ -54,15 +55,15 @@ include sections/header_page.pug
                 .row.no-gutters
                   .col-12.col-md-6
                     input(type='text' placeholder='Ваше имя ...')
-                    input(type='text' placeholder='Контактный телефон ...')
+                    input.input-phone(type='text' placeholder='Контактный телефон ...')
                     input(type='text' placeholder='Укажите email ...')
 
                   .col-12.col-md-6
                     textarea(type='text' placeholder='Текст Вашего сообщения ...')
 
                   .col-12.col-lg-10.offset-lg-1.text-left
-                    input(type='checkbox' id='checkbox')
-                    label(for='checkbox') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу www.newtech39.ru/personalinfo.pdf.
+                    input(type='checkbox' id='checkbox2')
+                    label(for='checkbox2') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу <a href="#!">www.newtech39.ru/personalinfo.pdf</a>
 
                   .col-12.text-center
                     button.btn(type='submit') Перезвоните мне
@@ -88,15 +89,15 @@ include sections/header_page.pug
                 .row.no-gutters
                   .col-12.col-md-6
                     input(type='text' placeholder='Ваше имя ...')
-                    input(type='text' placeholder='Контактный телефон ...')
+                    input.input-phone(type='text' placeholder='Контактный телефон ...')
                     input(type='text' placeholder='Укажите email ...')
 
                   .col-12.col-md-6
                     textarea(type='text' placeholder='Текст Вашего сообщения ...')
 
                   .col-12.col-lg-10.offset-lg-1.text-left
-                    input(type='checkbox' id='checkbox')
-                    label(for='checkbox') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу www.newtech39.ru/personalinfo.pdf.
+                    input(type='checkbox' id='checkbox3')
+                    label(for='checkbox3') Я согласен на обработку персональных данных в порядке и на условиях, указанных по адресу <a href="#!">www.newtech39.ru/personalinfo.pdf</a>
 
                   .col-12.text-center
                     button.btn(type='submit') Записаться на прием
