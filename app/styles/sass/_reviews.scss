@@ -2,6 +2,18 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1) inset;
   background: #f5f5f5 url(../img/main-bg.jpg) center / cover;
   padding: 80px 0 105px;
+  position: relative;
+  overflow-x: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 270px;
+    right: 12px;
+    background: url(../img/form-leaf-3.png) left center/cover;
+    width: 60px;
+    height: 317px;
+  }
 
   h2 {
     text-align: center;
@@ -83,6 +95,10 @@
   .reviews {
     padding: 50px 0 55px;
 
+    &:before {
+      display: none;
+    }
+    
     &__item {
       margin-bottom: 40px;
     }

@@ -9,6 +9,7 @@
   &__desc {
     max-width: 750px;
     text-align: center;
+    @include rem-line-height(26)
   }
 
   &__button {
