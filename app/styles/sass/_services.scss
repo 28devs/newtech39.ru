@@ -39,12 +39,12 @@
     bottom: 0;
     right: 0;
     margin: 20px;
-    padding: 30px;
+    padding: 20px;
     background-color: transparent;
     transition: ease 0.3s;
 
     :hover > & {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, .97);
     }
   }
 
@@ -52,7 +52,7 @@
     &:after {
       @extend %text-devider;
       width: 0;
-      margin: 18px 0;
+      margin: 18px 0 !important;
       transition: 0.3s ease width;
     }
 
@@ -75,8 +75,8 @@
 
   &__link {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 28px;
+    left: 20px;
   }
 
   &__item:last-child {
