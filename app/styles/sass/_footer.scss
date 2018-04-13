@@ -96,7 +96,8 @@
       .nav-link {
         padding: 1px 0;
         color: #666666;
-        border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+        // border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
         text-decoration: none;
         line-height: 20px;
         margin-bottom: 20px;
@@ -106,6 +107,7 @@
         &:hover {
           color: $bg-main;
           border-color: transparent;
+          box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
           text-decoration: none;
         }
       }
@@ -114,7 +116,7 @@
 
   &__address {
     background: #fff;
-    padding: 35px 0 31px;
+    padding: 35px 0 25px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
     h5 {
@@ -124,6 +126,7 @@
     p {
       @include rem-font-size(14);
       margin: 0;
+      line-height: 1.6;
     }
   }
 
