@@ -2,213 +2,233 @@ script(defer).
   function initMap() {
     var myLatLng = {lat: 54.7074764, lng: 20.6168746};
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 54.7074764, lng: 20.6168746},
-      zoom: 17,
+      center: {lat: 54.70678215, lng: 20.60849538},
+      zoom: 16,
           styles: [
             {
-              "featureType": "poi",
-              "elementType": "all",
-              "stylers": [
-                  {
-                      "hue": "#000000"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": -100
-                  },
-                  {
-                      "visibility": "off"
-                  }
-              ]
-          },
-          {
-              "featureType": "poi",
-              "elementType": "all",
-              "stylers": [
-                  {
-                      "hue": "#000000"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": -100
-                  },
-                  {
-                      "visibility": "off"
-                  }
-              ]
-          },
-          {
-              "featureType": "administrative",
-              "elementType": "all",
-              "stylers": [
-                  {
-                      "hue": "#000000"
-                  },
-                  {
-                      "saturation": 0
-                  },
-                  {
-                      "lightness": -100
-                  },
-                  {
-                      "visibility": "off"
-                  }
-              ]
-          },
-          {
-              "featureType": "road",
-              "elementType": "labels",
-              "stylers": [
-                  {
-                      "hue": "#ffffff"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": 100
-                  },
-                  {
-                      "visibility": "off"
-                  }
-              ]
-          },
-          {
-              "featureType": "water",
-              "elementType": "labels",
-              "stylers": [
-                  {
-                      "hue": "#000000"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": -100
-                  },
-                  {
-                      "visibility": "off"
-                  }
-              ]
-          },
-          {
-              "featureType": "road.local",
-              "elementType": "all",
-              "stylers": [
-                  {
-                      "hue": "#ffffff"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": 100
-                  },
-                  {
-                      "visibility": "on"
-                  }
-              ]
-          },
-          {
-              "featureType": "water",
-              "elementType": "geometry",
-              "stylers": [
-                  {
-                      "hue": "#ffffff"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": 100
-                  },
-                  {
-                      "visibility": "on"
-                  }
-              ]
-          },
-          {
-              "featureType": "transit",
-              "elementType": "labels",
-              "stylers": [
-                  {
-                      "hue": "#000000"
-                  },
-                  {
-                      "saturation": 0
-                  },
-                  {
-                      "lightness": -100
-                  },
-                  {
-                      "visibility": "off"
-                  }
-              ]
-          },
-          {
-              "featureType": "landscape",
-              "elementType": "labels",
-              "stylers": [
-                  {
-                      "hue": "#000000"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": -100
-                  },
-                  {
-                      "visibility": "off"
-                  }
-              ]
-          },
-          {
-              "featureType": "road",
-              "elementType": "geometry",
-              "stylers": [
-                  {
-                      "hue": "#bbbbbb"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": 26
-                  },
-                  {
-                      "visibility": "on"
-                  }
-              ]
-          },
-          {
-              "featureType": "landscape",
-              "elementType": "geometry",
-              "stylers": [
-                  {
-                      "hue": "#dddddd"
-                  },
-                  {
-                      "saturation": -100
-                  },
-                  {
-                      "lightness": -3
-                  },
-                  {
-                      "visibility": "on"
-                  }
-              ]
-          }
+                  "featureType": "poi",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "hue": "#000000"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": -100
+                      },
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "poi",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "hue": "#000000"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": -100
+                      },
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "administrative",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "hue": "#000000"
+                      },
+                      {
+                          "saturation": 0
+                      },
+                      {
+                          "lightness": -100
+                      },
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "hue": "#ffffff"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": 100
+                      },
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "water",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "hue": "#000000"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": -100
+                      },
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road.local",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "hue": "#ffffff"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": 100
+                      },
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "water",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "hue": "#ffffff"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": 100
+                      },
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "transit",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "hue": "#000000"
+                      },
+                      {
+                          "saturation": 0
+                      },
+                      {
+                          "lightness": -100
+                      },
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "hue": "#000000"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": -100
+                      },
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "road",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "hue": "#bbbbbb"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": 26
+                      },
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "hue": "#dddddd"
+                      },
+                      {
+                          "saturation": -100
+                      },
+                      {
+                          "lightness": -3
+                      },
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              }
       ] 
     });
     
+   
+    var contentString = '<div id="content">'+
+      '<h5 id="firstHeading" class="firstHeading">Клиника на Московском проспекте</h5>'+
+      '<div id="bodyContent">'+
+      '<ul class="list list--secondary-colo">'+
+      '<li>г. Калининград, Московский проспект, 375</li>'+
+      '</ul>'+
+      '</div>'+
+      '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      pixelOffset: new google.maps.Size(-260,90)
+    });
+
     var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      title: 'Hello World!'
+      title: 'Hello World!',
+      icon: 'img/map-icon.png'
+    });
+
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
     });
   }

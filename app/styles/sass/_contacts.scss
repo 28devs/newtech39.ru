@@ -213,3 +213,22 @@
     }
   }
 }
+
+#content {
+  width: 320px;
+  height: 60px;
+
+  h5 {
+    text-transform: initial;
+    font-size: 14px;
+    line-height: 28px;
+    color: #000;
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 400;
+  }
+}
+
+[style="border-top-width: 24px;position: absolute"] {
+  display: none;
+}
