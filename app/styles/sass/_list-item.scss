@@ -59,6 +59,7 @@
 
     a {
       @extend %font-main-regular;
+      display: inline-block;
 
       &:hover {
         color: $bg-main;

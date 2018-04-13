@@ -95,6 +95,14 @@
   }
 }
 
+@include media-breakpoint-up(lg) {
+  .contacts-page {
+    .col-md-3 {
+      padding-left: 67px;
+    }
+  }
+}
+
 @include media-breakpoint-down(md) {
   .contacts-page {
     padding: 53px 0 0;
