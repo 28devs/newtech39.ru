@@ -3,6 +3,12 @@
   overflow: hidden;
   max-height: 390px;
 
+  //decrease line hight for one block, because Jesus cry if line height so big
+  .list-item__title a {
+    @include rem-line-height(22);
+    display: inline-block;
+  }
+
   &:after {
     @exnted %devider;
   }
