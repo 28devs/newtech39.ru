@@ -1,5 +1,18 @@
 .faq-page {
   padding: 76px 0;
+  position: relative;
+  overflow-x: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 270px;
+    right: -226px;
+    background: url(../img/main-leaf-1.png) left center/cover;
+    width: 362px;
+    height: 356px;
+    transform: rotateZ(-96deg) rotateY(-180deg);
+  }
 
   h2 {
     text-align: center;
@@ -31,6 +44,20 @@
     background: #f4f4f4 url(../img/collapse-bg.jpg) center top / cover;
     @extend %font-main-regular;
     margin: -12px 0 47px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      border: 11px solid transparent;
+      border-bottom: 10px solid #f6f6f6;;
+      display: block;
+      width: 0;
+      height: 0;
+    }
 
     p {
       padding: 32px 39px;
@@ -47,6 +74,10 @@
 @include media-breakpoint-down(md) {
   .faq-page {
     padding: 46px 0;
+
+    &:before {
+      display: none;
+    }
 
     h2 {
       margin-bottom: 29px;
