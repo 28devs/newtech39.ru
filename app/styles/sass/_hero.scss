@@ -98,7 +98,7 @@
 
   .btn {
     @extend %hero-slide-animate;
-    transition-delay: 0.5s !important;
+    transition-delay: 0.5s;
   }
 
   .leaf--1 {

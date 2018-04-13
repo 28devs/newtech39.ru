@@ -6,6 +6,10 @@ body {
   @include rem-line-height(26);
 }
 
+* {
+  outline: none !important;
+}
+
 a {
   color: $text-gray;
   text-decoration: underline;

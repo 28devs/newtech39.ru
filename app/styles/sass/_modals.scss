@@ -206,11 +206,14 @@
     }
   }
 
+  &__devider {
+    @extend %devider;
+    width: 100%;
+    margin: 23px 0 19px;
+  }
+
   + .list {
-    &:before {
-      @extend %devider;
-      width: 100%;
-      margin: 23px 0 19px;
-    }
+    max-height: 50vh;
+    overflow: auto;
   }
 }

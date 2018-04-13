@@ -12,12 +12,13 @@
   text-transform: uppercase;
   @extend %font-main-bold;
   cursor: pointer;
-  transition: $control-elem-transition;
+  transition: $control-elem-transition !important;
   box-shadow: 0px 3px 29.12px 2.88px rgba(196, 71, 57, 0.45);
   text-align: center;
   border: 0;
   outline: none !important;
   text-decoration: none;
+  transition-delay: 0 !important;
 
   &:hover,
   &:active,
