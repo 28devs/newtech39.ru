@@ -79,27 +79,33 @@
       margin-bottom: 26px;
       display: inline-block;
       text-decoration: none;
+      border-color: transparent;
 
       &:hover {
         color: $text-black;
         text-decoration: none;
+        border-color: transparent;
       }
     }
 
     &-childs {
+      .col-6 {
+        margin-bottom: 12px;
+      }
+
       .nav-link {
         padding: 1px 0;
         color: #666666;
-        //border-bottom: 1px #c5c5c5 solid;
-        text-decoration: underline;
+        border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+        text-decoration: none;
         line-height: 20px;
         margin-bottom: 20px;
         transition: 0.1s;
-        display: inline-block;
+        display: inline;
 
         &:hover {
           color: $bg-main;
-          //border-color: transparent;
+          border-color: transparent;
           text-decoration: none;
         }
       }
@@ -226,7 +232,6 @@ section:last-of-type {
 
       a {
         margin-bottom: 0;
-        text-decoration: underline;
         @include rem-font-size(14);
       }
 
@@ -238,6 +243,9 @@ section:last-of-type {
     }
 
     &__nav-item a {
+      border-bottom: 1px solid;
+      line-height: 1.3;
+
       &:hover,
       &.active {
         color: $bg-main;
