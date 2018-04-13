@@ -237,6 +237,35 @@
   }
 }
 
-[style="border-top-width: 24px;position: absolute"] {
-  display: none;
+.infoOutter {
+  background-color: initial !important;
+  box-shadow: none !important;
+}
+
+.infoContainer {
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.1));
+}
+
+.infoAfter {
+  left: initial !important;
+  right: 1px !important;
+  transform: rotate(-90deg);
+  top: 54px !important;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    right: -28px;
+    top: 371px;
+    content: '';
+    border: 15px solid transparent;
+    border-top: 15px solid #fff;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+  
+  & > div {
+    display: none !important;
+  }
 }

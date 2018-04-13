@@ -5,14 +5,13 @@
 
 const submenus = document.querySelectorAll('.header .nav ul');
 
-submenus.forEach(function(elem) {
+submenus.forEach(function (elem) {
   elem.parentNode.classList.add('nav-child');
 });
 
-const submenusAligment = function() {
-  submenus.forEach(function(elem) {
-    elem.style.left =
-      -Math.abs((elem.offsetWidth - elem.parentNode.offsetWidth) / 2) + 'px';
+const submenusAligment = function () {
+  submenus.forEach(function (elem) {
+    elem.style.left = -Math.abs((elem.offsetWidth - elem.parentNode.offsetWidth) / 2) + 'px';
   });
 };
 submenusAligment();
@@ -25,14 +24,14 @@ window.onresize = submenusAligment;
 const heroSlider = $('.hero__slider #hero-slider').lightSlider({
   item: 1,
   controls: false,
-  onSliderLoad: function() {
+  onSliderLoad: function () {
     document.querySelector('.lSPager').classList.add('container');
     document.querySelector('.hero').classList.add('hero--slider-load');
   },
-  onBeforeNextSlide: function() {
+  onBeforeNextSlide: function () {
     document.querySelector('.hero').classList.add('hero--slider-slide');
   },
-  onAfterSlide: function() {
+  onAfterSlide: function () {
     document.querySelector('.hero').classList.remove('hero--slider-slide');
   }
 });
@@ -47,7 +46,7 @@ const landingSlider = $('.hero__slider #landing-slider').lightSlider({
   enableDrag: false,
   pager: false,
   enableTouch: false,
-  onSliderLoad: function() {
+  onSliderLoad: function () {
     document.querySelector('.hero').classList.add('hero--slider-load');
   }
 });
@@ -58,7 +57,7 @@ const landingSliderTop = $('.hero__slider #landing-slider-top').lightSlider({
   enableDrag: false,
   pager: false,
   enableTouch: false,
-  onSliderLoad: function() {
+  onSliderLoad: function () {
     document.querySelector('.hero-top').classList.add('hero--slider-load');
   }
 });
@@ -94,8 +93,7 @@ const menuSlider = $('#slider-menu').lightSlider({
   slideMove: 5,
   controls: false,
   pager: false,
-  responsive: [
-    {
+  responsive: [{
       breakpoint: 1220,
       settings: {
         item: 4,
@@ -111,10 +109,10 @@ const menuSlider = $('#slider-menu').lightSlider({
     }
   ]
 });
-const prevSlide = $('#prev').on('click', function() {
+const prevSlide = $('#prev').on('click', function () {
   menuSlider.goToPrevSlide();
 });
-const nextSlide = $('#next').on('click', function() {
+const nextSlide = $('#next').on('click', function () {
   menuSlider.goToNextSlide();
 });
 
@@ -155,23 +153,23 @@ const videoPresentation = $('#video-presentation').lightGallery({
 const footerNavBtns = document.querySelectorAll('.footer__nav-item a');
 const footerNavs = document.querySelectorAll('.footer__nav-childs');
 
-const showFooterNav = function() {
+const showFooterNav = function () {
   let index = this.getAttribute('href').slice(1);
 
-  footerNavBtns.forEach(function(elem) {
+  footerNavBtns.forEach(function (elem) {
     elem.classList.remove('active');
   });
 
   this.classList.add('active');
 
-  footerNavs.forEach(function(elem) {
+  footerNavs.forEach(function (elem) {
     elem.classList.remove('active');
   });
 
   footerNavs[index].classList.add('active');
 };
 
-footerNavBtns.forEach(function(elem) {
+footerNavBtns.forEach(function (elem) {
   elem.addEventListener('click', showFooterNav);
 });
 
@@ -181,8 +179,8 @@ footerNavBtns.forEach(function(elem) {
 
 const forms = document.querySelectorAll('form');
 
-forms.forEach(function(elem) {
-  elem.addEventListener('submit', function(e) {
+forms.forEach(function (elem) {
+  elem.addEventListener('submit', function (e) {
     e.preventDefault();
     this.parentNode.parentNode.classList.add('form-success--show');
   });
@@ -195,7 +193,9 @@ forms.forEach(function(elem) {
 new WOW().init();
 
 //$('.input-phone').inputmask('99-9999999');
-Inputmask({ mask: '+7 (999) 999-99-99' }).mask(
+Inputmask({
+  mask: '+7 (999) 999-99-99'
+}).mask(
   document.querySelectorAll('.input-phone')
 );
 console.log(Inputmask);
@@ -206,10 +206,10 @@ console.log(Inputmask);
 
 const header = document.querySelector('.header');
 
-const headerScroll = function() {
-  this.scrollY < 30
-    ? header.classList.remove('header--scroll-state')
-    : header.classList.add('header--scroll-state');
+const headerScroll = function () {
+  this.scrollY < 30 ?
+    header.classList.remove('header--scroll-state') :
+    header.classList.add('header--scroll-state');
 };
 headerScroll();
 window.onscroll = headerScroll;
@@ -224,11 +224,11 @@ const headerNavBtnClose = document.querySelector('.header__nav-close');
 const headerNavBtnPrev = document.querySelector('.header__nav-prev');
 const headerNavBtnPrevOriginalText = headerNavBtnPrev.textContent;
 
-headerNavBtnOpen.addEventListener('click', function() {
+headerNavBtnOpen.addEventListener('click', function () {
   headerNav.classList.add('header__nav--open');
 });
 
-headerNavBtnClose.addEventListener('click', function() {
+headerNavBtnClose.addEventListener('click', function () {
   headerNav.classList.remove('header__nav--open');
 });
 
@@ -237,7 +237,7 @@ const headerNavsWithChilds = document.querySelectorAll(
   '.header__nav .nav-child'
 );
 
-const changePrevBtnText = function() {
+const changePrevBtnText = function () {
   let categoryName = this.childNodes[0].textContent;
 
   headerNavBtnPrev.textContent = categoryName;
@@ -246,12 +246,12 @@ const changePrevBtnText = function() {
   this.classList.add('header__nav--child-open');
 };
 
-headerNavsWithChilds.forEach(function(elem) {
+headerNavsWithChilds.forEach(function (elem) {
   elem.addEventListener('click', changePrevBtnText);
 });
 
 // Return original text to prev button than close submenu
-const returnPrevBtnText = function() {
+const returnPrevBtnText = function () {
   this.textContent = headerNavBtnPrevOriginalText;
   this.classList.remove('header__nav-prev--arrow');
 

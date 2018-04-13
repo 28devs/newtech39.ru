@@ -210,7 +210,7 @@ script(defer).
     var contentString = '<div id="content">'+
       '<h5 id="firstHeading" class="firstHeading">Клиника на Московском проспекте</h5>'+
       '<div id="bodyContent">'+
-      '<ul class="list list--secondary-colo">'+
+      '<ul class="list list--secondary-color">'+
       '<li>г. Калининград, Московский проспект, 375</li>'+
       '</ul>'+
       '</div>'+
@@ -218,7 +218,7 @@ script(defer).
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString,
-      pixelOffset: new google.maps.Size(-260,90)
+      pixelOffset: new google.maps.Size(-240,85)
     });
 
     var marker = new google.maps.Marker({
@@ -231,4 +231,17 @@ script(defer).
     marker.addListener('click', function() {
       infowindow.open(map, marker);
     });
+
+
+    google.maps.event.addListener(infowindow, 'domready', function () {
+      var iwOuter = $('.gm-style-iw');
+
+      var iwBackground = iwOuter.prev()
+      iwBackground.addClass('infoContainer')
+      iwBackground.children(':nth-child(2)').addClass('infoOutter')
+      iwBackground.children(':nth-child(3)').addClass('infoAfter')
+      iwBackground.children(':nth-child(1)').css({'display' : 'none'});
+    });
+
+
   }
