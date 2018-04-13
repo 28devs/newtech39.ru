@@ -75,9 +75,12 @@ include sections/header_page.pug
           each li in ['Стоматология']
            li= li
 
-  .contact-page__map
-    iframe(width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=54.7104,20.4522&key=AIzaSyBdyv1rLhnLTot0cmWLq2KYUeun8NKNcf8" allowfullscreen)
-
+  //- #map_canvas.contact-page__map
+  //- iframe(width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=10&center=54.7104,20.4522&key=AIzaSyBdyv1rLhnLTot0cmWLq2KYUeun8NKNcf8" allowfullscreen)
+  div#map(style="width: 100%; height: 500px;")
+  
+  include blocks/googlemap.pug
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKHMTkHEWFerdIYypni1ca3XTW511OVfQ&callback=initMap" async defer)
 
 include sections/share-opinion.pug
 +share-opinion(forms[0])
