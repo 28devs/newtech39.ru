@@ -12,6 +12,10 @@
     transition: $header-transition;
   }
 
+  a {
+    text-decoration: none !important;
+  }
+
   &__nav {
     margin: 23px auto 0 54px;
     transition: $header-transition;
