@@ -12,7 +12,9 @@
     uglifycss = require('gulp-uglifycss'),
     pug = require('gulp-pug'),
     rename = require('gulp-rename'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    rev = require('gulp-rev-append'),
+    autoprefixer = require('gulp-autoprefixer');
 
   //write html by pug
   gulp.task('views', function buildHTML() {
@@ -26,13 +28,23 @@
       .pipe(gulp.dest('dest/'));
   });
 
+  gulp.task('hash', function() {
+    return gulp.src('dest/*.html')
+      .pipe(rev())
+      .pipe(gulp.dest('dest/'));
+  });
+
   //write style
   gulp.task('sass', function() {
     return gulp
-      .src('app/styles/sass/main.scss')
-      .pipe(sourcemaps.init())
+      .src('app/styles/sass/*.scss')
+      // .pipe(sourcemaps.init())
       .pipe(sass().on('error', notify.onError()))
-      .pipe(sourcemaps.write())
+      .pipe(autoprefixer({
+            browsers: ['last 10 versions'],
+            cascade: false
+        }))
+      // .pipe(sourcemaps.write())
       .pipe(gulp.dest('dest/styles'));
   });
   gulp.task('css', function() {
@@ -86,7 +98,8 @@
         'libs-js',
         'assets',
         'scripts'
-      )
+      ),
+      'hash'
     )
   );
 
@@ -107,6 +120,8 @@
     gulp.watch('app/scripts/**/*.*', gulp.series('scripts'));
     gulp.watch('app/assets/**/*.*', gulp.series('assets'));
     gulp.watch('app/assets/views/**/*.*', gulp.series('views'));
+    gulp.watch('dest/styles/main.css*', gulp.series('hash'));
+    gulp.watch('dest/scripts/main.js*', gulp.series('hash'));
     gulp.watch('app/libs/**/*.js', gulp.series('libs-js'));
     gulp.watch('app/libs/libs.scss', gulp.series('libs-css'));
   });

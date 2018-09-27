@@ -1,15 +1,23 @@
+if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    };
+}
 //
 // Center alignment for submenus
 // Add class to menu item with submenu
-//
 
-const submenus = document.querySelectorAll('.header .nav ul');
+
+var submenus = document.querySelectorAll('.header .nav ul');
 
 submenus.forEach(function (elem) {
   elem.parentNode.classList.add('nav-child');
 });
 
-const submenusAligment = function () {
+var submenusAligment = function () {
   submenus.forEach(function (elem) {
     elem.style.left = -Math.abs((elem.offsetWidth - elem.parentNode.offsetWidth) / 2) + 'px';
   });
@@ -21,7 +29,7 @@ window.onresize = submenusAligment;
 // Hero slider initialization
 //
 
-const heroSlider = $('.hero__slider #hero-slider').lightSlider({
+var heroSlider = $('.hero__slider #hero-slider').lightSlider({
   item: 1,
   controls: false,
   onSliderLoad: function () {
@@ -40,7 +48,7 @@ const heroSlider = $('.hero__slider #hero-slider').lightSlider({
 // Landing hero slider initialization
 //
 
-const landingSlider = $('.hero__slider #landing-slider').lightSlider({
+var landingSlider = $('.hero__slider #landing-slider').lightSlider({
   item: 1,
   controls: false,
   enableDrag: false,
@@ -51,7 +59,7 @@ const landingSlider = $('.hero__slider #landing-slider').lightSlider({
   }
 });
 
-const landingSliderTop = $('.hero__slider #landing-slider-top').lightSlider({
+var landingSliderTop = $('.hero__slider #landing-slider-top').lightSlider({
   item: 1,
   controls: false,
   enableDrag: false,
@@ -66,7 +74,7 @@ const landingSliderTop = $('.hero__slider #landing-slider-top').lightSlider({
 // Landing tariffs slider initialization
 //
 
-// const tariffsSlider = $('.tariffs-block__slider').lightSlider({
+// var tariffsSlider = $('.tariffs-block__slider').lightSlider({
 //   item: 3,
 //   slideMargin: 0,
 //   controls: false,
@@ -88,7 +96,7 @@ const landingSliderTop = $('.hero__slider #landing-slider-top').lightSlider({
 // Menu slider for photo-gallary
 //
 
-const menuSlider = $('#slider-menu').lightSlider({
+var menuSlider = $('#slider-menu').lightSlider({
   item: 5,
   slideMove: 5,
   controls: false,
@@ -109,10 +117,10 @@ const menuSlider = $('#slider-menu').lightSlider({
     }
   ]
 });
-const prevSlide = $('#prev').on('click', function () {
+var prevSlide = $('#prev').on('click', function () {
   menuSlider.goToPrevSlide();
 });
-const nextSlide = $('#next').on('click', function () {
+var nextSlide = $('#next').on('click', function () {
   menuSlider.goToNextSlide();
 });
 
@@ -120,7 +128,7 @@ const nextSlide = $('#next').on('click', function () {
 // Main page gallery initialization
 //
 
-const lightGalleryMain = $('#gallery-main').lightGallery({
+var lightGalleryMain = $('#gallery-main').lightGallery({
   selector: '.gallery__item a',
   downloadUrl: false
 });
@@ -129,7 +137,7 @@ const lightGalleryMain = $('#gallery-main').lightGallery({
 //video gallery reviews
 //
 
-const videoGalleryReviews = $('#video-reviews').lightGallery({
+var videoGalleryReviews = $('#video-reviews').lightGallery({
   selector: '.video-reviews__item',
   pager: false,
   controls: false,
@@ -139,7 +147,7 @@ const videoGalleryReviews = $('#video-reviews').lightGallery({
 //
 // landing gallery whith one video
 //
-const videoPresentation = $('#video-presentation').lightGallery({
+var videoPresentation = $('#video-presentation').lightGallery({
   selector: '.presentation__item',
   pager: false,
   controls: false,
@@ -150,11 +158,11 @@ const videoPresentation = $('#video-presentation').lightGallery({
 // Footer nav tabs (work on small resolution)
 //
 
-const footerNavBtns = document.querySelectorAll('.footer__nav-item a');
-const footerNavs = document.querySelectorAll('.footer__nav-childs');
+var footerNavBtns = document.querySelectorAll('.footer__nav-item a');
+var footerNavs = document.querySelectorAll('.footer__nav-childs');
 
-const showFooterNav = function () {
-  let index = this.getAttribute('href').slice(1);
+var showFooterNav = function () {
+  var index = this.getAttribute('href').slice(1);
 
   footerNavBtns.forEach(function (elem) {
     elem.classList.remove('active');
@@ -177,7 +185,7 @@ footerNavBtns.forEach(function (elem) {
 // Forms testing handler
 //
 
-const forms = document.querySelectorAll('form');
+var forms = document.querySelectorAll('form');
 
 forms.forEach(function (elem) {
   elem.addEventListener('submit', function (e) {
@@ -204,9 +212,9 @@ console.log(Inputmask);
 // Minify header when page scroll
 //
 
-const header = document.querySelector('.header');
+var header = document.querySelector('.header');
 
-const headerScroll = function () {
+var headerScroll = function () {
   this.scrollY < 30 ?
     header.classList.remove('header--scroll-state') :
     header.classList.add('header--scroll-state');
@@ -218,11 +226,11 @@ window.onscroll = headerScroll;
 // Header nav mobile
 //
 
-const headerNav = document.querySelector('.header__nav .nav');
-const headerNavBtnOpen = document.querySelector('.header__nav-open');
-const headerNavBtnClose = document.querySelector('.header__nav-close');
-const headerNavBtnPrev = document.querySelector('.header__nav-prev');
-const headerNavBtnPrevOriginalText = headerNavBtnPrev.textContent;
+var headerNav = document.querySelector('.header__nav .nav');
+var headerNavBtnOpen = document.querySelector('.header__nav-open');
+var headerNavBtnClose = document.querySelector('.header__nav-close');
+var headerNavBtnPrev = document.querySelector('.header__nav-prev');
+var headerNavBtnPrevOriginalText = headerNavBtnPrev.textContent;
 
 headerNavBtnOpen.addEventListener('click', function () {
   headerNav.classList.add('header__nav--open');
@@ -233,12 +241,12 @@ headerNavBtnClose.addEventListener('click', function () {
 });
 
 // Change prev button text to current nav category
-const headerNavsWithChilds = document.querySelectorAll(
+var headerNavsWithChilds = document.querySelectorAll(
   '.header__nav .nav-child'
 );
 
-const changePrevBtnText = function () {
-  let categoryName = this.childNodes[0].textContent;
+var changePrevBtnText = function () {
+  var categoryName = this.childNodes[0].textContent;
 
   headerNavBtnPrev.textContent = categoryName;
   headerNavBtnPrev.classList.add('header__nav-prev--arrow');
@@ -251,7 +259,7 @@ headerNavsWithChilds.forEach(function (elem) {
 });
 
 // Return original text to prev button than close submenu
-const returnPrevBtnText = function () {
+var returnPrevBtnText = function () {
   this.textContent = headerNavBtnPrevOriginalText;
   this.classList.remove('header__nav-prev--arrow');
 

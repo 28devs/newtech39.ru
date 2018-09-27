@@ -90,9 +90,10 @@
     }
 
     &__item {
-      min-width: 30%;
+      // min-width: 30%;
       max-width: 30%;
       margin-bottom: 70px;
+      flex: 1 1 30%;
     }
 
     &__title {
